@@ -1,0 +1,440 @@
+@import "../../assets/css/custom/header.css";
+@import "../../assets/css/custom/card.css";
+@import "../../assets/css/custom/user.css";
+@import "../../assets/css/custom/tab.css";
+@import "../../assets/css/custom/slick-slide.css";
+@import "../../assets/css/custom/select2.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans !overflow-x-hidden flex flex-col min-h-screen;
+  }
+
+  a {
+    @apply transition-bundle;
+  }
+
+  p,
+  a {
+    @apply font-inter;
+  }
+
+  img,
+  video {
+    max-width: unset;
+    height: unset;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none border border-primary;
+  }
+}
+
+@layer components {
+  .key-title {
+    @apply text-primary text-xl xs:text-base font-bold leading-normal;
+  }
+
+  .common-title {
+    @apply block text-primary-title font-bold;
+  }
+
+  .common-pera {
+    @apply block text-tertiary-title font-normal;
+  }
+
+  .transition-bundle {
+    @apply transition-all duration-300 ease-linear;
+  }
+
+  .header-area .mobile_menu .slicknav_menu .slicknav_nav .sub-single {
+    @apply text-primary-title font-semibold text-base capitalize;
+  }
+
+  .loading-page {
+    @apply bg-[#0d0d0d] flex justify-center items-center w-full h-full fixed top-0 left-0 right-0 bottom-0 z-[9999] transition-bundle my-0 mx-auto;
+  }
+
+  .loading-page .counter {
+    @apply text-center relative w-200;
+  }
+
+  .loading-page .counter .text {
+    font-weight: 100;
+    @apply text-primary text-11xl;
+  }
+
+  .loading-page .counter .number {
+    color: white;
+    font-size: 60px;
+    margin-top: -10px;
+  }
+
+  .loading-page .counter .line {
+    @apply border-2 border-primary block w-0;
+  }
+
+  .hover-dropdown:hover .show-dropdown {
+    @apply opacity-100 block;
+  }
+
+  .custom-progress {
+    @apply mt-40 h-6 relative overflow-visible bg-primary-progress rounded-[5px];
+  }
+
+  .input-style {
+    @apply py-13 px-20 h-50 w-full bg-white border border-primary-gray text-base xs-to-sm-max:text-md font-normal text-tertiary-title leading-[1.56] rounded-[8px];
+  }
+
+  .progress-bar {
+    @apply relative h-6 overflow-visible rounded-[5px] bg-secondary;
+  }
+
+  .urgent-tab.active {
+    @apply bg-secondary;
+  }
+
+  .collapse.custom-collapse:not(.collapse-close):has(> input[type="radio"]:checked) {
+    @apply border border-primary;
+  }
+
+  .blog-img::before {
+    content: "30 Jun 2023";
+    @apply text-primary-title text-md font-bold py-7 px-[20px] absolute bottom-[-20px] right-[20px] bg-secondary overflow-visible w-[72px] text-center z-[3] transition-bundle group-hover:bg-primary group-hover:text-white;
+  }
+
+  .donate-details .blog-img::before {
+    content: "55%";
+    @apply text-xl py-10 w-80;
+  }
+
+  .blog-img::after {
+    content: "";
+    @apply absolute bottom-[-20px] right-[13px] border-t-[20px] border-t-secondary-light border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent h-0 w-[86px] z-[2] transition-bundle group-hover:border-t-primary-deep;
+  }
+
+  .donate-details .blog-img::after {
+    @apply w-95;
+  }
+
+  .radio-success:checked,
+  .radio-success[aria-checked="true"] {
+    @apply border-primary bg-primary;
+  }
+
+  .radio:checked {
+    box-shadow: 0 0 0 3px var(--fallback-b1, oklch(var(--b1) / 1)) inset, 0 0 0 2px var(--fallback-b1, oklch(var(--b1) / 1)) inset;
+  }
+
+  .radio-success {
+    @apply border-primary;
+  }
+
+  .gallery-img::before {
+    content: "\eeaf";
+    font-family: "RemixIcon";
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-8xl text-secondary opacity-0 transition-opacity duration-300 z-[1] invisible group-hover:opacity-100 group-hover:visible;
+  }
+
+  .gallery-img::after {
+    content: "";
+    @apply absolute inset-0 bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 invisible group-hover:opacity-100 group-hover:visible;
+  }
+
+  .progressParent {
+    @apply fixed right-[30px] bottom-[70px] h-[36px] w-[36px] rounded-full cursor-pointer block shadow-progress z-[10000] opacity-0 invisible translate-y-[15px] transition-all duration-200;
+  }
+
+  .progressParent.rn-backto-top-active {
+    @apply opacity-100 visible translate-y-0;
+  }
+
+  .progressParent::after {
+    content: "\EA76";
+    font-family: "remixicon";
+    @apply absolute text-center text-[20px] h-[36px] w-[36px] top-0 left-0 cursor-pointer block z-[2] font-extrabold text-primary leading-[36px];
+  }
+
+  .progressParent:hover::after {
+    @apply opacity-100;
+  }
+
+  .progressParent svg path {
+    @apply fill-none;
+  }
+
+  .progressParent svg.backCircle path {
+    @apply stroke-primary box-border stroke-[4] transition-all duration-200 ease-linear;
+  }
+
+  .category-box .single-list.active {
+    @apply list-disc text-primary ml-16;
+  }
+
+  .category-box .single-list.active a {
+    @apply text-primary;
+  }
+
+  .bg-footer-bg-one::before {
+    content: "";
+    @apply absolute z-[-1] inset-0 bg-center bg-no-repeat bg-[url('/assets/images/gallery/footer-graph.png')] bg-auto opacity-100 transition-opacity duration-300 ease-linear;
+  }
+
+  .breadcrumb-section::before {
+    content: "";
+    @apply absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-bottom opacity-100 transition-opacity duration-300 ease-linear z-[-1] xs:opacity-0;
+  }
+
+  /* .breadcrumb-section .breadcrumb-item:last-child::before {
+    float: left;
+    padding-right: 8px;
+    content: "\ea6e";
+    font-family: "remixIcon";
+    font-size: 16px;
+    color: #fff;
+  } */
+  
+  .breadcrumb-section .breadcrumb-item:first-child::before {
+    content: "";
+    display: 'none';
+  }
+
+  .breadcrumb-section .breadcrumb-item::before {
+    float: left;
+    padding-right: 8px;
+    content: "\ea6e";
+    font-family: "remixIcon";
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .breadcrumb-item+.breadcrumb-item {
+    padding-left: 8px;
+  }
+
+  .pagination .page-item .page-link {
+    @apply w-50 xs:w-40 min-w-50 xs:min-w-40 h-50 xs:h-40 rounded-full bg-transparent flex items-center justify-center text-primary-title text-lg xs:text-base font-normal border border-primary-gray transition-all hover:bg-primary hover:border-transparent hover:text-white;
+  }
+
+  .pagination .page-item .page-link.next {
+    @apply w-70 xs:w-60 h-50 xs:h-40 rounded-[30px];
+  }
+
+  .pagination .page-item .page-link.active {
+    @apply bg-primary text-white border-none;
+  }
+
+  .hero-area-two::before {
+    content: "";
+    @apply absolute w-full h-full top-0 left-0 bg-center bg-no-repeat bg-[url('../../../assets/images/hero/hero-bg.png')] bg-cover opacity-10 transition-opacity duration-300 ease-linear;
+  }
+
+  .video-play-button {
+    @apply absolute z-[9] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full py-18 pr-20 pl-28;
+  }
+
+  .video-play-button::before {
+    content: "";
+    @apply absolute z-0 left-1/2 top-1/2 bg-primary -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full animate-pulse-border;
+  }
+
+  .about-area-three .video-play-button::before {
+    @apply bg-secondary;
+  }
+
+  .video-play-button::after {
+    content: "";
+    @apply absolute left-1/2 top-1/2 bg-primary -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full transition-all duration-200 ease-linear;
+  }
+
+  .about-area-three .video-play-button::after {
+    @apply bg-secondary;
+  }
+
+  .blog-section-three .brush-bg::before {
+    content: "30 Jun 2023";
+    @apply text-primary-title text-md font-bold py-7 px-14 absolute left-24 top-4 visible w-72 text-center z-[2];
+  }
+
+  .blog-details-img .brush-bg::before {
+    content: "30 Jun 2023";
+    @apply text-white text-md font-bold py-7 px-14 absolute left-24 top-4 visible w-72 text-center z-[2];
+  }
+  .listItem {
+    @apply inline-block text-tertiary-paragraph bg-white border border-primary-border font-medium text-base px-20 xs:px-9 py-11 xs:py-5 shadow-[0_1px_2px_rgba(16,_24,_40,_0.05)] mb-8 mr-9 xs:mr-3 cursor-pointer text-center rounded-[6px] transition-bundle hover:bg-primary hover:text-white hover:border-transparent;
+  }
+
+  
+
+  .listItem.active {
+    @apply bg-primary text-white border-transparent;
+  }
+
+  /* .listItem:last-child {
+    @apply mb-0 mr-0;
+  } */
+
+  .single-gateway-item {
+    @apply inline-block relative w-111 h-50 border border-[#E5E5E5] mr-15 mb-15 rounded-[6px] cursor-pointer;
+  }
+
+  .single-gateway-item::before {
+    @apply content-[""] absolute w-full h-full border border-transparent rounded-[6px];
+  }
+
+  .single-gateway-item::after {
+    @apply absolute -right-8 -top-10 w-17 h-17 leading-[17px] bg-primary rounded-full text-white transition-bundle text-[10px] text-center my-0 mx-auto z-[9];
+  }
+
+  .single-gateway-item.selected {
+    @apply relative bg-primary/5;
+  }
+
+  .single-gateway-item.selected::before {
+    @apply content-[""] border border-primary;
+  }
+
+  .single-gateway-item.selected::after {
+    content: "\eb7b";
+    font-weight: 900;
+    font-family: "remixIcon";
+  }
+
+  .single-gateway-item img {
+    @apply py-9 px-20 mr-12 block text-center w-full h-full;
+  }
+
+  .remember-me {
+    @apply relative cursor-pointer flex justify-between mb-30 items-center gap-20 flex-wrap;
+  }
+
+  .remember-me label {
+    @apply flex items-center pl-25 relative cursor-pointer;
+  }
+
+  .remember-me small {
+    @apply font-normal text-md leading-[20px] text-primary-title ml-8;
+  }
+
+  .checkbox-style {
+    @apply mr-10 absolute opacity-0 cursor-pointer h-0 w-0;
+  }
+
+  .checkbox-style:checked~.checkmark-style {
+    @apply bg-primary border-primary;
+  }
+
+  .checkbox-style:checked~.checkmark-style::after {
+    @apply block;
+  }
+
+  .checkmark-style {
+    @apply absolute top-0 left-0 w-20 h-20 leading-[20px] border-[1.5px] border-[#b1b5c4] mr-12 rounded-[4px];
+  }
+
+  .checkmark-style::after {
+    content: url("../images/icon/tick.png");
+    @apply absolute left-0 top-[-2px] hidden right-0 m-0 text-center;
+  }
+
+  .checkbox-success:checked,
+  .checkbox-success[aria-checked="true"] {
+    @apply border-primary bg-primary;
+    background-image: linear-gradient(-45deg, transparent 65%, #00715d 65.99%), linear-gradient(45deg, transparent 75%, #00715d 75.99%), linear-gradient(-45deg, #00715d 40%, transparent 40.99%),
+      linear-gradient(45deg, #00715d 30%, #fff 30.99%, #fff 40%, transparent 40.99%), linear-gradient(-45deg, #fff 50%, #00715d 50.99%);
+  }
+
+  .forget-section span {
+    @apply font-normal text-sm leading-[17px] text-right tracking-wider text-primary;
+  }
+
+  .video-play-button span {
+    display: block;
+    position: relative;
+    z-index: 3 !important;
+    width: 0;
+    height: 0;
+    border-left: 26px solid #fff;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+  }
+
+  .video-overlay {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: all ease 500ms;
+  }
+
+  .video-overlay.open {
+    position: fixed;
+    z-index: 9999;
+    opacity: 1;
+  }
+
+  .video-overlay-close {
+    position: absolute;
+    z-index: 9999;
+    top: 15px;
+    right: 20px;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 200ms;
+  }
+
+  .video-overlay-close:hover {
+    color: var(--primary);
+  }
+
+  .video-overlay iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+  }
+
+  .donate-section .donate-img::after {
+    content: "";
+    @apply absolute -bottom-8 right-13 border-t-[8px] border-t-secondary-light border-l-[7px] border-r-[7px] border-l-transparent border-r-transparent h-0 w-70 z-[2];
+  }
+
+  .donate-section .donate-img::before {
+    content: "55%";
+    @apply text-primary-title text-xl font-bold pt-5 pb-5 absolute -bottom-8 right-20 bg-secondary visible w-55 text-center z-[5];
+  }
+}
+
+.embla {
+  max-width: 100vw;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  width: 100%;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  min-width: 0;
+  max-width: 100%;
+}

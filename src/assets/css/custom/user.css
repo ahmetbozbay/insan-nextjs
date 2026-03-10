@@ -1,0 +1,41 @@
+.sidebar-users-dashboard-list .list .single {
+  @apply text-tertiary-title text-base font-medium leading-tight flex items-center gap-8 py-6 pl-10 pr-6 cursor-pointer transition-bundle capitalize border-l-[3px] border-transparent;
+}
+.sidebar-users-dashboard-list .list:hover .single {
+  @apply border-primary bg-white text-primary shadow-helpful-card;
+}
+.sidebar-users-dashboard-list .list .single i {
+  @apply text-lg min-w-35 max-w-35 h-35 text-center leading-[35px];
+}
+.sidebar-users-dashboard-list .list.active .single {
+  @apply border-primary bg-white text-primary shadow-helpful-card;
+}
+.sidebar-users-dashboard-list .list.active .single i {
+  @apply text-primary;
+}
+.sidebar-body-overlay {
+  @apply fixed h-screen w-full top-0 left-0 z-[-1] invisible opacity-0 bg-black/10 transition-bundle;
+}
+.sidebar-body-overlay.active {
+  @apply visible opacity-100 z-[9];
+}
+.data-show-table table thead th {
+  @apply p-16 font-medium text-base leading-[19px] text-primary-title border border-primary-border text-left whitespace-nowrap;
+}
+.data-show-table table tbody tr td {
+  @apply py-7 px-16 text-md text-primary-paragraph border border-primary-border whitespace-nowrap;
+}
+.sidebar-users-dashboard {
+    @apply block rounded-md p-24 text-center bg-section-bg-two;
+}
+@media (max-width: 991px) {
+  .sidebar-users-dashboard {
+    @apply w-320 fixed left-[-100%] z-[999] top-5 bottom-5 transition-bundle h-screen;
+  }
+  .sidebar-users-dashboard.active {
+    @apply visible opacity-100 left-0;
+  }
+}
+.profile-account-area .select2-container--default .select2-selection--single {
+ @apply bg-transparent rounded-lg border-primary-gray;
+}

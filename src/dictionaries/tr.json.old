@@ -1,0 +1,274 @@
+{
+    "header": {
+        "home": "Ana Sayfa",
+        "about": "Hakkında",
+        "projects": "Projeler",
+        "blog": "Blog",
+        "contact": "İletişim",
+        "donate": "Bağış yap"
+    },
+    "home": {
+        "hero": {
+            "title": "Evsizler İçin Umut Konuşun",
+            "subtitle": "Çocuklara ve yaşlılara bağış yapın",
+            "description": "Tıbbi araştırma, eğitim veya anatomi diseksiyonu için ölüm sonrası vücut bağışını içerir. Vücut bağışı, tıp biliminin ilerlemesinde hayati bir rol oynar",
+            "button_1": "Şimdi Bağış Yap",
+            "button_2": "Gönüllülere Katıl",
+            "count_1": "Yıllık Deneyim",
+            "count_2": "Binlerce gönüllü",
+            "count_3": "Dünya çapında Ofisler"
+        }
+    },
+    "services": {
+        "cards": [
+            {
+                "icon": "ri-shake-hands-line",
+                "title": "Destek",
+                "description": "Bağış yapacağınız hayır kurumunu seçerken araştırmanızı yapmak önemlidir."
+            },
+            {
+                "icon": "ri-graduation-cap-line",
+                "title": "Eğitim",
+                "description": "Bağış yapacağınız hayır kurumunu seçerken araştırmanızı yapmak önemlidir."
+            },
+            {
+                "icon": "ri-user-line",
+                "title": "Gönüllüler",
+                "description": "Bağış yapacağınız hayır kurumunu seçerken araştırmanızı yapmak önemlidir."
+            },
+            {
+                "icon": "ri-money-dollar-circle-line",
+                "title": "Bağışlar",
+                "description": "Bağış yapacağınız hayır kurumunu seçerken araştırmanızı yapmak önemlidir."
+            }
+        ]
+    },
+    "urgent": {
+        "title": "Acil durumlarda",
+        "description": "En iyi yol kendinizi bulmaktır"
+    },
+    "questions": {
+        "title": "Herhangi Bir Sorunuz Var mı?",
+        "description": "Hangi hayır kurumuna bağış yapacağınıza karar verirken, araştırmanızı yapmanız ve değerlerinizle ve ilgi alanlarınızla uyumlu bir kurum bulmanız önemlidir.",
+        "questions": [
+            {
+                "question": "Olası riskleri ve faydaları tarttınız mı?",
+                "answer": "Hangi hayır kurumuna bağış yapacağınıza karar verirken, araştırmanızı yapmanız önemlidir."
+            },
+            {
+                "question": "Paydaşlardan geri bildirimleri nasıl toplayacaksınız?",
+                "answer": ""
+            },
+            {
+                "question": "Dikkate alınması gereken herhangi bir sürdürülebilirlik veya etik husus var mı?",
+                "answer": ""
+            },
+            {
+                "question": "Dikkate alınması gereken herhangi bir sürdürülebilirlik veya etik husus var mı?",
+                "answer": ""
+            },
+            {
+                "question": "Dikkate alınması gereken herhangi bir sürdürülebilirlik veya etik husus var mı?",
+                "answer": ""
+            }
+        ]
+    },
+    "events": {
+        "title": "Etkinliğimiz",
+        "description": "Yaklaşan Etkinliklerimiz"
+    },
+    "testimonials": {
+        "title": "Referanslar",
+        "description": "İnsanlar Ne Diyor",
+        "testimonials": [
+            {
+                "name": "Robart Jonson",
+                "location": "Kanada, United",
+                "rating": 5,
+                "quote": "Bu sorular düşünce ve tartışmayı teşvik etmek için kullanılır. Karşı tarafın varsayımlarını sorgulamak için kullanılabilir, örneğin 'Gerçekten bunun doğru olduğunu mu düşünüyorsunuz?' veya farklı bir bakış açısı düşünmelerini sağlamak için, örneğin 'Bunu bu şekilde deneseydik ne olurdu?' gibi. Sorulacak spesifik sorular, bağlama ve aradığınız bilgiye bağlı olarak değişebilir."
+            },
+            {
+                "name": "Robart Jonson",
+                "location": "Kanada, United",
+                "rating": 5,
+                "quote": "Bu sorular düşünce ve tartışmayı teşvik etmek için kullanılır. Karşı tarafın varsayımlarını sorgulamak için kullanılabilir, örneğin 'Gerçekten bunun doğru olduğunu mu düşünüyorsunuz?' veya farklı bir bakış açısı düşünmelerini sağlamak için, örneğin 'Bunu bu şekilde deneseydik ne olurdu?' gibi. Sorulacak spesifik sorular, bağlama ve aradığınız bilgiye bağlı olarak değişebilir."
+            },
+            {
+                "name": "Robart Jonson",
+                "location": "Kanada, United",
+                "rating": 5,
+                "quote": "Bu sorular düşünce ve tartışmayı teşvik etmek için kullanılır. Karşı tarafın varsayımlarını sorgulamak için kullanılabilir, örneğin 'Gerçekten bunun doğru olduğunu mu düşünüyorsunuz?' veya farklı bir bakış açısı düşünmelerini sağlamak için, örneğin 'Bunu bu şekilde deneseydik ne olurdu?' gibi. Sorulacak spesifik sorular, bağlama ve aradığınız bilgiye bağlı olarak değişebilir."
+            }
+        ]
+    },
+    "home_blog": {
+        "title": "Blog",
+        "description": "Blogumuz ve Akışlarımız"
+    },
+    "about": {
+        "home": "Ana Sayfa",
+        "about": "Hakkımızda",
+        "title": "Hakkımızda",
+        "cards": [
+            {
+                "iconClass": "ri-hand-coin-line",
+                "bgClass": "bg-helpful-card-bg-one",
+                "title": "Tıbbi & Kan",
+                "textColorClass": "text-helpful-card-icon-one",
+                "description": "Hangi hayır kurumuna bağış yapacağınıza karar verirken, araştırma yapmanız önemlidir."
+            },
+            {
+                "iconClass": "ri-24-hours-line",
+                "bgClass": "bg-helpful-card-bg-two",
+                "title": "Sosyal Hizmet",
+                "textColorClass": "text-helpful-card-icon-two",
+                "description": "Hangi hayır kurumuna bağış yapacağınıza karar verirken, araştırma yapmanız önemlidir."
+            },
+            {
+                "iconClass": "ri-exchange-dollar-line",
+                "bgClass": "bg-helpful-card-bg-three",
+                "title": "Hayırseverlik Gönder",
+                "textColorClass": "text-helpful-card-icon-three",
+                "description": "Hangi hayır kurumuna bağış yapacağınıza karar verirken, araştırma yapmanız önemlidir."
+            },
+            {
+                "iconClass": "ri-book-open-line",
+                "bgClass": "bg-helpful-card-bg-four",
+                "title": "Eğitim",
+                "textColorClass": "text-helpful-card-icon-four",
+                "description": "Hangi hayır kurumuna bağış yapacağınıza karar verirken, araştırma yapmanız önemlidir."
+            }
+        ],
+        "about_section": {
+            "title": "Hakkımızda",
+            "subtitle": "Hastanemiz İçin En İyi Tedaviyiz",
+            "description": "Hangi hayır kurumuna bağış yapacağınıza karar verirken, araştırma yapmanız ve değerlerinizle uyumlu bir kurum bulmanız önemlidir.",
+            "imageUrl": "/assets/images/gallery/about-3.png",
+            "aboutItems": [
+                {
+                    "iconClass": "ri-hand-heart-line",
+                    "title": "Hızlı Bağış Toplama",
+                    "description": "Çocukların yoksulluktan kurtulmalarına yardımcı olmak için mesleki eğitim sağlayan programları finanse edin."
+                },
+                {
+                    "iconClass": "ri-user-line",
+                    "title": "Ekibimize Katılın",
+                    "description": "Çocukların yoksulluktan kurtulmalarına yardımcı olmak için mesleki eğitim sağlayan programları finanse edin."
+                }
+            ]
+        },
+        "team": {
+            "title": "Uzman Ekip",
+            "subtitle": "Gönüllü ekibimizle tanışın",
+            "teamMembers": [
+                {
+                    "imageUrl": "/assets/images/gallery/team-1.png",
+                    "name": "David Warner",
+                    "role": "Sir Bradman",
+                    "detailsUrl": "/volunteer-details",
+                    "socialLinks": [
+                        {
+                            "platform": "Google",
+                            "iconClass": "ri-google-fill",
+                            "url": "https://google.com"
+                        },
+                        {
+                            "platform": "Facebook",
+                            "iconClass": "ri-facebook-fill",
+                            "url": "https://facebook.com"
+                        },
+                        {
+                            "platform": "LinkedIn",
+                            "iconClass": "ri-linkedin-fill",
+                            "url": "https://linkedin.com"
+                        }
+                    ]
+                },
+                {
+                    "imageUrl": "/assets/images/gallery/team-2.png",
+                    "name": "Jony Bristow",
+                    "role": "Sir Bradman",
+                    "detailsUrl": "/volunteer-details",
+                    "socialLinks": [
+                        {
+                            "platform": "Google",
+                            "iconClass": "ri-google-fill",
+                            "url": "https://google.com"
+                        },
+                        {
+                            "platform": "Facebook",
+                            "iconClass": "ri-facebook-fill",
+                            "url": "https://facebook.com"
+                        },
+                        {
+                            "platform": "LinkedIn",
+                            "iconClass": "ri-linkedin-fill",
+                            "url": "https://linkedin.com"
+                        }
+                    ]
+                },
+                {
+                    "imageUrl": "/assets/images/gallery/team-3.png",
+                    "name": "David Warner",
+                    "role": "Sir Bradman",
+                    "detailsUrl": "/volunteer-details",
+                    "socialLinks": [
+                        {
+                            "platform": "Google",
+                            "iconClass": "ri-google-fill",
+                            "url": "https://google.com"
+                        },
+                        {
+                            "platform": "Facebook",
+                            "iconClass": "ri-facebook-fill",
+                            "url": "https://facebook.com"
+                        },
+                        {
+                            "platform": "LinkedIn",
+                            "iconClass": "ri-linkedin-fill",
+                            "url": "https://linkedin.com"
+                        }
+                    ]
+                }
+            ]
+        },
+        "testimonial": {
+            "title": "Referanslar",
+            "subtitle": "İnsanların Yorumlarını Almak Çok Sevindirici",
+            "description": "Eğer paranızı bağışlamak istiyorsanız, dileklerinizi tartışmak önemlidir. Bu sorular düşünce ve tartışmayı teşvik etmek için kullanılır.",
+            "testimonials": [
+                {
+                    "imageUrl": "/assets/images/gallery/testimonial.png",
+                    "name": "Robart Jonson",
+                    "role": "Yönetici",
+                    "rating": 5,
+                    "review": "Bu sorular düşünce ve tartışmayı teşvik etmek için kullanılır. Karşı tarafın varsayımlarını sorgulamak için kullanılabilir.",
+                    "profileImage": "/assets/images/gallery/testimonial-4.png"
+                }
+            ]
+        }
+    },
+    "projects": {
+        "home": "Ana Sayfa",
+        "projects": "Projeler",
+        "title": "Projeler"
+    },
+    "blog": {
+        "home": "Ana Sayfa",
+        "blog": "Blog",
+        "title": "Blog"
+    },
+    "contact": {
+        "home": "Ana Sayfa",
+        "contact": "İletişim",
+        "title": "İletişim"
+    },
+    "footer": {
+        "donate": "Bağış Yap",
+        "profile": "Profil",
+        "description": "Hayır kurumu, çocuklar, kadınlar ve yaşlılar gibi ihtiyaç sahiplerine yardımcı olan kar amacı gütmeyen bir kuruluştur. Daha az şanslı olanlara yiyecek, barınma, eğitim ve sağlık hizmetleri sağlıyoruz.",
+        "support": "Destek",
+        "projects": "Projeler",
+        "copy": "Telif Hakkı © 2025 Insan Dernigi. Tüm hakları saklıdır."
+    }
+}

@@ -1,0 +1,274 @@
+{
+    "header": {
+        "home": "الرئيسية",
+        "about": "من نحن",
+        "projects": "المشاريع",
+        "blog": "المدونة",
+        "contact": "اتصل بنا",
+        "donate": "تبرع"
+    },
+    "home": {
+        "hero": {
+            "title": "تحدث الأمل للمشردين",
+            "subtitle": "تبرع للأطفال وكبار السن",
+            "description": "يشمل التبرع بالجسم بعد الوفاة للبحث الطبي، التعليم، أو التشريح. يلعب التبرع بالجسم دورًا مهمًا في تطوير العلوم الطبية",
+            "button_1": "تبرع الآن",
+            "button_2": "انضم إلى المتطوعين",
+            "count_1": "سنوات من الخبرة",
+            "count_2": "آلاف المتطوعين",
+            "count_3": "مكاتب حول العالم"
+        }
+    },
+    "services": {
+        "cards": [
+            {
+                "icon": "ri-shake-hands-line",
+                "title": "الدعم",
+                "description": "عند اختيار المؤسسة الخيرية التي تريد التبرع لها، من المهم إجراء بحثك."
+            },
+            {
+                "icon": "ri-graduation-cap-line",
+                "title": "التعليم",
+                "description": "عند اختيار المؤسسة الخيرية التي تريد التبرع لها، من المهم إجراء بحثك."
+            },
+            {
+                "icon": "ri-user-line",
+                "title": "المتطوعون",
+                "description": "عند اختيار المؤسسة الخيرية التي تريد التبرع لها، من المهم إجراء بحثك."
+            },
+            {
+                "icon": "ri-money-dollar-circle-line",
+                "title": "التبرعات",
+                "description": "عند اختيار المؤسسة الخيرية التي تريد التبرع لها، من المهم إجراء بحثك."
+            }
+        ]
+    },
+    "urgent": {
+        "title": "في الحالات العاجلة",
+        "description": "أفضل طريقة هي أن تجد نفسك"
+    },
+    "questions": {
+        "title": "أي أسئلة",
+        "description": "عند اتخاذ قرار بشأن الجمعية الخيرية التي ستتبرع لها، من المهم أن تقوم بالبحث والعثور على واحدة تتماشى مع قيمك واهتماماتك.",
+        "questions": [
+            {
+                "question": "هل قمت بموازنة المخاطر والفوائد المحتملة؟",
+                "answer": "عند اتخاذ قرار بشأن الجمعية الخيرية التي ستتبرع لها، من المهم أن تقوم بالبحث."
+            },
+            {
+                "question": "كيف ستجمع ملاحظات أصحاب المصلحة؟",
+                "answer": ""
+            },
+            {
+                "question": "هل هناك أي اعتبارات تتعلق بالاستدامة أو الأخلاقيات يجب أخذها في الاعتبار؟",
+                "answer": ""
+            },
+            {
+                "question": "هل هناك أي اعتبارات تتعلق بالاستدامة أو الأخلاقيات يجب أخذها في الاعتبار؟",
+                "answer": ""
+            },
+            {
+                "question": "هل هناك أي اعتبارات تتعلق بالاستدامة أو الأخلاقيات يجب أخذها في الاعتبار؟",
+                "answer": ""
+            }
+        ]
+    },
+    "events": {
+        "title": "فعاليتنا",
+        "description": "فعالياتنا القادمة"
+    },
+    "testimonials": {
+        "title": "الشهادات",
+        "description": "ماذا يقول الناس",
+        "testimonials": [
+            {
+                "name": "روبرت جونسون",
+                "location": "يونايتد، كندا",
+                "rating": 5,
+                "quote": "تُستخدم هذه الأسئلة لتحفيز التفكير والنقاش. يمكن استخدامها لتحدي افتراضات الشخص الآخر، مثل 'هل تعتقد حقًا أن هذا صحيح؟'، أو لجعلهم يفكرون من منظور مختلف، مثل 'ماذا لو جربناها بهذه الطريقة؟'. قد تختلف الأسئلة المحددة التي تطرحها بناءً على السياق والمعلومات التي تبحث عنها."
+            },
+            {
+                "name": "روبرت جونسون",
+                "location": "يونايتد، كندا",
+                "rating": 5,
+                "quote": "تُستخدم هذه الأسئلة لتحفيز التفكير والنقاش. يمكن استخدامها لتحدي افتراضات الشخص الآخر، مثل 'هل تعتقد حقًا أن هذا صحيح؟'، أو لجعلهم يفكرون من منظور مختلف، مثل 'ماذا لو جربناها بهذه الطريقة؟'. قد تختلف الأسئلة المحددة التي تطرحها بناءً على السياق والمعلومات التي تبحث عنها."
+            },
+            {
+                "name": "روبرت جونسون",
+                "location": "يونايتد، كندا",
+                "rating": 5,
+                "quote": "تُستخدم هذه الأسئلة لتحفيز التفكير والنقاش. يمكن استخدامها لتحدي افتراضات الشخص الآخر، مثل 'هل تعتقد حقًا أن هذا صحيح؟'، أو لجعلهم يفكرون من منظور مختلف، مثل 'ماذا لو جربناها بهذه الطريقة؟'. قد تختلف الأسئلة المحددة التي تطرحها بناءً على السياق والمعلومات التي تبحث عنها."
+            }
+        ]
+    },
+    "home_blog": {
+        "title": "مدونة",
+        "description": "مدونتنا والتحديثات"
+    },
+    "about": {
+        "home": "الرئيسية",
+        "about": "معلومات عنا",
+        "title": "معلومات عنا",
+        "cards": [
+            {
+                "iconClass": "ri-hand-coin-line",
+                "bgClass": "bg-helpful-card-bg-one",
+                "title": "الطب والدم",
+                "textColorClass": "text-helpful-card-icon-one",
+                "description": "عند اتخاذ قرار بشأن الجمعية الخيرية التي ستتبرع لها، من المهم أن تقوم بالبحث."
+            },
+            {
+                "iconClass": "ri-24-hours-line",
+                "bgClass": "bg-helpful-card-bg-two",
+                "title": "الخدمة الاجتماعية",
+                "textColorClass": "text-helpful-card-icon-two",
+                "description": "عند اتخاذ قرار بشأن الجمعية الخيرية التي ستتبرع لها، من المهم أن تقوم بالبحث."
+            },
+            {
+                "iconClass": "ri-exchange-dollar-line",
+                "bgClass": "bg-helpful-card-bg-three",
+                "title": "إرسال تبرع",
+                "textColorClass": "text-helpful-card-icon-three",
+                "description": "عند اتخاذ قرار بشأن الجمعية الخيرية التي ستتبرع لها، من المهم أن تقوم بالبحث."
+            },
+            {
+                "iconClass": "ri-book-open-line",
+                "bgClass": "bg-helpful-card-bg-four",
+                "title": "التعليم",
+                "textColorClass": "text-helpful-card-icon-four",
+                "description": "عند اتخاذ قرار بشأن الجمعية الخيرية التي ستتبرع لها، من المهم أن تقوم بالبحث."
+            }
+        ],
+        "about_section": {
+            "title": "معلومات عنا",
+            "subtitle": "نحن الأفضل لعلاج مستشفانا",
+            "description": "عند اتخاذ قرار بشأن الجمعية الخيرية التي ستتبرع لها، من المهم أن تقوم بالبحث والعثور على واحدة تتماشى مع قيمك واهتماماتك.",
+            "imageUrl": "/assets/images/gallery/about-3.png",
+            "aboutItems": [
+                {
+                    "iconClass": "ri-hand-heart-line",
+                    "title": "جمع التبرعات بسرعة",
+                    "description": "قم بتمويل البرامج التي تساعد الأطفال على الهروب من الفقر من خلال توفير التدريب المهني."
+                },
+                {
+                    "iconClass": "ri-user-line",
+                    "title": "انضم إلى فريقنا",
+                    "description": "قم بتمويل البرامج التي تساعد الأطفال على الهروب من الفقر من خلال توفير التدريب المهني."
+                }
+            ]
+        },
+        "team": {
+            "title": "الفريق الخبير",
+            "subtitle": "تعرف على فريق المتطوعين لدينا",
+            "teamMembers": [
+                {
+                    "imageUrl": "/assets/images/gallery/team-1.png",
+                    "name": "ديفيد وارنر",
+                    "role": "السير برادمان",
+                    "detailsUrl": "/volunteer-details",
+                    "socialLinks": [
+                        {
+                            "platform": "Google",
+                            "iconClass": "ri-google-fill",
+                            "url": "https://google.com"
+                        },
+                        {
+                            "platform": "Facebook",
+                            "iconClass": "ri-facebook-fill",
+                            "url": "https://facebook.com"
+                        },
+                        {
+                            "platform": "LinkedIn",
+                            "iconClass": "ri-linkedin-fill",
+                            "url": "https://linkedin.com"
+                        }
+                    ]
+                },
+                {
+                    "imageUrl": "/assets/images/gallery/team-2.png",
+                    "name": "جوني بريستو",
+                    "role": "السير برادمان",
+                    "detailsUrl": "/volunteer-details",
+                    "socialLinks": [
+                        {
+                            "platform": "Google",
+                            "iconClass": "ri-google-fill",
+                            "url": "https://google.com"
+                        },
+                        {
+                            "platform": "Facebook",
+                            "iconClass": "ri-facebook-fill",
+                            "url": "https://facebook.com"
+                        },
+                        {
+                            "platform": "LinkedIn",
+                            "iconClass": "ri-linkedin-fill",
+                            "url": "https://linkedin.com"
+                        }
+                    ]
+                },
+                {
+                    "imageUrl": "/assets/images/gallery/team-3.png",
+                    "name": "ديفيد وارنر",
+                    "role": "السير برادمان",
+                    "detailsUrl": "/volunteer-details",
+                    "socialLinks": [
+                        {
+                            "platform": "Google",
+                            "iconClass": "ri-google-fill",
+                            "url": "https://google.com"
+                        },
+                        {
+                            "platform": "Facebook",
+                            "iconClass": "ri-facebook-fill",
+                            "url": "https://facebook.com"
+                        },
+                        {
+                            "platform": "LinkedIn",
+                            "iconClass": "ri-linkedin-fill",
+                            "url": "https://linkedin.com"
+                        }
+                    ]
+                }
+            ]
+        },
+        "testimonial": {
+            "title": "الشهادات",
+            "subtitle": "من الرائع جدًا الحصول على آراء الناس",
+            "description": "إذا كنت مهتمًا بالتبرع بأموالك، فمن المهم مناقشة رغباتك. تُستخدم هذه الأسئلة لتحفيز التفكير والنقاش.",
+            "testimonials": [
+                {
+                    "imageUrl": "/assets/images/gallery/testimonial.png",
+                    "name": "روبرت جونسون",
+                    "role": "مدير",
+                    "rating": 5,
+                    "review": "تُستخدم هذه الأسئلة لتحفيز التفكير والنقاش. يمكن استخدامها لتحدي افتراضات الشخص الآخر.",
+                    "profileImage": "/assets/images/gallery/testimonial-4.png"
+                }
+            ]
+        }
+    },
+    "projects": {
+        "home": "الرئيسية",
+        "projects": "المشاريع",
+        "title": "المشاريع"
+    },
+    "blog": {
+        "home": "الرئيسية",
+        "blog": "مدونة",
+        "title": "مدونة"
+    },
+    "contact": {
+        "home": "الرئيسية",
+        "contact": "اتصل بنا",
+        "title": "اتصل بنا"
+    },
+    "footer": {
+        "donate": "تبرع",
+        "profile": "الملف الشخصي",
+        "description": "المنظمة الخيرية هي منظمة غير ربحية تساعد المحتاجين، مثل الأطفال والنساء وكبار السن. نحن نوفر الطعام والمأوى والتعليم والرعاية الصحية لمن هم أقل حظًا.",
+        "support": "الدعم",
+        "projects": "المشاريع",
+        "copy": "حقوق النشر © 2025 Insan Dernigi. جميع الحقوق محفوظة."
+    }
+}

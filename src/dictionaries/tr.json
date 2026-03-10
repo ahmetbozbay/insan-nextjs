@@ -1,0 +1,396 @@
+{
+  "header": {
+    "home": "Ana Sayfa",
+    "about": "Kurumsal",
+    "about_children": [
+      {
+        "label": "Hakkımızda",
+        "href": "/about/about-us"
+      },
+      {
+        "label": "Misyon – Vizyon",
+        "href": "/about/mission-vision"
+      },
+      {
+        "label": "Yetkili Kurullar",
+        "href": "/about/board-of-directors"
+      },
+      {
+        "label": "Tüzük",
+        "href": "/about/bylaws"
+      },
+      {
+        "label": "Çalışma İlkelerimiz",
+        "href": "/about/our-working-principles"
+      },
+      {
+        "label": "Hesap Numaraları",
+        "href": "/about/account-numbers"
+      },
+      {
+        "label": "Paydaş Derneklerimiz",
+        "href": "/about/our-partner-associations"
+      },
+      {
+        "label": "Sık Sorulan Sorular",
+        "href": "/about/frequently-asked-questions"
+      },
+      {
+        "label": "Belgeler",
+        "href": "/about/documents"
+      },
+      {
+        "label": "KVKK",
+        "href": "/about/kvkk"
+      }
+    ],
+    "projects": "Neler Yapıyoruz",
+    "blog": "Haberler",
+    "contact": "İletişim",
+    "donate": "Bağış Yap"
+  },
+  "home": {
+    "hero": {
+      "title": "Savunmasızlar İçin Umut Konuşun",
+      "subtitle": "Çocukları, Aileleri ve Yaşlıları Destekleyin",
+      "description": "Temel insani yardım programlarına katkıda bulunarak fark yaratmaya katılın. Bağışlarınız, ihtiyaç sahiplerine gıda, temiz su, eğitim, sağlık hizmetleri ve acil yardım sağlayarak yaşamları güçlendirir ve umutları yeniden canlandırır.",
+      "button_1": "Şimdi Bağış Yap",
+      "button_2": "Daha Fazla Bilgi",
+      "count_1": "Yıllık Deneyim",
+      "count_2": "Binlerce Gönüllü",
+      "count_3": "Dünya Çapında Ofisler"
+    }
+  },
+  "services": {
+    "cards": [
+      {
+        "icon": "ri-shake-hands-line",
+        "title": "İnsani Yardım",
+        "description": "Gıda paketleri, temiz su ve mali yardım dağıtarak kritik ihtiyaçları karşılıyoruz. Birlikte, yaşamları yükseltiyor ve onuru geri kazandırıyoruz."
+      },
+      {
+        "icon": "ri-graduation-cap-line",
+        "title": "Eğitim Desteği",
+        "description": "Eğitim, kalkınmanın temel taşıdır. 500'den fazla öğrenciye harç desteği, öğrenim materyalleri ve ders dışı destek sağlıyoruz, daha parlak bir gelecek yetiştiriyoruz."
+      },
+      {
+        "icon": "ri-user-line",
+        "title": "Gönüllü Katılımı",
+        "description": "Küresel gönüllü ağımız, girişimlerimizin bel kemiğidir. Yardım dağıtımlarını organize etmekten eğitim ve sağlık hizmetlerini desteklemeye kadar, onların bağlılığı misyonumuzu ileri taşır."
+      },
+      {
+        "icon": "ri-money-dollar-circle-line",
+        "title": "Sağlık ve Refah",
+        "description": "Tıbbi ekipman, tekerlekli sandalyeler ve doğum öncesi bakım sağlayarak sağlık hizmetlerine erişimi garanti altına alıyor, savunmasız topluluklar için güvenliği ve sağlığı önceliklendiriyoruz."
+      }
+    ]
+  },
+  "urgent": {
+    "title": "Acil Durumlarda",
+    "description": "Başkalarına yardım etmenin en iyi yolu, kendilerini bulmalarına yardımcı olmaktır",
+    "project_details": "Proje Detaylar ",
+    "donate_now": "Bağış Yap"
+  },
+  "questions": {
+    "title": "Herhangi Bir Sorunuz Var mı?",
+    "description": "Bunların haricinde merak ettiğiniz konularla ilgili sorularınızı, iletişim bölümünden bizimle irtibata geçerek sorabilirsiniz.",
+    "questions": [
+      {
+        "question": "İhtiyaç sahibi insanlar nasıl belirleniyor?",
+        "answer": "Çalışma yaptığımız bölgelerdeki temsilcilerimiz ve onların denetimindeki gönüllülerimiz aracılığıyla yerinde inceleme yaparak tespit etmekteyiz."
+      },
+      {
+        "question": "Yardım yaparken önceliğiniz nedir?",
+        "answer": "Temel ilkelerimiz doğrultusunda hiçbir ayrım yapmadan gerçek ihtiyaç sahibi olması esasıdır. Bu doğrultuda temsilcilerimiz ivedilikle tüm talepleri yerinde inceleyip kontrolünü gerçekleştirdikten sonra yardımlarımızı gerçekleştirmekteyiz."
+      },
+      {
+        "question": "Yardım öncesi ve sonrasında denetleme yapılıyor mu?",
+        "answer": "Oluşabilecek suistimalleri gidermek ve sürekliliği sağlamak için yardım yapıldıktan sonra temsilcilerimiz tarafından yardım ulaştırılan ailelere belirli aralıklarla ziyaretler yapılıyor."
+      },
+      {
+        "question": "Banka aracılığıyla ya da online bağış yoluyla yaptığım bağışın ulaşıp ulaşmadığını nasıl öğrenebilirim?",
+        "answer": "Bağışınızı yaparken bağış konusu, cep telefonu numarası ya da e-mail adresinizi bildirmeniz durumunda bağış sonucunuz size iletilir."
+      },
+      {
+        "question": "Derneğinizin faaliyetlerini nasıl takip edebilirim?",
+        "answer": "Derneğimizin sosyal medya hesaplarını takip ederek yapılan faaliyetleri sürekli görebilirsiniz."
+      },
+      {
+        "question": "Yurtdışından nasıl bağış yapabilirim?",
+        "answer": "Yurt dışından göndereceğiniz bağışlarınızı euro veya dolar hesaplarımıza SWIFT kodu ile birlikte EFT yapabilirsiniz. Ya da kredi kartı ile online bağış yapabilirsiniz."
+      },
+      {
+        "question": "Şartlı bağış yapabilir miyim?",
+        "answer": "Güncel projelerimizle ilgili bağış açıklamanızda belirtmeniz halinde şartlı bağış yapabilirsiniz. Bunun haricindeki alanlarla ilgili derneğimizle iletişime geçebilirsiniz."
+      },
+      {
+        "question": "Güncel en acil yardım alanını nasıl öğrenebilirim?",
+        "answer": "Ana sayfamızdaki duyurular kısmı güncel ve acil alanları göstermektedir. Bu alanlara bağış yapabilirsiniz."
+      },
+      {
+        "question": "Derneğinizin siyasi parti, cemaat bağlantısı var mı?",
+        "answer": "Derneğimizin herhangi bir siyasi parti, cemaat ya da ideolojik hareket ile bağı bulunmamaktadır."
+      },
+      {
+        "question": "Sadece yurtdışı yardımları mı yapılıyor?",
+        "answer": "Kuruluş amacı itibari ile ülkemiz başta olmak üzere tüm dünyadaki ihtiyaç sahiplerine destek olmak ana gayemizdir. Lakin Gazze’de yaşanan süreç ağırlıklı çalışmalarımızı oraya yapmaya yönlendirmiştir."
+      },
+      {
+        "question": "Ayrıca öğrenmek istediğiniz konularla ilgili nasıl bilgi alabilirim?",
+        "answer": "İletişim bölümünden bizlere ulaşmanız halinde gerekli bilgilendirmeler yapılmaktadır."
+      }
+    ]    
+  },
+  "events": {
+    "title": "Etkinliklerimiz",
+    "description": "Yaklaşan Etkinliklerimiz"
+  },
+  "testimonials": {
+    "title": "Referanslar",
+    "description": "İnsanlar Ne Diyor?",
+    "testimonials": [
+      {
+        "name": "Ahmad Al-Farouq",
+        "location": "Filistin, Gazze",
+        "rating": 5,
+        "quote": "Bu organizasyon, topluluğumuzdaki yaşamları gerçekten değiştirdi. Gıda dağıtım programı, zor bir dönemde ailemin yemek yemesini sağladı. Onların bağlılığı ve özeni bizim için dünyalar kadar değerli."
+      },
+      {
+        "name": "Fatima Al-Mansouri",
+        "location": "Filistin, Gazze",
+        "rating": 5,
+        "quote": "Çocuklarıma sağlanan eğitim desteği için minnettarım. Artık eğitimlerine devam etmek için kaynaklara sahipler ve bu bize daha parlak bir gelecek için umut verdi. Yardımseverliğiniz ve cömertliğiniz için teşekkür ederim."
+      },
+      {
+        "name": "Youssef Al-Zahrani",
+        "location": "Filistin, Gazze",
+        "rating": 5,
+        "quote": "Sağlık yardım programı annemin hayatını kurtardı. İhtiyaç duyduğumuz zamanda aldığımız tıbbi destek bir lütuftu. Çabaları için ne kadar teşekkür etsem azdır."
+      }
+    ]
+  },
+  "home_blog": {
+    "title": "Haberler",
+    "description": "Blogumuz ve Haberler"
+  },
+  "about": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "title": "Hakkımızda",
+    "cards": [
+      {
+        "title": "Hakkımızda",
+        "iconClass": "ix:about",
+        "bgClass": "bg-helpful-card-bg-one",
+        "textColorClass": "text-helpful-card-icon-one",
+        "href": "/about/about-us"
+      },
+      {
+        "title": "Misyon – Vizyon",
+        "iconClass": "material-symbols:other-admission-rounded",
+        "bgClass": "bg-helpful-card-bg-two",
+        "textColorClass": "text-helpful-card-icon-two",
+        "href": "/about/mission-vision"
+      },
+      {
+        "title": "Yetkili Kurullar",
+        "iconClass": "fa:users",
+        "bgClass": "bg-helpful-card-bg-three",
+        "textColorClass": "text-helpful-card-icon-three",
+        "href": "/about/board-of-directors"
+      },
+      {
+        "title": "Tüzük",
+        "iconClass": "lsicon:contract-across-outline",
+        "bgClass": "bg-helpful-card-bg-one",
+        "textColorClass": "text-helpful-card-icon-one",
+        "href": "/about/bylaws"
+      },
+      {
+        "title": "Çalışma İlkelerimiz",
+        "iconClass": "material-symbols:balance",
+        "bgClass": "bg-helpful-card-bg-two",
+        "textColorClass": "text-helpful-card-icon-two",
+        "href": "/about/our-working-principles"
+      },
+      {
+        "title": "Hesap Numaraları",
+        "iconClass": "ic:outline-account-balance",
+        "bgClass": "bg-helpful-card-bg-three",
+        "textColorClass": "text-helpful-card-icon-three",
+        "href": "/about/account-numbers"
+      },
+      {
+        "title": "Paydaş Derneklerimiz",
+        "iconClass": "material-symbols:partner-exchange",
+        "bgClass": "bg-helpful-card-bg-four",
+        "textColorClass": "text-helpful-card-icon-four",
+        "href": "/about/our-partner-associations"
+      },
+      {
+        "title": "Sık Sorulan Sorular",
+        "iconClass": "mdi:frequently-asked-questions",
+        "bgClass": "bg-helpful-card-bg-one",
+        "textColorClass": "text-helpful-card-icon-one",
+        "href": "/about/frequently-asked-questions"
+      },
+      {
+        "title": "Belgeler",
+        "iconClass": "oui:documents",
+        "bgClass": "bg-helpful-card-bg-two",
+        "textColorClass": "text-helpful-card-icon-two",
+        "href": "/about/documents"
+      },
+      {
+        "title": "Basında Biz",
+        "iconClass": "fluent:document-person-16-filled",
+        "bgClass": "bg-helpful-card-bg-three",
+        "textColorClass": "text-helpful-card-icon-three",
+        "href": "/about/press-coverage"
+      }
+    ],
+    "about_section": {
+      "title": "Hakkımızda",
+      "subtitle": "Bir Yaşamda Bir Fark Yaratmak",
+      "description": "2023 yılında kurulan bir insani yardım kuruluşuyuz. Dezavantajlı topluluklara umut ve yardım getirmeye adanmışız. Kapsamlı programlarımız aracılığıyla, acil ihtiyaçları karşılayarak ve sürdürülebilir kalkınmayı destekleyerek bireyleri ve aileleri güçlendiriyoruz.",
+      "imageUrl": "/assets/images/gallery/about-3.png",
+      "aboutItems": [
+        {
+          "iconClass": "ri-hand-heart-line",
+          "title": "Hızlı Fon Toplama",
+          "description": "Krizdeki topluluklara gıda paketleri, temiz su ve temel tıbbi malzemeler sağlamak için kaynakları verimli bir şekilde seferber ediyoruz."
+        },
+        {
+          "iconClass": "ri-user-line",
+          "title": "Ekibimize Katılın",
+          "description": "Eğitim, sağlık ve kalkınma girişimleriyle kalıcı değişim yaratmaya kendini adamış küresel bir gönüllü ağının parçası olun."
+        }
+      ]
+    },
+    "team": {
+      "title": "Uzman Ekibimiz",
+      "subtitle": "Gönüllü Ekibimizle Tanışın",
+      "teamMembers": [
+        {
+          "imageUrl": "/assets/images/gallery/team-1.png",
+          "name": "David Warner",
+          "role": "Sir Bradman",
+          "detailsUrl": "/volunteer-details",
+          "socialLinks": [
+            {
+              "platform": "Google",
+              "iconClass": "ri-google-fill",
+              "url": "https://google.com"
+            },
+            {
+              "platform": "Facebook",
+              "iconClass": "ri-facebook-fill",
+              "url": "https://facebook.com"
+            },
+            {
+              "platform": "LinkedIn",
+              "iconClass": "ri-linkedin-fill",
+              "url": "https://linkedin.com"
+            }
+          ]
+        },
+        {
+          "imageUrl": "/assets/images/gallery/team-2.png",
+          "name": "Jony Bristow",
+          "role": "Sir Bradman",
+          "detailsUrl": "/volunteer-details",
+          "socialLinks": [
+            {
+              "platform": "Google",
+              "iconClass": "ri-google-fill",
+              "url": "https://google.com"
+            },
+            {
+              "platform": "Facebook",
+              "iconClass": "ri-facebook-fill",
+              "url": "https://facebook.com"
+            },
+            {
+              "platform": "LinkedIn",
+              "iconClass": "ri-linkedin-fill",
+              "url": "https://linkedin.com"
+            }
+          ]
+        },
+        {
+          "imageUrl": "/assets/images/gallery/team-3.png",
+          "name": "David Warner",
+          "role": "Sir Bradman",
+          "detailsUrl": "/volunteer-details",
+          "socialLinks": [
+            {
+              "platform": "Google",
+              "iconClass": "ri-google-fill",
+              "url": "https://google.com"
+            },
+            {
+              "platform": "Facebook",
+              "iconClass": "ri-facebook-fill",
+              "url": "https://facebook.com"
+            },
+            {
+              "platform": "LinkedIn",
+              "iconClass": "ri-linkedin-fill",
+              "url": "https://linkedin.com"
+            }
+          ]
+        }
+      ]
+    },
+    "testimonial": {
+      "title": "Referanslar",
+      "subtitle": "İnsanlar Bizim Hakkımızda Ne Diyor?",
+      "description": "Sayısız bireyin ve topluluğun yaşamına dokunmaktan onur duyuyoruz. Programlarımızın etkisini ilk elden deneyimleyenlerden dinleyin.",
+      "testimonials": [
+        {
+          "imageUrl": "/assets/images-used/about/3.png",
+          "name": "Ahmad Al-Farouq",
+          "role": "",
+          "rating": 5,
+          "review": "Onların kararlılığı ve şefkati, zor bir dönemde aileme umut verdi. Aldığımız destek, hayatımızı daha iyi hale getirdi.",
+          "profileImage": "/assets/images/gallery/testimonial-4.png"
+        }
+      ]
+    }
+  },
+  "projects": {
+    "home": "Ana Sayfa",
+    "projects": "Neler Yapıyoruz",
+    "title": "Neler Yapıyoruz"
+  },
+  "blog": {
+    "home": "Ana Sayfa",
+    "blog": "Haberler",
+    "readMore": "Devamını oku",
+    "title": "Haberler"
+  },
+  "contact": {
+    "home": "Ana Sayfa",
+    "contact": "İletişim",
+    "title": "İletişim",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "address": "Adres",
+    "full_name": "Tam Adı",
+    "message": "Mesaj",
+    "send_message": "Mesaj Gönder"
+  },
+  "pay": {
+    "home": "Ana Sayfa",
+    "pay": "Bağış",
+    "title": "Bağış"
+  },
+  "footer": {
+    "donate": "Bağış Yap",
+    "profile": "Profil",
+    "description": "En genel haliyle faaliyet gösterdiğimiz bölgelerdeki dezavantajlı kesimleri desteklemeyi, kapsamlı insani yardım ve kalkınma programları aracılığıyla çalışmayı, yerel ve uluslararası sivil toplum kuruluşları ile işbirliği halinde çalışmalar yapmayı hedefimiz olarak belirliyoruz",
+    "support": "Destek",
+    "projects": "Neler Yapıyoruz",
+    "copy": "Telif Hakkı © 2025 insanların hakkı. Tüm hakları saklıdır."
+  }
+}

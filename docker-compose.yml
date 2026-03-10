@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    build: .
+    container_name: nextjs-node22
+    ports:
+      - "3000:3000"           # Localhost:Container
+    volumes:
+      - .:/app                # Mount your code for live reload
+      - /app/node_modules     # Avoid overwriting node_modules
+    environment:
+      - NODE_ENV=development

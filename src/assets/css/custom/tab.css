@@ -1,0 +1,15 @@
+.setting-tab {
+    @apply flex flex-wrap
+}
+.setting-tab .nav-item .nav-link {
+    @apply py-8 px-11 bg-none border-b-2 border-secondary-border mb-14 rounded-none transition-bundle; 
+}
+.setting-tab .nav-item .nav-link span {
+    @apply font-medium text-base text-primary-paragraph capitalize;
+}
+.setting-tab .nav-item.active .nav-link {
+    @apply bg-none text-primary border-b-2 border-primary;
+}
+.setting-tab .nav-item.active .nav-link span {
+    @apply  text-primary;
+}

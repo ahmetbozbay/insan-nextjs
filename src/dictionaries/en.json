@@ -1,0 +1,380 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "about_children": [
+      {
+        "label": "About Us",
+        "href": "/about/about-us"
+      },
+      {
+        "label": "Mission – Vision",
+        "href": "/about/mission-vision"
+      },
+      {
+        "label": "Board of Directors",
+        "href": "/about/board-of-directors"
+      },
+      {
+        "label": "Audit Committee",
+        "href": "/about/audit-committee"
+      },
+      {
+        "label": "Bylaws",
+        "href": "/about/bylaws"
+      },
+      {
+        "label": "Our Working Principles",
+        "href": "/about/our-working-principles"
+      },
+      {
+        "label": "Account Numbers",
+        "href": "/about/account-numbers"
+      },
+      {
+        "label": "Our Partner Associations",
+        "href": "/about/our-partner-associations"
+      },
+      {
+        "label": "Frequently Asked Questions",
+        "href": "/about/frequently-asked-questions"
+      },
+      {
+        "label": "Documents",
+        "href": "/about/documents"
+      },
+      {
+        "label": "Press Coverage",
+        "href": "/about/press-coverage"
+      }
+    ],
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
+    "donate": "Donate"
+  },
+  "home": {
+    "hero": {
+      "title": "Speak Hope for the Vulnerable",
+      "subtitle": "Support Children, Families & Senior Citizens",
+      "description": "Join us in making a difference by contributing to essential humanitarian aid programs. Your donations help provide food, clean water, education, healthcare, and emergency assistance to those in need, empowering lives and restoring hope.",
+      "button_1": "Donate Now",
+      "button_2": "Learn more",
+      "count_1": "Years of Experience",
+      "count_2": "Thousands volunteers",
+      "count_3": "World wide Offices"
+    }
+  },
+  "services": {
+    "cards": [
+      {
+        "icon": "ri-shake-hands-line",
+        "title": "Humanitarian Aid",
+        "description": "We address critical needs by distributing food packages, clean water, and financial assistance to disadvantaged families. Together, we uplift lives and restore dignity."
+      },
+      {
+        "icon": "ri-graduation-cap-line",
+        "title": "Educational Support",
+        "description": "Education is the cornerstone of development. We provide tuition assistance, learning materials, and extracurricular support to over 500 students, nurturing a brighter tomorrow."
+      },
+      {
+        "icon": "ri-user-line",
+        "title": "Volunteer Engagement",
+        "description": "Our global network of volunteers is the backbone of our initiatives. From organizing aid deliveries to supporting education and healthcare, their dedication drives our mission forward."
+      },
+      {
+        "icon": "ri-money-dollar-circle-line",
+        "title": "Health and Well-being",
+        "description": "Ensuring access to healthcare through the provision of medical equipment, wheelchairs, and maternity care, we prioritize safety and health for vulnerable communities."
+      }
+    ]
+  },
+  "urgent": {
+    "title": "In urgent cases",
+    "description": "The best way is to help others find themselves",
+    "project_details": "View Details",
+    "donate_now": "Donate Now"
+  },
+  "questions": {
+    "title": "Any Questions",
+    "description": "When deciding which charity to donate to, it's important to do your search and find one that aligns with your values and interests.",
+    "questions": [
+      {
+        "question": "What is the primary mission of your organization?",
+        "answer": "Our mission is to actively improve the lives of those in need by providing essential humanitarian aid and development programs. We focus on supporting disadvantaged communities through food distribution, education, healthcare, and emergency relief."
+      },
+      {
+        "question": "Who benefits from your programs?",
+        "answer": "Our programs are designed to assist vulnerable groups, including families in need, orphans, senior citizens, differently-abled individuals, and communities affected by crises or disasters."
+      },
+      {
+        "question": "How are donations utilized?",
+        "answer": "Donations are allocated to various programs, such as providing food packages, clean water, educational resources, medical aid, and emergency relief. We ensure every dollar has a meaningful impact on the lives of those we support."
+      },
+      {
+        "question": "How can I get involved besides donating?",
+        "answer": "You can join our global network of over 140,000 volunteers. Volunteers play a crucial role in delivering aid, supporting education, and ensuring our programs reach those who need them most."
+      },
+      {
+        "question": "What steps are taken to ensure transparency in your operations?",
+        "answer": "We maintain transparency by collaborating with local and international organizations, providing regular updates on our programs, and ensuring that donations are used efficiently to maximize their impact."
+      }
+    ]
+  },
+  "events": {
+    "title": "Our event",
+    "description": "Our Upcoming Events"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "description": "What People Say",
+    "testimonials": [
+      {
+        "name": "Ahmad Al-Farouq",
+        "location": "Palestine, Gaza",
+        "rating": 5,
+        "quote": "This organization has truly changed lives in our community. Their food distribution program ensured my family had meals during a difficult time. Their dedication and care mean the world to us."
+      },
+      {
+        "name": "Fatima Al-Mansouri",
+        "location": "Palestine, Gaza",
+        "rating": 5,
+        "quote": "I am grateful for the education support provided to my children. They now have the resources to continue their studies, and it has given us hope for a brighter future. Thank you for your kindness and generosity."
+      },
+      {
+        "name": "Youssef Al-Zahrani",
+        "location": "Palestine, Gaza",
+        "rating": 5,
+        "quote": "Their healthcare assistance program saved my mother’s life. The medical support we received was a blessing during a time of need. I can't express enough gratitude for their efforts."
+      }
+    ]
+  },
+  "home_blog": {
+    "title": "Blog",
+    "description": "Our Blog & Feeds"
+  },
+  "about": {
+    "home": "Home",
+    "about": "About Us",
+    "title": "About Us",
+    "cards": [
+      {
+        "title": "About Us",
+        "iconClass": "ix:about",
+        "bgClass": "bg-helpful-card-bg-one",
+        "textColorClass": "text-helpful-card-icon-one",
+        "href": "/about/about-us"
+      },
+      {
+        "title": "Mission – Vision",
+        "iconClass": "material-symbols:other-admission-rounded",
+        "bgClass": "bg-helpful-card-bg-two",
+        "textColorClass": "text-helpful-card-icon-two",
+        "href": "/about/mission-vision"
+      },
+      {
+        "title": "Board of Directors",
+        "iconClass": "fa:users",
+        "bgClass": "bg-helpful-card-bg-three",
+        "textColorClass": "text-helpful-card-icon-three",
+        "href": "/about/board-of-directors"
+      },
+      {
+        "title": "Bylaws",
+        "iconClass": "lsicon:contract-across-outline",
+        "bgClass": "bg-helpful-card-bg-one",
+        "textColorClass": "text-helpful-card-icon-one",
+        "href": "/about/bylaws"
+      },
+      {
+        "title": "Our Working Principles",
+        "iconClass": "material-symbols:balance",
+        "bgClass": "bg-helpful-card-bg-two",
+        "textColorClass": "text-helpful-card-icon-two",
+        "href": "/about/our-working-principles"
+      },
+      {
+        "title": "Account Numbers",
+        "iconClass": "ic:outline-account-balance",
+        "bgClass": "bg-helpful-card-bg-three",
+        "textColorClass": "text-helpful-card-icon-three",
+        "href": "/about/account-numbers"
+      },
+      {
+        "title": "Our Partner Associations",
+        "iconClass": "material-symbols:partner-exchange",
+        "bgClass": "bg-helpful-card-bg-four",
+        "textColorClass": "text-helpful-card-icon-four",
+        "href": "/about/our-partner-associations"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "iconClass": "mdi:frequently-asked-questions",
+        "bgClass": "bg-helpful-card-bg-one",
+        "textColorClass": "text-helpful-card-icon-one",
+        "href": "/about/frequently-asked-questions"
+      },
+      {
+        "title": "Documents",
+        "iconClass": "oui:documents",
+        "bgClass": "bg-helpful-card-bg-two",
+        "textColorClass": "text-helpful-card-icon-two",
+        "href": "/about/documents"
+      },
+      {
+        "title": "Press Coverage",
+        "iconClass": "fluent:document-person-16-filled",
+        "bgClass": "bg-helpful-card-bg-three",
+        "textColorClass": "text-helpful-card-icon-three",
+        "href": "/about/press-coverage"
+      }
+    ],
+    "about_section": {
+      "title": "About Us",
+      "subtitle": "Making a Difference, One Life at a Time",
+      "description": "We are a humanitarian organization founded in 2023, dedicated to bringing hope and aid to disadvantaged communities worldwide. Through our comprehensive programs, we work to empower individuals and families by addressing their immediate needs and supporting sustainable development.",
+      "imageUrl": "/assets/images/gallery/about-3.png",
+      "aboutItems": [
+        {
+          "iconClass": "ri-hand-heart-line",
+          "title": "Quick Fundraising",
+          "description": "We mobilize resources efficiently to provide immediate relief, including food packages, clean water, and essential medical supplies to communities in crisis."
+        },
+        {
+          "iconClass": "ri-user-line",
+          "title": "Join Our Team",
+          "description": "Be part of a global network of passionate volunteers committed to delivering impactful aid. Together, we create lasting change through education, healthcare, and development initiatives."
+        }
+      ]
+    },
+    "team": {
+      "title": "Expert Team",
+      "subtitle": "Meet our volunteer team",
+      "teamMembers": [
+        {
+          "imageUrl": "/assets/images/gallery/team-1.png",
+          "name": "David Warner",
+          "role": "Sir Bradman",
+          "detailsUrl": "/volunteer-details",
+          "socialLinks": [
+            {
+              "platform": "Google",
+              "iconClass": "ri-google-fill",
+              "url": "https://google.com"
+            },
+            {
+              "platform": "Facebook",
+              "iconClass": "ri-facebook-fill",
+              "url": "https://facebook.com"
+            },
+            {
+              "platform": "LinkedIn",
+              "iconClass": "ri-linkedin-fill",
+              "url": "https://linkedin.com"
+            }
+          ]
+        },
+        {
+          "imageUrl": "/assets/images/gallery/team-2.png",
+          "name": "Jony Bristow",
+          "role": "Sir Bradman",
+          "detailsUrl": "/volunteer-details",
+          "socialLinks": [
+            {
+              "platform": "Google",
+              "iconClass": "ri-google-fill",
+              "url": "https://google.com"
+            },
+            {
+              "platform": "Facebook",
+              "iconClass": "ri-facebook-fill",
+              "url": "https://facebook.com"
+            },
+            {
+              "platform": "LinkedIn",
+              "iconClass": "ri-linkedin-fill",
+              "url": "https://linkedin.com"
+            }
+          ]
+        },
+        {
+          "imageUrl": "/assets/images/gallery/team-3.png",
+          "name": "David Warner",
+          "role": "Sir Bradman",
+          "detailsUrl": "/volunteer-details",
+          "socialLinks": [
+            {
+              "platform": "Google",
+              "iconClass": "ri-google-fill",
+              "url": "https://google.com"
+            },
+            {
+              "platform": "Facebook",
+              "iconClass": "ri-facebook-fill",
+              "url": "https://facebook.com"
+            },
+            {
+              "platform": "LinkedIn",
+              "iconClass": "ri-linkedin-fill",
+              "url": "https://linkedin.com"
+            }
+          ]
+        }
+      ]
+    },
+    "testimonial": {
+      "title": "Testimonials",
+      "subtitle": "What People Are Saying About Us",
+      "description": "We are honored to have touched the lives of countless individuals and communities. Hear from those who have experienced the impact of our programs firsthand",
+      "testimonials": [
+        {
+          "imageUrl": "/assets/images-used/about/3.png",
+          "name": "Ahmad Al-Farouq",
+          "role": "",
+          "rating": 5,
+          "review": "Their unwavering dedication and compassion gave my family hope during a difficult time. The support we received changed our lives for the better",
+          "profileImage": "/assets/images/gallery/testimonial-4.png"
+        }
+      ]
+    }
+  },
+  "projects": {
+    "home": "Home",
+    "projects": "Projects",
+    "title": "Projects"
+  },
+  "blog": {
+    "home": "Home",
+    "blog": "Blog",
+    "title": "Blog",
+    "readMore": "Read More"
+  },
+  "contact": {
+    "home": "Home",
+    "contact": "Contact",
+    "title": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "full_name": "Full Name",
+    "message": "Message",
+    "send_message": "Send Message"
+  },
+  "pay": {
+    "home": "Home",
+    "pay": "Pay",
+    "title": "Donate for:"
+  },
+  "footer": {
+    "donate": "Donate",
+    "profile": "Profile",
+    "description": "Charity organization is a non-profit organization that helps people in need, such as children, women, and the elderly. We provide food, shelter, education, and healthcare to those who are less fortunate. We provide food, shelter, education, and healthcare to those who are less fortunate.",
+    "support": "Support",
+    "projects": "Projects",
+    "copy": "Copyright © 2025 Insan Dernigi. All rights reserved."
+  },
+  "project": {
+    "home": "Home",
+    "projects": "Projects"
+  }
+}
