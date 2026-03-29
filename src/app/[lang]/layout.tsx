@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -66,6 +67,7 @@ export default async function RootLayout({
       // className={`${inter.variable} ${openSans.variable}`}
       >
         {children}
+        <GoogleAnalytics gaId="G-WR99BX6GZ7" />
       </body>
     </html>
   );
