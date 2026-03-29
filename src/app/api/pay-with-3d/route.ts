@@ -93,6 +93,7 @@ export async function POST(request: Request) {
         // const result = await fetch('https://boa.vakifkatilim.com.tr/VirtualPOS.Gateway/Home/ThreeDModelPayGate', {
         const result = await fetch('https://insander.org/bank/pay', {
             method: 'POST',
+            
             headers: {
                 'Content-Type': 'application/xml',
             },
@@ -100,7 +101,7 @@ export async function POST(request: Request) {
         });
 
         const responseText = await result.text();
-
+        console.log(responseText)
         // Parse the XML response using xml2js
         // const parsedResponse = await parseStringPromise(responseText);
 
@@ -118,8 +119,8 @@ export async function POST(request: Request) {
             })
 
         } catch (error) {
-
-        }
+                        console.log(error)
+                    }
 
 
         return new Response(responseText, {
