@@ -300,7 +300,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
 <section className="py-20 md:py-28 bg-gray-50/50">
     <div className="container mx-auto px-6">
         
-        {/* Başlık Alanı - Net ve Sola Yaslı */}
+        {/* Başlık Alanı */}
         <div className="mb-16 border-l-4 border-emerald-600 pl-6">
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tighter">
                 Neler Yapıyoruz?
@@ -310,34 +310,84 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
             </p>
         </div>
 
-        {/* 4'lü Grid Yapısı */}
+        {/* 8 İkon İçin Sabit Linkli Grid Yapısı */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-            {categories.map((cat, idx) => (
-                <Link 
-                    key={idx} 
-                    href={`/${lang}/projects${cat.link}`}
-                    className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-emerald-500/30"
-                >
-                    {/* İkon Dairesi - Sabit ve Dengeli */}
-                    <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
-                        {cat.icon && (
-                            <div className="scale-[1.5] md:scale-[1.8]">{cat.icon}</div>
-                        )}
-                    </div>
+            
+            {/* 1. Eğitim Destek */}
+            <Link href={`/${lang}/projects/egitim-destek`} className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-emerald-500/30">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="scale-[1.5] md:scale-[1.8]">{categories[0]?.icon}</div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-emerald-700 transition-colors">Eğitim Destek</h3>
+                <div className="mt-4 w-0 h-1 bg-emerald-500 rounded-full group-hover:w-12 transition-all duration-500"></div>
+            </Link>
 
-                    {/* Kategori Adı */}
-                    <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-emerald-700 transition-colors">
-                        {cat.name}
-                    </h3>
+            {/* 2. Gıda Kolisi */}
+            <Link href={`/${lang}/projects/gida-kolisi`} className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-emerald-500/30">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="scale-[1.5] md:scale-[1.8]">{categories[1]?.icon}</div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-emerald-700 transition-colors">Gıda Kolisi</h3>
+                <div className="mt-4 w-0 h-1 bg-emerald-500 rounded-full group-hover:w-12 transition-all duration-500"></div>
+            </Link>
 
-                    {/* Alt Çizgi - Sadece Hover'da Belirir */}
-                    <div className="mt-4 w-0 h-1 bg-emerald-500 rounded-full group-hover:w-12 transition-all duration-500"></div>
-                </Link>
-            ))}
+            {/* 3. Sıcak Yemek */}
+            <Link href={`/${lang}/projects/sicak-yemek`} className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-emerald-500/30">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="scale-[1.5] md:scale-[1.8]">{categories[2]?.icon}</div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-emerald-700 transition-colors">Sıcak Yemek</h3>
+                <div className="mt-4 w-0 h-1 bg-emerald-500 rounded-full group-hover:w-12 transition-all duration-500"></div>
+            </Link>
+
+            {/* 4. Çadır */}
+            <Link href={`/${lang}/projects/cadir`} className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-emerald-500/30">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="scale-[1.5] md:scale-[1.8]">{categories[3]?.icon}</div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-emerald-700 transition-colors">Çadır Yardımı</h3>
+                <div className="mt-4 w-0 h-1 bg-emerald-500 rounded-full group-hover:w-12 transition-all duration-500"></div>
+            </Link>
+
+            {/* 5. Ambulans */}
+            <Link href={`/${lang}/projects/ambulans`} className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-emerald-500/30">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="scale-[1.5] md:scale-[1.8]">{categories[4]?.icon}</div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-emerald-700 transition-colors">Ambulans</h3>
+                <div className="mt-4 w-0 h-1 bg-emerald-500 rounded-full group-hover:w-12 transition-all duration-500"></div>
+            </Link>
+
+            {/* 6. Yenidoğan Paketi */}
+            <Link href={`/${lang}/projects/yenidogan-paketi`} className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-emerald-500/30">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="scale-[1.5] md:scale-[1.8]">{categories[5]?.icon}</div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-emerald-700 transition-colors">Yenidoğan Paketi</h3>
+                <div className="mt-4 w-0 h-1 bg-emerald-500 rounded-full group-hover:w-12 transition-all duration-500"></div>
+            </Link>
+
+            {/* 7. Kardeş Aile */}
+            <Link href={`/${lang}/projects/kardes-aile`} className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-emerald-500/30">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="scale-[1.5] md:scale-[1.8]">{categories[6]?.icon}</div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-emerald-700 transition-colors">Kardeş Aile</h3>
+                <div className="mt-4 w-0 h-1 bg-emerald-500 rounded-full group-hover:w-12 transition-all duration-500"></div>
+            </Link>
+
+            {/* 8. Nakdi Yardım */}
+            <Link href={`/${lang}/projects/nakdi-yardim`} className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-emerald-500/30">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <div className="scale-[1.5] md:scale-[1.8]">{categories[7]?.icon}</div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-emerald-700 transition-colors">Nakdi Yardım</h3>
+                <div className="mt-4 w-0 h-1 bg-emerald-500 rounded-full group-hover:w-12 transition-all duration-500"></div>
+            </Link>
+
         </div>
     </div>
 </section>
-
            {/* --- İSTATİSTİKLER (MODERN & TEMİZ) --- */}
 <section className="bg-emerald-900 py-24 relative overflow-hidden">
     {/* Arka plan süslemesi - CSS Gradient ile derinlik */}
