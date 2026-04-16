@@ -122,7 +122,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
                                     </div>
 
                                     <div className="col-span-12">
-                                        <label className="mb-10 font-normal text-base text-tertiary-title block">Ad Soyad (Vekalet Sahibi)</label>
+                                        <label className="mb-10 font-normal text-base text-tertiary-title block">Ad Soyad</label>
                                         <input
                                             type="text"
                                             name="donorFullName"
