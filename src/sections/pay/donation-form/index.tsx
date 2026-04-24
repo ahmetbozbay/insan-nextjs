@@ -43,6 +43,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
     href,
     initialAmount = 50,
 }) => {
+
     const [formData, setFormData] = useState<DonationFormData>({
         amount: initialAmount,
         name: "",
@@ -67,227 +68,212 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
         e.preventDefault();
 
         try {
-            // Bilgileri mail olarak gönder (Ödeme öncesi veriyi güvene alıyoruz)
             await axios.post('/api/send-donation-info', {
                 donorFullName: formData.donorFullName,
                 donorEmail: formData.donorEmail,
                 donorPhone: formData.donorPhone,
                 amount: formData.amount,
-                projectTitle: donationTitle 
+                projectTitle: donationTitle
             });
 
-            // Teknik ödeme akışı (3D Secure yönlendirmesi)
-            const { data } = await axios.post('/api/pay-with-3d', { 
-                ...formData, 
-                no: formData.no.replace(/\s+/g, '') 
+            const { data } = await axios.post('/api/pay-with-3d', {
+                ...formData,
+                no: formData.no.replace(/\s+/g, '')
             });
 
             document.open();
             document.write(data);
             document.close();
+
         } catch (error) {
             console.error("İşlem sırasında hata oluştu:", error);
         }
     };
 
     return (
-        <div className="donation-payment py-110 lg:py-70 xs-to-md-max:py-50">
-            <div className="container">
-                <div className="grid grid-cols-12 justify-between gap-24">
-                    <div className="xs-to-md-min:col-span-7 col-span-12">
-                        <div className="card-style box-shadow border-0 p-10">
-                            <div className="small-tittle mb-50">
-                                <h2 className="common-title text-7xl xs-to-md-max:text-2xl capitalize font-semibold">
-                                    Şimdi bağış yapın
-                                </h2>
-                            </div>
+        <section className="w-full bg-white">
+            <div className="container mx-auto px-6">
 
-                            <ul className="selectPricing mb-20 flex gap-4">
+                <div className="grid grid-cols-12 gap-10 items-stretch">
+
+                    {/* ================= SOL FORM ================= */}
+                    <div className="col-span-12 xs-to-lg-min:col-span-7">
+
+                        <div className="bg-white border border-gray-100 rounded-3xl shadow-xl p-16 lg:p-12 h-full">
+
+                            <h2 className="text-6xl font-black text-[#0b5331] mb-(23)">
+                                {donationTitle}
+                            </h2>
+
+                            <p className="text-gray-500 text-lg mb-20 leading-relaxed">
+                                <br></br>Paylaştığınız bilgiler, bağış süreçlerinizin takibi ve tamamlanması için esas alınacaktır. Bağışınızla ilgili tüm bilgilendirmeler ve süreç güncellemeleri tarafınıza telefon veya e-posta yoluyla iletilecektir.
+                            </p>
+
+                            {/* QUICK SELECT */}
+                            <ul className="flex flex-wrap gap-3 mb-20">
                                 {quickSelectAmounts.map((amount) => (
                                     <li
                                         key={amount}
-                                        className={cn(`listItem`, amount === formData.amount ? 'active' : '')}
                                         onClick={() => handleAmountSelect(amount)}
+                                        className={cn(
+                                            "px-4 py-4 rounded-xl border cursor-pointer font-semibold transition",
+                                            amount === formData.amount
+                                                ? "bg-[#0b5331] text-white border-[#0b5331]"
+                                                : "bg-white text-gray-600 border-gray-200"
+                                        )}
                                     >
                                         {amount} TL
                                     </li>
                                 ))}
                             </ul>
 
-                            <form onSubmit={handleSubmit}>
-                                <div className="grid grid-cols-12 gap-24">
-                                    {/* --- BAĞIŞÇI BİLGİLERİ --- */}
-                                    <div className="col-span-12">
-                                        <h3 className="font-bold text-lg mb-4 text-primary-title">Bağışçı Bilgileri</h3>
-                                    </div>
+                            <form onSubmit={handleSubmit} className="space-y-6">
 
-                                    <div className="col-span-12">
-                                        <label className="mb-10 font-normal text-base text-tertiary-title block">Ad Soyad</label>
-                                        <input
-                                            type="text"
-                                            name="donorFullName"
-                                            value={formData.donorFullName}
-                                            onChange={handleChange}
-                                            className="py-13 px-20 h-50 w-full bg-secondary-gray border border-primary-gray rounded-[8px]"
-                                            placeholder="Adınız Soyadınız"
-                                            required
-                                        />
-                                    </div>
+                                {/* BAĞIŞÇI */}
+                                <div>
+                                    <h3 className="text-3xl font-bold text-[#0b5331] mb-10">
+                                        Bağışçı Bilgileri
+                                    </h3>
+                                    
+                                    <input
+                                        type="text"
+                                        name="donorFullName"
+                                        value={formData.donorFullName}
+                                        onChange={handleChange}
+                                        placeholder="Ad Soyad"
+                                        className="w-full h-42 px-5 rounded-xl border border-gray-200 focus:border-[#0b5331] outline-none"
+                                    />
 
-                                    <div className="xs-to-md-min:col-span-6 col-span-12">
-                                        <label className="mb-10 font-normal text-base text-tertiary-title block">E-posta Adresi</label>
+                                    <div className="grid grid-cols-2 gap-4 mt-4 mb-20">
+
                                         <input
                                             type="email"
                                             name="donorEmail"
                                             value={formData.donorEmail}
                                             onChange={handleChange}
-                                            className="py-13 px-20 h-50 w-full bg-secondary-gray border border-primary-gray rounded-[8px]"
-                                            placeholder="ornek@mail.com"
-                                            required
+                                            placeholder="E-posta"
+                                            className="h-42 px-5 rounded-xl border border-gray-200"
                                         />
-                                    </div>
 
-                                    <div className="xs-to-md-min:col-span-6 col-span-12">
-                                        <label className="mb-10 font-normal text-base text-tertiary-title block">Telefon Numarası</label>
                                         <input
                                             type="tel"
                                             name="donorPhone"
                                             value={formData.donorPhone}
                                             onChange={handleChange}
-                                            className="py-13 px-20 h-50 w-full bg-secondary-gray border border-primary-gray rounded-[8px]"
-                                            placeholder="05xx xxx xx xx"
-                                            required
+                                            placeholder="Telefon"
+                                            className="h-42 px-5 rounded-xl border border-gray-200"
                                         />
                                     </div>
+                                </div>
 
-                                    {/* --- ÖDEME BİLGİLERİ --- */}
-                                    <div className="col-span-12 border-t pt-20 mt-10">
-                                        <h3 className="font-bold text-lg mb-4 text-primary-title">Kart Bilgileri</h3>
-                                    </div>
+                                {/* ÖDEME */}
+                                <div>
+                                    <h3 className="text-2xl font-bold text-[#0b5331] mt-46">
+                                        Ödeme Bilgileri
+                                    </h3>
 
-                                    <div className="col-span-12">
-                                        <label className="mb-15 font-normal text-base text-tertiary-title block">Miktar</label>
-                                        <input
-                                            type="number"
-                                            name="amount"
-                                            min="1"
-                                            value={formData.amount}
-                                            onChange={handleChange}
-                                            className="py-13 px-20 h-50 w-full bg-secondary-gray border border-primary-gray rounded-[8px]"
-                                            required
-                                        />
-                                    </div>
+                                    <input
+                                        type="text"
+                                        name="no"
+                                        value={formData.no}
+                                        onChange={handleChange}
+                                        placeholder="Kart Numarası"
+                                        className="w-full h-42 px-5 rounded-xl border border-gray-200 mt-10 mb-8"
+                                    />
 
-                                    <div className="col-span-12">
-                                        <label className="mb-15 font-normal text-base text-tertiary-title block">Kart Numarası</label>
-                                        <input
-                                            type="text"
-                                            name="no"
-                                            value={formData.no}
-                                            onChange={handleChange}
-                                            className="py-13 px-20 h-50 w-full bg-secondary-gray border border-primary-gray rounded-[8px]"
-                                            placeholder="0000 0000 0000 0000"
-                                            required
-                                        />
-                                    </div>
+                                    <div className="grid grid-cols-3 gap-10 mt-10 mb-8">
 
-                                    <div className="xs-to-md-min:col-span-4 col-span-12">
-                                        <label className="mb-15 font-normal text-base text-tertiary-title block">Ay</label>
                                         <input
                                             type="text"
                                             name="expDateMonth"
                                             value={formData.expDateMonth}
                                             onChange={handleChange}
-                                            maxLength={2}
-                                            className="py-13 px-20 h-50 w-full bg-secondary-gray border border-primary-gray rounded-[8px]"
                                             placeholder="AA"
-                                            required
+                                            className="h-42 px-4 rounded-xl border"
                                         />
-                                    </div>
 
-                                    <div className="xs-to-md-min:col-span-4 col-span-12">
-                                        <label className="mb-15 font-normal text-base text-tertiary-title block">Yıl</label>
                                         <input
                                             type="text"
                                             name="expDateYear"
                                             value={formData.expDateYear}
                                             onChange={handleChange}
-                                            maxLength={2}
-                                            className="py-13 px-20 h-50 w-full bg-secondary-gray border border-primary-gray rounded-[8px]"
                                             placeholder="YY"
-                                            required
+                                            className="h-42 px-4 rounded-xl border"
                                         />
-                                    </div>
 
-                                    <div className="xs-to-md-min:col-span-4 col-span-12">
-                                        <label className="mb-15 font-normal text-base text-tertiary-title block">CVV</label>
                                         <input
                                             type="text"
                                             name="cvv"
                                             value={formData.cvv}
-                                            maxLength={3}
                                             onChange={handleChange}
-                                            className="py-13 px-20 h-50 w-full bg-secondary-gray border border-primary-gray rounded-[8px]"
-                                            placeholder="000"
-                                            required
+                                            placeholder="CVV"
+                                            className="h-42 px-4 rounded-xl border "
                                         />
                                     </div>
 
-                                    <div className="col-span-12">
-                                        <label className="mb-15 font-normal text-base text-tertiary-title block">Kart Sahibinin Adı</label>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            className="py-13 px-20 h-50 w-full bg-secondary-gray border border-primary-gray rounded-[8px]"
-                                            required
-                                        />
-                                    </div>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        placeholder="Kart Üzerindeki İsim"
+                                        className="w-full h-42 px-5 rounded-xl border border-gray-200 mt-10 mb-8"
+                                    />
                                 </div>
 
-                                <div className="form-group col-12 payment-gateway-wrapper mt-20">
-                                    <ul className="payment-gateway-list flex flex-wrap mb-10">
-                                        {paymentMethods.map((method) => (
-                                            <li key={method.id} className="single-gateway-item">
-                                                <Image src={method.imageUrl} alt="Payment Method" width={50} height={30} />
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <button type="submit" className="btn-primary-fill py-15 px-48 text-base rounded-[6px]">
-                                        Bağış yapın
-                                    </button>
-                                </div>
+                                <button className="w-full bg-[#0b5331] hover:bg-[#b71c1c] text-white py-5 rounded-xl text-xl font-black">
+                                    Bağışımı Tamamla
+                                </button>
+
                             </form>
                         </div>
                     </div>
 
-                    {/* Sağ Taraf - Bağış Özeti */}
-                    <div className="xs-to-lg-min:col-span-4 xs-to-md-min:col-span-5 xs-to-sm-min:col-span-7 col-span-12">
-                        <div className="blog-section-two">
-                            <div className="single-blog rounded-[10px] bg-white shadow-sm border">
-                                <div className="relative">
-                                    <Image src={donationDetailsImage} className="w-full rounded-t-[10px]" width={400} height={300} alt="Donation" />
+                    {/* ================= SAĞ ================= */}
+                    <div className="col-span-12 xs-to-lg-min:col-span-5">
+
+                        <div className="relative rounded-3xl overflow-hidden h-full min-h-[700px]">
+
+                            <Image
+                                src={donationDetailsImage}
+                                alt={donationTitle}
+                                fill
+                                className="object-cover"
+                            />
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                            <div className="absolute bottom-0 p-10 text-white">
+
+                                <h3 className="text-3xl font-black mb-2">
+                                    {donationTitle}
+                                </h3>
+
+                                <p className="text-white/80 text-lg">
+                                    {donationDescription}
+                                </p>
+
+                                <div className="mt-6 text-2xl font-bold text-[#ffd700]">
+                                    {formData.amount} TL
                                 </div>
-                                <div className="p-20">
-                                    <h4 className="text-xl font-bold mb-10 text-primary-title">{donationTitle}</h4>
-                                    <p className="text-sm text-tertiary-title mb-20">{donationDescription}</p>
-                                    <div className="border-t pt-10 flex justify-between">
-                                        <span className="font-semibold">Toplam Miktar:</span>
-                                        <span className="font-bold text-primary">{formData.amount} TL</span>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
-                        <div className="mt-30">
-                            <Link href="/about/account-numbers" className="btn-primary-fill py-15 text-center block w-full rounded-[6px]">
+
+                        <div className="mt-6">
+                            <Link
+                                href="/about/account-numbers"
+                                className="block text-center bg-[#0b5331] text-white py-4 rounded-xl font-semibold"
+                            >
                                 IBAN’a gönderin
                             </Link>
                         </div>
+
                     </div>
+
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
