@@ -84,19 +84,20 @@ const KurbanDonationPage = () => {
               <div className="flex items-center gap-3 mb-6">
                 <span className="w-10 h-[2px] bg-[#e31e24]" aria-hidden="true"></span>
 
-                <span className="text-[#e31e24] font-bold tracking-[0.25em] text-xs uppercase">
-                  2026 Filistin Kurban Organizasyonu
-                </span>
+                <span className="text-[#e31e24] font-bold tracking-[0.1em] md:tracking-[0.25em] text-[10px] md:text-xs uppercase">
+                2026 Filistin Kurban Organizasyonu
+              </span>
               </div>
 
               {/* H1 (PRIMARY SEO KEYWORD) */}
-              <h1 className="text-[#0b5331] text-4xl md:text-6xl font-extrabold leading-[1.1] mb-6">
-                Filistin Kurban Bağışı 2026 <br />
-                <span className="text-[#e31e24]">Gazze ve Filistin’de Vekaletle Kurban Kesimi</span>
-              </h1>
+              <h1 className="text-[#0b5331] text-3xl md:text-6xl font-extrabold leading-[1.2] md:leading-[1.1] mb-4 md:mb-6">
+                  Gazze Filistin Kurban Bağışı 2026 <br></br><br className="hidden md:block" />
+                  <span className="text-[#e31e24] text-2xl md:text-6xl">Gazze ve Filistin’de Vekaletle Kurban Kesimi</span>
+                </h1>
 
+          
               {/* SEO DESCRIPTION (LSI keywords included) */}
-              <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-10 max-w-[680px]">
+              <p className="text-gray-700 text-base md:text-xl leading-relaxed mb-8 md:mb-10 max-w-[680px]">
                 <strong>Filistin kurban bağışı</strong> ile 2026 yılı kurban ibadetinizi
                 vekalet yoluyla gerçekleştirerek <strong>Gazze, Filistin ve çevre bölgelerdeki ihtiyaç sahiplerine</strong> ulaştırılmasını sağlayabilirsiniz.
                 Kurban kesimleri <strong>İslami usullere uygun</strong> şekilde yapılır ve süreç video ile raporlanır.
@@ -372,12 +373,12 @@ const KurbanDonationPage = () => {
               <DonationPaymentSection
                 categories={["Filistin", "Gazze", "Vekalet"]}
                 paymentMethods={[]}
-                quickSelectAmounts={[135000]}
+                quickSelectAmounts={[19285]}
                 donationTitle="Filistin Kurban Bağışı"
                 href="/tr/pay/qurbani"
                 donationDetailsImage="/assets/images-used/projects/filistin.webp"
                 donationDescription="Gazze ve Filistin bölgesi kurban bağışı."
-                initialAmount={135000}
+                initialAmount={19285}
               />
             </div>
         </div>

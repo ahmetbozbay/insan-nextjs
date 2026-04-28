@@ -20,8 +20,8 @@ const KurbanDonationPage = () => {
   const kurbanProjects = [
     {
       title: "Filistin Kurban Bağışı",
-      price: "135.000 TL",
-      priceNumeric: 135000,
+      price: "19.285 TL",
+      priceNumeric: 19285,
       unit: "Küçükbaş Kurban",
       image: "/assets/images-used/projects/filistin.webp",
       link: "/projects/kurban-bagisi/filistin-kurban-bagisi",
