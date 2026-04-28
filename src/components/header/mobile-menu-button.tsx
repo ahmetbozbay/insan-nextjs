@@ -47,7 +47,7 @@ export default function MobileMenuButton({ navItems }: { navItems: any[] }) {
             </button>
 
             {isOpen && (
-                <div className="bg-white p-10 w-full absolute top-[7rem] left-0 z-[9]">
+                <div className="bg-white p-10 w-full absolute top-[7rem] left-0 z-[9999]">
                     <ul className="space-y-4 p-20">
                         {navItems.map((item, index) => (
                             <MenuItem key={index} active={index == 0} item={item} />
