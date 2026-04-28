@@ -257,7 +257,7 @@ const KurbanDonationPage = () => {
             
             {/* 1. KART: SEÇİM */}
             <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-              <Link href="https://insander.org/tr/pay/qurbani" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
+              <Link href="#bagis-formu" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
                 <Image
                   src="/assets/images-used/projects/kurbanlıklar-filistin.webp"
                   alt="Filistin kurbanlık seçimi ve islami usullere uygun kurban hazırlığı"
@@ -269,7 +269,7 @@ const KurbanDonationPage = () => {
                 </div>
               </Link>
               <div className="p-6">
-                <Link href="https://insander.org/tr/pay/qurbani">
+                <Link href="#bagis-formu">
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#0b5331] transition-colors">
                     Kurbanlıkların Seçimi
                   </h3>
@@ -278,7 +278,7 @@ const KurbanDonationPage = () => {
                   Gazze ve Filistin bölgelerinde kurban vasıflarına en uygun, sağlıklı hayvanlar titizlikle belirlenir ve kesim gününe kadar koruma altına alınır.
                 </p>
                 <Link
-                  href="https://insander.org/tr/pay/qurbani"
+                  href="#bagis-formu"
                   className="inline-block w-full text-center py-3 rounded-lg border border-[#0b5331] text-[#0b5331] font-bold hover:bg-[#0b5331] hover:text-white transition"
                 >
                   Vekaletini Ver →
@@ -288,7 +288,7 @@ const KurbanDonationPage = () => {
 
             {/* 2. KART: KESİM */}
             <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-              <Link href="https://insander.org/tr/pay/qurbani" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
+              <Link href="#bagis-formu" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
                 <Image
                   src="/assets/images-used/projects/kurban-kesim-sonrası-filistin.webp"
                   alt="Gazze kurban kesimi video kayıt ve SMS bilgilendirme süreci"
@@ -300,7 +300,7 @@ const KurbanDonationPage = () => {
                 </div>
               </Link>
               <div className="p-6">
-                <Link href="https://insander.org/tr/pay/qurbani">
+                <Link href="#bagis-formu">
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#0b5331] transition-colors">
                     İslami Usullerle Kesim
                   </h3>
@@ -309,7 +309,7 @@ const KurbanDonationPage = () => {
                   Kurbanlarınız bayramın ilk gününden itibaren isminiz okunarak vekalet yoluyla kesilir. Kesim anı video kaydıyla tarafınıza raporlanır.
                 </p>
                 <Link
-                  href="https://insander.org/tr/pay/qurbani"
+                  href="#bagis-formu"
                   className="inline-block w-full text-center py-3 rounded-lg bg-[#e31e24] text-white font-bold hover:bg-[#b71c1c] transition"
                 >
                   Bağışını Tamamla
@@ -319,7 +319,7 @@ const KurbanDonationPage = () => {
 
             {/* 3. KART: DAĞITIM */}
             <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-              <Link href="https://insander.org/tr/pay/qurbani" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
+              <Link href="#bagis-formu" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
                 <Image
                   src="/assets/images-used/projects/kurban-yardim-tiri-filistin.webp"
                   alt="Gazze kurban yardımı tırları ve ihtiyaç sahiplerine et dağıtımı"
@@ -331,7 +331,7 @@ const KurbanDonationPage = () => {
                 </div>
               </Link>
               <div className="p-6">
-                <Link href="https://insander.org/tr/pay/qurbani">
+                <Link href="#bagis-formu">
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#0b5331] transition-colors">
                     İhtiyaç Sahiplerine Teslim
                   </h3>
@@ -340,7 +340,7 @@ const KurbanDonationPage = () => {
                   Hazırlanan kurban payları, yardım tırlarımızla Gazze’deki çadır kentlerde ve mahallelerdeki savaş mağduru ailelere bizzat teslim edilir.
                 </p>
                 <Link
-                  href="https://insander.org/tr/pay/qurbani"
+                  href="#bagis-formu"
                   className="inline-block w-full text-center py-3 rounded-lg border border-[#0b5331] text-[#0b5331] font-bold hover:bg-[#0b5331] hover:text-white transition"
                 >
                   Hemen Destek Ol →
@@ -354,7 +354,7 @@ const KurbanDonationPage = () => {
           <div className="mt-12 text-center">
               <p className="text-gray-500 mb-4">Lübnan genel kurban hisse bedeli için bağış sayfamızı ziyaret edin.</p>
               <Link 
-                  href="https://insander.org/tr/pay/qurbani"
+                  href="#bagis-formu"
                   className="text-[#e31e24] font-black text-lg hover:underline underline-offset-8"
               >
                   Tüm Kurban Bağışı Seçeneklerini Gör
@@ -457,7 +457,7 @@ const KurbanDonationPage = () => {
                 </div>
 
                 <Link 
-                  href="https://insander.org/tr/pay/qurbani"
+                  href="#bagis-formu"
                   className="block w-full bg-[#e31e24] text-white text-center py-5 rounded-2xl font-black text-xl hover:bg-[#b71c1c] transition-all shadow-xl mb-6"
                 >
                   HİSSE BAĞIŞI YAP
