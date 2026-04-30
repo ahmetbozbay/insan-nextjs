@@ -15,7 +15,7 @@ const KurbanDonationPage = () => {
   const kurbanProjects = [
     {
       title: "Filistin Kurban Bağışı",
-      price: "135.000 TL",
+      price: "19.285 TL",
       unit: "Küçükbaş Kurban",
       image: "/assets/images-used/projects/filistin.webp",
       link: "/projects/kurban-bagisi/filistin-kurban-bagisi",
@@ -437,7 +437,7 @@ const KurbanDonationPage = () => {
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b border-gray-100">
                     <span className="text-gray-500 text-sm">Hisse Bedeli</span>
-                    <span className="font-bold text-[#0b5331]">135.000 TL</span>
+                    <span className="font-bold text-[#0b5331]">19.285 TL</span>
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b border-gray-100">
                     <span className="text-gray-500 text-sm">Kesim Zamanı</span>

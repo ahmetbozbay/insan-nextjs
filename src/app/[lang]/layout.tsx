@@ -5,7 +5,8 @@ import { cn } from "@/lib/utils";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-import { GoogleAnalytics } from '@next/third-parties/google';
+// Hem Analytics hem de TagManager (gtag altyapısı için) içe aktarıyoruz
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -64,10 +65,14 @@ export default async function RootLayout({
           lang == 'ar' && cairo.variable,
           lang == 'ar' && cairo2.variable
         )}
-      // className={`${inter.variable} ${openSans.variable}`}
       >
         {children}
+        
+        {/* Mevcut Google Analytics Kurulumun */}
         <GoogleAnalytics gaId="G-WR99BX6GZ7" />
+
+        {/* Yeni Eklenen Google Ads (gtag.js) Kurulumun */}
+        <GoogleTagManager gtmId="AW-18129486149" />
       </body>
     </html>
   );

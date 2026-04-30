@@ -12,6 +12,7 @@ const Header = async ({ lang }: { lang: string }) => {
 
     return (
         <header className="header-area bg-white font-inter">
+            
             <div className="header-sticky">
                 <div className="container">
                     <div className="relative">
