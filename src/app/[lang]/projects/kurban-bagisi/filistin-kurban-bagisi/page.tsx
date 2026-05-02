@@ -15,7 +15,7 @@ const KurbanDonationPage = () => {
   const kurbanProjects = [
     {
       title: "Filistin Kurban Bağışı",
-      price: "19.285 TL",
+      price: "135.000 TL",
       unit: "Küçükbaş Kurban",
       image: "/assets/images-used/projects/filistin.webp",
       link: "/projects/kurban-bagisi/filistin-kurban-bagisi",
@@ -373,12 +373,12 @@ const KurbanDonationPage = () => {
               <DonationPaymentSection
                 categories={["Filistin", "Gazze", "Vekalet"]}
                 paymentMethods={[]}
-                quickSelectAmounts={[19285]}
+                quickSelectAmounts={[135000]}
                 donationTitle="Filistin Kurban Bağışı"
                 href="/tr/pay/qurbani"
                 donationDetailsImage="/assets/images-used/projects/filistin.webp"
                 donationDescription="Gazze ve Filistin bölgesi kurban bağışı."
-                initialAmount={19285}
+                initialAmount={135000}
               />
             </div>
         </div>
@@ -436,8 +436,8 @@ const KurbanDonationPage = () => {
                     <span className="font-bold text-gray-900">Filistin / Gazze</span>
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b border-gray-100">
-                    <span className="text-gray-500 text-sm">Hisse Bedeli</span>
-                    <span className="font-bold text-[#0b5331]">19.285 TL</span>
+                    <span className="text-gray-500 text-sm">Küçükbaş Kurban Bedeli</span>
+                    <span className="font-bold text-[#0b5331]">135.000 TL</span>
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b border-gray-100">
                     <span className="text-gray-500 text-sm">Kesim Zamanı</span>
