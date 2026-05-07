@@ -259,8 +259,8 @@ const KurbanDonationPage = () => {
             <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
               <Link href="#bagis-formu" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
                 <Image
-                  src="/assets/images-used/projects/kurbanlıklar-filistin.webp"
-                  alt="Filistin kurbanlık seçimi ve islami usullere uygun kurban hazırlığı"
+                  src="/assets/images-used/projects/kurbanlıklar-misir.webp"
+                  alt="Mısır kurbanlık seçimi ve islami usullere uygun kurban hazırlığı"
                   fill
                   className="object-contain group-hover:scale-105 transition-transform duration-500"
                 />
@@ -275,7 +275,7 @@ const KurbanDonationPage = () => {
                   </h3>
                 </Link>
                 <p className="text-gray-500 text-sm mb-6">
-                  Gazze ve Filistin bölgelerinde kurban vasıflarına en uygun, sağlıklı hayvanlar titizlikle belirlenir ve kesim gününe kadar koruma altına alınır.
+                  Mısır bölgesinde kurban vasıflarına en uygun, sağlıklı hayvanlar titizlikle belirlenir ve kesim gününe kadar koruma altına alınır.
                 </p>
                 <Link
                   href="#bagis-formu"
@@ -290,7 +290,7 @@ const KurbanDonationPage = () => {
             <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
               <Link href="#bagis-formu" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
                 <Image
-                  src="/assets/images-used/projects/kurban-kesim-sonrası-filistin.webp"
+                  src="/assets/images-used/projects/kurban-kesim-sonrası-misir.webp"
                   alt="Gazze kurban kesimi video kayıt ve SMS bilgilendirme süreci"
                   fill
                   className="object-contain group-hover:scale-105 transition-transform duration-500"
@@ -321,7 +321,7 @@ const KurbanDonationPage = () => {
             <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
               <Link href="#bagis-formu" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
                 <Image
-                  src="/assets/images-used/projects/kurban-yardim-tiri-filistin.webp"
+                  src="/assets/images-used/projects/kurban-yardim-tiri-misir.webp"
                   alt="Gazze kurban yardımı tırları ve ihtiyaç sahiplerine et dağıtımı"
                   fill
                   className="object-contain group-hover:scale-105 transition-transform duration-500"
