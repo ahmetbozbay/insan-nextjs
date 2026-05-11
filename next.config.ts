@@ -16,8 +16,16 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-  }
-
+  },
+  async redirects() {
+    return [
+      {
+        source: '/tr/projects/qurbani',
+        destination: '/tr/projects/kurban-bagisi',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
