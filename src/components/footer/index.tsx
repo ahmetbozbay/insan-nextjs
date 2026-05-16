@@ -51,7 +51,7 @@ export default async function Footer() {
                             <FooterContactCol
                                 title={t.support}
                                 email="info@insander.org"
-                                phone="+902742121212"
+                                phone="05010879198 / 05523202962"
                                 address="Kütahya, Türkiye"
                             />
                             <FooterProjectsCol
