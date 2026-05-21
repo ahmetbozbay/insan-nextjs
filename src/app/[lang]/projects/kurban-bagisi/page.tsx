@@ -482,14 +482,14 @@ const KurbanDonationPage = () => {
         "provider": {
           "@type": "Organization",
           "name": "İnsan Derneği",
-          "url": "https://insander.org" // Eklenmesi tavsiye edilir
+          "url": "https://insander.org" 
         },
         "areaServed": "TR",
         "serviceType": "Kurban Bağışı",
         "offers": kurbanProjects.map((item) => ({
           "@type": "Offer",
           "name": item.title,
-          "price": item.priceNumeric, // Değişen yer burası: item.price yerine item.priceNumeric
+          "price": item.priceNumeric, 
           "priceCurrency": "TRY",
           "url": `https://insander.org${item.link}`,
           "availability": "https://schema.org/InStock"

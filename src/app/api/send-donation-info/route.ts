@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
         await resend.emails.send({
             from: 'Insander Bağış <onboarding@resend.dev>',
-            to: ['ahmetbozbay.work@gmail.com'], // Belirlediğin alıcı adresi
+            to: ['ahmetbozbay.work@gmail.com', 'info@insander.org'], // Belirlediğin alıcı adresi
             subject: `Yeni Bağış Bildirimi: ${projectTitle}`,
             html: `
                 <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">

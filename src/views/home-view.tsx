@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   ChevronLeft, 
   ChevronRight, 
@@ -18,7 +19,26 @@ import {
 export default function HomeView({ lang = "tr" }: { lang?: string }) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
-
+const kurbanProjects = [
+  {
+    title: "Filistin Kurban Bağışı",
+    price: "135.000 TL",
+    image: "/assets/images-used/projects/filistin.webp",
+    link: "/projects/kurban-bagisi/filistin-kurban-bagisi",
+  },
+  {
+    title: "Lübnan Kurban Bağışı",
+    price: "15.000 TL",
+    image: "/assets/images-used/projects/lübnan.webp",
+    link: "/projects/kurban-bagisi/lubnan-kurban-bagisi",
+  },
+  {
+    title: "Mısır Kurban Bağışı",
+    price: "15.000 TL",
+    image: "/assets/images-used/projects/mısır.webp",
+    link: "/projects/kurban-bagisi/misir-kurban-bagisi",
+  }
+];
     // --- SLIDER VERİLERİ ---
     const slides = [
         { 
@@ -193,7 +213,83 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                     </div>
                 </div>
             </section>
+<section id="bagis-secenekleri" className="py-20 md:py-32 bg-[#fcfcfc] border-y border-gray-100">
 
+  <div className="container mx-auto px-6">
+
+    <div className="max-w-3xl mb-14">
+
+      <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+        2026 Vekaletle Kurban Bağışı Yapılabilecek Bölgeler
+      </h2>
+
+      <p className="text-gray-700 text-lg max-w-20xl">
+        Vekaletle kurban bağışınızı Filistin, Gazze, Lübnan ve Mısır gibi ihtiyaç bölgelerine ulaştırarak islami usullere uygun kesim ve dağıtım sürecine destek olabilirsiniz.
+      </p>
+
+    </div>
+
+    <div className="grid gap-6 lg:gap-8 pb-12 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
+
+      {kurbanProjects.map((item, idx) => {
+
+        const slug = item.link || "#";
+
+        return (
+          <div
+            key={idx}
+            className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
+          >
+
+            <Link href={slug} className="block relative aspect-[5/4] overflow-hidden">
+
+              <Image
+                src={item.image}
+                alt={`${item.title} 2026 kurban bağışı`}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+
+              <div className="absolute top-4 left-4 bg-[#e31e24] text-white px-3 py-1 text-xs font-bold rounded">
+                Kurban Bağışı 2026
+              </div>
+
+            </Link>
+
+            <div className="p-6">
+
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#0b5331] transition-colors">
+                {item.title}
+              </h3>
+
+              <p className="text-[#0b5331] text-2xl font-black mb-3">
+                {item.price}
+              </p>
+
+              <p className="text-gray-500 text-sm mb-4">
+                {item.title} kapsamında vekaletle kurban kesimi yapılır.
+              </p>
+
+              <Link
+                href={slug}
+                className="text-sm font-semibold text-[#0b5331] hover:underline underline-offset-4"
+              >
+                Detayları incele →
+              </Link>
+
+            </div>
+
+          </div>
+        );
+
+      })}
+
+    </div>
+
+  </div>
+
+</section>
            {/* --- HIZLI BAĞIŞ SECTION --- */}
 <section className="py-20 md:py-32 bg-[#fcfcfc] border-y border-gray-100">
     <div className="container mx-auto px-6">
