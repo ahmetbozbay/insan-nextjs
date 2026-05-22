@@ -3,8 +3,8 @@ import Link from "next/link";
 import Script from "next/script";
 import DonationPaymentSection from "@/sections/pay/donation-form";
 export const metadata = {
-  title: "Filistin Kurban Bağışı 2026 | Gazze Vekaletle Kurban Kesimi",
-  description: "2026 Filistin kurban bağışı hisse bedellerini inceleyin. Gazze ve Filistin'de vekaletle, İslami usullere uygun kurban kesimi ve video raporlama hizmeti.",
+  title: "Filistin Gazze Kurban Bağışı 2026 | Gazze Vekaletle Kurban Kesimi",
+  description: "2026 Filistin Gazze kurban bağışı hisse bedellerini inceleyin. Gazze ve Filistin'de vekaletle, İslami usullere uygun kurban kesimi ve video raporlama hizmeti.",
   alternates: {
     canonical: "https://insander.org/tr/projects/kurban-bagisi/filistin-kurban-bagisi",
   },
@@ -374,7 +374,7 @@ const KurbanDonationPage = () => {
                 categories={["Filistin", "Gazze", "Vekalet"]}
                 paymentMethods={[]}
                 quickSelectAmounts={[135000]}
-                donationTitle="Filistin Kurban Bağışı"
+                donationTitle="Filistin Gazze Kurban Bağışı"
                 href="/tr/pay/qurbani"
                 donationDetailsImage="/assets/images-used/projects/filistin.webp"
                 donationDescription="Gazze ve Filistin bölgesi kurban bağışı."
@@ -399,12 +399,12 @@ const KurbanDonationPage = () => {
               
               <div className="prose prose-lg text-gray-600 space-y-8 max-w-none">
                 <p>
-                  <strong>Filistin kurban bağışı</strong>, bölgedeki insani krizin derinleştiği bu dönemde sadece bir ibadet değil, aynı zamanda Gazze halkı için hayati bir destek anlamına gelmektedir. İnsan Derneği olarak, 2026 yılı kurban döneminde <strong>vekaletle kurban kesimi</strong> süreçlerimizi, bölgedeki lojistik ağımızı güçlendirerek en üst seviyeye çıkardık. 
+                  <strong>Filistin Gazze kurban bağışı</strong>, bölgedeki insani krizin derinleştiği bu dönemde sadece bir ibadet değil, aynı zamanda Gazze halkı için hayati bir destek anlamına gelmektedir. İnsan Derneği olarak, 2026 yılı kurban döneminde <strong>vekaletle kurban kesimi</strong> süreçlerimizi, bölgedeki lojistik ağımızı güçlendirerek en üst seviyeye çıkardık. 
                 </p>
 
                 <h3 className="text-2xl font-bold text-gray-800">Gazze’de Kurban Kesimi ve Şeffaflık Standartlarımız</h3>
                 <p>
-                  Vekalet yoluyla bizlere emanet ettiğiniz kurbanlar, <strong>İslami usullere tam riayet edilerek</strong>, veteriner kontrolünden geçmiş sağlıklı hayvanlar arasından seçilir. Filistin kurban hisse bedelleri belirlenirken, bölgedeki yerel üreticileri desteklemek ve etin en taze haliyle savaş mağduru ailelere ulaşmasını sağlamak temel önceliğimizdir.
+                  Vekalet yoluyla bizlere emanet ettiğiniz kurbanlar, <strong>İslami usullere tam riayet edilerek</strong>, veteriner kontrolünden geçmiş sağlıklı hayvanlar arasından seçilir. Filistin Gazze kurban hisse bedelleri belirlenirken, bölgedeki yerel üreticileri desteklemek ve etin en taze haliyle savaş mağduru ailelere ulaşmasını sağlamak temel önceliğimizdir.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
@@ -418,9 +418,9 @@ const KurbanDonationPage = () => {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-800">Filistin Kurban Hisse Bedeli 2026</h3>
+                <h3 className="text-2xl font-bold text-gray-800">Filistin Gazze Kurban Hisse Bedeli 2026</h3>
                 <p>
-                  <strong>Filistin kurban fiyatları</strong>, bölgedeki ambargo ve lojistik zorluklar göz önüne alınarak, her bağışçımızın bu hayra ortak olabileceği makul seviyelerde tutulmaktadır. Küçükbaş kurban bağışı veya büyükbaş hisse seçenekleriyle, 2026 Kurban Bayramı'nda Filistinli kardeşlerinizin sofrasında siz de yerinizi alabilirsiniz. Yapacağınız bağışlar, <strong>İnsan Derneği</strong> güvencesiyle ilk elden teslim edilir.
+                  <strong>Filistin Gazze kurban fiyatları</strong>, bölgedeki ambargo ve lojistik zorluklar göz önüne alınarak, her bağışçımızın bu hayra ortak olabileceği makul seviyelerde tutulmaktadır. Küçükbaş kurban bağışı veya büyükbaş hisse seçenekleriyle, 2026 Kurban Bayramı'nda Filistinli kardeşlerinizin sofrasında siz de yerinizi alabilirsiniz. Yapacağınız bağışlar, <strong>İnsan Derneği</strong> güvencesiyle ilk elden teslim edilir.
                 </p>
               </div>
             </div>
@@ -491,7 +491,7 @@ const KurbanDonationPage = () => {
           <div className="max-w-4xl mx-auto grid gap-5">
             {[
               {
-                q: "Filistin kurban bağışı vekaleti nasıl verilir?",
+                q: "Filistin Gazze kurban bağışı vekaleti nasıl verilir?",
                 a: "Online bağış sistemimiz üzerinden 'Ödemeyi Tamamla' butonuna basmadan önce vekalet kutucuğunu işaretleyerek veya 444’lü numaramızı arayıp çağrı merkezi operatörümüze 'Vekaletimi İnsan Derneği'ne veriyorum' diyerek bu işlemi tamamlayabilirsiniz. İslami şartlar gereği, isminiz bizzat zikredilerek kesim yapılır."
               },
               {
@@ -508,7 +508,7 @@ const KurbanDonationPage = () => {
               },
               {
                 q: "Adak, Akika veya Şükür kurbanı da bağışlayabilir miyim?",
-                a: "Tabii ki. Sadece Kurban Bayramı'nda değil, yılın her günü Filistin için Adak, Akika veya Şükür kurbanı vekaleti verebilirsiniz. Bu bağışlar da aynı titizlikle kesilerek Gazze halkına ulaştırılır."
+                a: "Tabii ki. Sadece Kurban Bayramı'nda değil, yılın her günü Filistin Gazze için Adak, Akika veya Şükür kurbanı vekaleti verebilirsiniz. Bu bağışlar da aynı titizlikle kesilerek Gazze halkına ulaştırılır."
               }
             ].map((item, index) => (
               <details key={index} className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:border-[#0b5331]/30 transition-all">
@@ -533,7 +533,7 @@ const KurbanDonationPage = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Filistin kurban bağışı vekaleti nasıl verilir?",
+                "name": "Filistin Gazze kurban bağışı vekaleti nasıl verilir?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Online bağış sistemimiz üzerinden ödeme adımında vekalet onayı vererek veya çağrı merkezimizi arayarak vekaletinizi İnsan Derneği'ne iletebilirsiniz."
