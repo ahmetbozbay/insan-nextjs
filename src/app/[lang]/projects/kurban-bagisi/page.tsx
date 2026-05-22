@@ -277,12 +277,33 @@ const KurbanDonationPage = () => {
                     </p>
 
                     {/* CTA + Internal Link */}
-                    <Link
-                      href={slug}
-                      className="text-sm font-semibold text-[#0b5331] hover:underline underline-offset-4"
-                    >
-                      {item.title} detaylarını incele →
-                    </Link>
+                   <Link
+  href={slug}
+  className="
+    group flex w-full items-center justify-center gap-2
+    rounded-xl
+    bg-[#0b5331]
+    px-5 py-3.5
+    text-center text-base font-bold text-white
+    shadow-md
+    transition-all duration-200
+    hover:bg-[#084326]
+    hover:shadow-lg
+    focus:outline-none
+    focus:ring-2 focus:ring-[#0b5331]/40
+    focus:ring-offset-2
+  "
+  aria-label={`${item.title} bağışı sayfasına git`}
+>
+  <span>{item.title} bağışı yapmak için tıkla</span>
+
+  <span
+    aria-hidden="true"
+    className="transition-transform duration-200 group-hover:translate-x-1"
+  >
+    →
+  </span>
+</Link>
 
                   </div>
 
