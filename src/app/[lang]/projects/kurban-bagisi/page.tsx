@@ -1,8 +1,6 @@
-import KurbanClient from "./KurbanClient";
-
-export default function Page() {
-  return <KurbanClient />;
-}
+import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
 
 // METADATA BURAYA GELMELİ
 export const metadata = {
@@ -17,3 +15,510 @@ export const metadata = {
     images: [{ url: "/assets/images-used/projects/2026-vekaletle-kurban-bagisi.webp" }],
   },
 };
+
+const KurbanDonationPage = () => {
+  const kurbanProjects = [
+    {
+      title: "Filistin Kurban Bağışı",
+      price: "135.000 TL",
+      priceNumeric: 135000,
+      unit: "Küçükbaş Kurban",
+      image: "/assets/images-used/projects/filistin.webp",
+      link: "/projects/kurban-bagisi/filistin-kurban-bagisi",
+      payLink: "/pay/qurbani",
+      tag: "Acil Destek"
+    },
+    {
+      title: "Lübnan Kurban Bağışı",
+      price: "15.000 TL",
+      priceNumeric: 15000,
+      unit: "Hisse Bedeli",
+      image: "/assets/images-used/projects/lübnan.webp",
+      link: "/projects/kurban-bagisi/lubnan-kurban-bagisi",
+      payLink: "/pay/qurbani",
+      tag: "Emanetinizle Umut"
+    },
+    {
+      title: "Mısır Kurban Bağışı",
+      price: "15.000 TL",
+      priceNumeric: 15000,
+      unit: "Hisse Bedeli",
+      image: "/assets/images-used/projects/mısır.webp",
+      link: "/projects/kurban-bagisi/misir-kurban-bagisi",
+      payLink: "/pay/qurbani",
+      tag: "Kardeşlik Payı"
+    }
+  ];
+
+  return (
+    <main className="bg-white">
+      <section className="relative w-full h-[520px] lg:h-[700px] overflow-hidden">
+
+        {/* Arka Plan Görsel */}
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/images-used/projects/banner.webp"
+            alt="2026 vekaletle kurban bağışı ve islami usullere uygun kesim organizasyonu"
+            fill
+            priority
+            className="object-cover object-right"
+          />
+        </div>
+
+        {/* Gradient Overlay (Yeşil + koyu kontrast) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#052c1a]/95 via-[#0b5331]/70 to-transparent"></div>
+
+        {/* İçerik */}
+        <div className="container mx-auto relative h-full z-10">
+          <div className="flex flex-col justify-center h-full max-w-[720px] px-6 lg:px-0">
+
+            {/* Üst Mini Başlık */}
+            <div className="flex items-center gap-3 mb-6">
+              <span className="w-10 h-[2px] bg-[#e31e24]"></span>
+              <span className="text-[#e31e24] font-bold tracking-[0.25em] text-xs uppercase">
+                Güvenilir Kurban Organizasyonu
+              </span>
+            </div>
+
+            {/* H1 */}
+            <h1 className="text-white text-4xl md:text-6xl font-extrabold leading-[1.1] mb-6">
+              2026 Kurban Bağışı <br />
+              <span className="text-white">Vekaletle Güvenli Kesim</span>
+            </h1>
+
+            {/* Açıklama */}
+            <p className="text-gray-200 text-lg md:text-xl leading-relaxed mb-10 font-light max-w-[700px]">
+              <strong>Kurban bağışı</strong> ile ibadetinizi güvenle yerine getirin. 
+              Vekaletle kesilen kurbanlarınız ihtiyaç sahiplerine ulaştırılır,
+              <strong> video ve SMS bildirimi</strong> ile süreci anlık takip edebilirsiniz.
+            </p>
+
+            {/* CTA */}
+            <div className="flex flex-wrap gap-4">
+              <Link 
+                href="#bagis-secenekleri"
+                className="bg-[#e31e24] text-white px-8 py-4 rounded-lg font-bold text-lg shadow-xl hover:bg-[#b71c1c] transition-all duration-300"
+              >
+                Kurban Bağışı Yap
+              </Link>
+
+              <Link 
+                href="#bagis-secenekleri"
+                className="border border-white/40 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#0b5331] transition-all duration-300"
+              >
+                Bağış Bölgelerini Gör
+              </Link>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+
+              <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-sm backdrop-blur-md">
+                <span className="text-[#e31e24] font-black">✔</span>
+                İslami usullere uygun kesim
+              </span>
+
+              <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-sm backdrop-blur-md">
+                <span className="text-[#e31e24] font-black">✔</span>
+                Video ile anlık bilgilendirme
+              </span>
+
+              <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-sm backdrop-blur-md">
+                <span className="text-[#e31e24] font-black">✔</span>
+                Güvenli online bağış sistemi
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+         {/* --- BREADCRUMB & INFO SECTION --- */}
+      <section className="bg-gray-50 border-b border-gray-200">
+
+        <nav aria-label="Breadcrumb" className="py-5">
+
+          <div className="container mx-auto px-6">
+
+            <ol className="flex items-center flex-wrap text-base md:text-lg font-medium">
+
+              {/* Ana Sayfa */}
+              <li>
+                <Link
+                  href="/tr"
+                  className="text-gray-500 hover:text-[#0b5331] transition-colors"
+                >
+                  Ana Sayfa
+                </Link>
+              </li>
+
+              <li className="mx-3 text-gray-300">/</li>
+
+              {/* Projeler */}
+              <li>
+                <Link
+                  href="/tr/projects"
+                  className="text-gray-500 hover:text-[#0b5331] transition-colors"
+                >
+                  Projelerimiz
+                </Link>
+              </li>
+
+              <li className="mx-3 text-gray-300">/</li>
+
+              
+
+
+              {/* Aktif sayfa (SEO TARGET PAGE) */}
+              <li className="text-[#0b5331] font-bold md:text-lg">
+                Kurban Bağışı
+              </li>
+
+            </ol>
+
+          </div>
+
+        </nav>
+
+        {/* SEO: JSON-LD Breadcrumb Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Ana Sayfa",
+                  "item": "https://insander.org/tr"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Projelerimiz",
+                  "item": "https://insander.org/tr/projects"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Kurban Bağışı",
+                  "item": "https://insander.org/tr/projects/kurban-bagisi"
+                },
+                // Şema içindeki 4. pozisyonu şu şekilde güncelle:
+                
+              ]
+            })
+          }}
+        />
+      </section>
+      <section id="bagis-secenekleri" className="py-20 md:py-32 bg-[#fcfcfc] border-y border-gray-100">
+
+        <div className="container mx-auto px-6">
+
+          {/* SEO Başlık */}
+          <div className="max-w-3xl mb-14">
+
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+              2026 Vekaletle Kurban Bağışı Yapılabilecek Bölgeler
+            </h2>
+
+            <p className="text-gray-700 text-lg max-w-20xl">
+              Vekaletle kurban bağışınızı Filistin, Gazze, Lübnan ve Mısır gibi ihtiyaç bölgelerine ulaştırarak islami usullere uygun kesim ve dağıtım sürecine destek olabilirsiniz.
+            </p>
+
+          </div>
+
+          {/* GRID */}
+          <div className="grid gap-6 lg:gap-8 pb-12 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
+
+            {kurbanProjects.map((item, idx) => {
+
+              // SEO-friendly slug fallback (link yoksa otomatik üret)
+              const slug = item.link || "#";
+
+              return (
+                <div
+                  key={idx}
+                  className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
+                >
+
+                  {/* IMAGE */}
+                  <Link href={slug} className="block relative aspect-[5/4] overflow-hidden">
+
+                    <Image
+                      src={item.image}
+                      alt={`${item.title} 2026 kurban bağışı vekaletle kesim ve ihtiyaç sahiplerine dağıtım`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+
+                    {/* Badge */}
+                    <div className="absolute top-4 left-4 bg-[#e31e24] text-white px-3 py-1 text-xs font-bold rounded">
+                      Kurban Bağışı 2026
+                    </div>
+
+                  </Link>
+
+                  {/* CONTENT */}
+                  <div className="p-6">
+
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#0b5331] transition-colors">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-[#0b5331] text-2xl font-black mb-3">
+                      {item.price}
+                    </p>
+
+                    {/* SEO micro description */}
+                    <p className="text-gray-500 text-sm mb-4">
+                      {item.title} kapsamında vekaletle kurban kesimi yapılır. Kesim süreci kayıt altına alınır ve bağışçılara video ile iletilir.
+                    </p>
+
+                    {/* CTA + Internal Link */}
+                   <Link
+  href={slug}
+  className="
+    group flex w-full items-center justify-center gap-2
+    rounded-xl
+    bg-[#0b5331]
+    px-5 py-3.5
+    text-center text-base font-bold text-white
+    shadow-md
+    transition-all duration-200
+    hover:bg-[#084326]
+    hover:shadow-lg
+    focus:outline-none
+    focus:ring-2 focus:ring-[#0b5331]/40
+    focus:ring-offset-2
+  "
+  aria-label={`${item.title} bağışı sayfasına git`}
+>
+  <span>{item.title} bağışı yapmak için tıkla</span>
+
+  <span
+    aria-hidden="true"
+    className="transition-transform duration-200 group-hover:translate-x-1"
+  >
+    →
+  </span>
+</Link>
+
+                  </div>
+
+                </div>
+              );
+
+            })}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section className="py-20 bg-white border-t border-gray-100">
+
+        <div className="container mx-auto px-6">
+          
+
+          {/* 1. SEO INTRO */}
+          <div className="mb-16">
+
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 leading-tight">
+              Vekaletle Kurban Kesimi ve Dağıtımı Nasıl Yapılır?
+            </h2>
+
+            <div className="prose prose-lg text-gray-600 space-y-6 max-w-none">
+
+              <p>
+                <strong>Kurban bağışı 2026</strong> kapsamında, İnsan Derneği olarak vekaletle kurban kesimlerini İslami usullere uygun şekilde gerçekleştiriyoruz. 
+                Kesilen kurbanlar; Filistin, Gazze, Lübnan ve Mısır başta olmak üzere ihtiyaç sahiplerine ulaştırılmaktadır.
+              </p>
+
+              <p>
+                Bu süreçte yapılan <strong>vekaletle kurban bağışı</strong>, yalnızca bir ibadet değil aynı zamanda dünyanın farklı bölgelerinde yaşayan ihtiyaç sahipleri için bir yardım köprüsüdür.
+              </p>
+
+            </div>
+          </div>
+
+          {/* 2. PROCESS */}
+          <div className="mb-20">
+
+            <h2 className="text-3xl font-black text-gray-900 mb-10 text-center">
+              Kurban Bağışı Süreci Nasıl İşler?
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+              {[
+                {
+                  title: "Kurbanlık Seçimi",
+                  desc: "Sağlık ve yaş kriterlerine uygun kurbanlıklar uzman ekipler tarafından seçilir."
+                },
+                {
+                  title: "Vekalet Verme",
+                  desc: "Online veya telefon üzerinden vekalet alınarak kurban bağışı süreci başlatılır."
+                },
+                {
+                  title: "İslami Usullere Göre Kesim",
+                  desc: "Kurbanlar bayram günlerinde bağışçı ismiyle birlikte dini kurallara uygun kesilir."
+                },
+                {
+                  title: "Video Bildirimi",
+                  desc: "Kesim anı kayıt altına alınır ve bağışçıya video ile bilgilendirme yapılır."
+                },
+                {
+                  title: "Dağıtım Süreci",
+                  desc: "Kurban payları savaş mağdurları, yetimler ve ihtiyaç sahiplerine ulaştırılır."
+                }
+              ].map((step, i) => (
+                <div key={i} className="p-6 bg-[#f8f9fa] rounded-2xl border border-gray-100 hover:shadow-md transition">
+
+                  <h3 className="text-[#0b5331] font-bold text-lg mb-2">
+                    {step.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm">
+                    {step.desc}
+                  </p>
+
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+
+          {/* 3. FAQ SEO (GÜÇLENDİRİLMİŞ) */}
+          <div className="mb-20 bg-[#0b5331]/5 p-8 md:p-12 rounded-2xl">
+
+            <h2 className="text-3xl font-black text-gray-900 mb-8">
+              Kurban Bağışı Hakkında Sıkça Sorulan Sorular
+            </h2>
+
+            <div className="space-y-6">
+
+              <div>
+                <h3 className="font-bold text-lg text-gray-800 mb-2">
+                  Kurban bağışı ne zaman yapılır?
+                </h3>
+                <p className="text-gray-600">
+                  Kurban bağışı, bayram öncesi ve bayram günleri içinde yapılabilir. Organizasyon planlaması için erken bağış önerilir.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-lg text-gray-800 mb-2">
+                  Vekaletle kurban kesimi nasıl yapılır?
+                </h3>
+                <p className="text-gray-600">
+                  Bağışçıdan alınan vekalet sonrası kurbanlar İslami usullere uygun şekilde kesilir ve ihtiyaç sahiplerine dağıtılır.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-lg text-gray-800 mb-2">
+                  Kurban bağışı nasıl takip edilir?
+                </h3>
+                <p className="text-gray-600">
+                  Kesim işlemi sonrası bağışçılara SMS ve video bildirimi gönderilerek süreç şeffaf şekilde paylaşılır.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* 4. CTA */}
+          <div className="text-center">
+
+            <h2 className="text-3xl font-black text-gray-900 mb-6">
+              2026 Kurban Bağışı ile İyiliğe Katılın
+            </h2>
+
+            <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
+              Sınırlı kontenjan nedeniyle kurban bağışınızı erken yaparak ihtiyaç sahiplerine zamanında ulaşmasını sağlayabilirsiniz.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-6">
+
+              <div className="text-lg font-bold text-[#0b5331]">
+                📞 +90 274 212 12 12
+              </div>
+
+              <div className="text-lg font-bold text-[#0b5331]">
+                📧 info@insander.org
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <Script id="faq-schema" type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Kurban bağışı ne zaman yapılır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kurban bağışı bayram öncesi ve bayram günleri içinde yapılabilir. Erken bağış, organizasyon planlaması açısından tavsiye edilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vekaletle kurban kesimi nasıl yapılır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bağışçıdan alınan vekalet sonrası kurbanlar İslami usullere uygun şekilde kesilir ve ihtiyaç sahiplerine ulaştırılır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kurban bağışı nasıl takip edilir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kesim sonrası bağışçılara SMS ve video ile bilgilendirme yapılır ve süreç şeffaf şekilde paylaşılır."
+            }
+          }
+        ]
+      })}
+      </Script>
+      <Script id="service-schema" type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Kurban Bağışı 2026",
+        "description": "Vekaletle kurban bağışı hizmeti. Filistin, Gazze, Mısır ve Lübnan bölgelerine İslami usullere uygun kurban kesimi ve dağıtımı.",
+        "provider": {
+          "@type": "Organization",
+          "name": "İnsan Derneği",
+          "url": "https://insander.org" 
+        },
+        "areaServed": "TR",
+        "serviceType": "Kurban Bağışı",
+        "offers": kurbanProjects.map((item) => ({
+          "@type": "Offer",
+          "name": item.title,
+          "price": item.priceNumeric, 
+          "priceCurrency": "TRY",
+          "url": `https://insander.org${item.link}`,
+          "availability": "https://schema.org/InStock"
+        }))
+      })}
+    </Script>
+    </main>
+  );
+};
+
+export default KurbanDonationPage;
