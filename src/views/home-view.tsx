@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { X } from "lucide-react";
 import { 
   ChevronLeft, 
   ChevronRight, 
@@ -134,7 +135,15 @@ const kurbanProjects = [
         }, 6000);
         return () => clearInterval(timer);
     }, [slides.length]);
+    const [showPopup, setShowPopup] = useState(false);
 
+useEffect(() => {
+    const timer = setTimeout(() => {
+        setShowPopup(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+}, []);
     const nextSlide = () => setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
     const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
@@ -598,7 +607,58 @@ const kurbanProjects = [
         </div>
     </div>
 </section>
+{/* --- KURBAN POPUP --- */}
+{showPopup && (
+    <>
+        <style jsx>{`
+            @keyframes popupScale {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.88);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        `}</style>
 
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+            
+            <div
+                className="relative w-full max-w-2xl"
+                style={{
+                    animation: "popupScale .35s ease"
+                }}
+            >
+                
+                {/* Kapat */}
+                <button
+                    onClick={() => setShowPopup(false)}
+                    aria-label="Popup kapat"
+                    className="absolute -top-5 -right-5 z-20 bg-white text-gray-900 w-36 h-36 rounded-full flex items-center justify-center shadow-[0_15px_40px_rgba(0,0,0,0.35)] hover:bg-emerald-600 hover:text-white transition-all duration-300 hover:scale-110"                >
+                    <X size={320} strokeWidth={2.8} />
+                </button>
+
+                {/* Popup Görsel */}
+                <Link
+                    href={`/${lang}/projects/kurban-bagisi`}
+                    className="block overflow-hidden rounded-[2rem] shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
+                >
+                    <Image
+                        src="/assets/images-used/projects/kurban-bagisi-popup.webp"
+                        alt="2026 Kurban Bağışı"
+                        width={1200}
+                        height={1200}
+                        priority
+                        className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
+                    />
+                </Link>
+
+            </div>
+        </div>
+    </>
+)}
             
         </main>
     );
