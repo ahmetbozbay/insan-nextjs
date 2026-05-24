@@ -579,7 +579,7 @@ const KurbanDonationPage = () => {
                 href="https://wa.me/905010879198?text=Merhaba,%20İnsan%20Derneği%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-50 right-20 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:scale-110 transition-all duration-300 animate-bounce"
+                className="fixed bottom-50 right-20 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:scale-110 transition-all duration-300 animate"
                 aria-label="WhatsApp üzerinden bize ulaşın"
                 >
                 <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
