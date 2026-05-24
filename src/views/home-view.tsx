@@ -47,7 +47,7 @@ const kurbanProjects = [
             title: "Kurbanınız Umut Olsun", 
             description: "Vekaletlerinizi titizlikle yerine getiriyor, videolarla size bildiriyoruz. Bu bayram binlerce sofraya bereket olalım.",
             link: `/${lang}/projects/kurban-bagisi`,
-            donateLink: `/${lang}/pay/kurban-bagisi`,
+            donateLink: `/${lang}/projects/kurban-bagisi`,
             tag: "KURBAN 2026"
         },
         { 
