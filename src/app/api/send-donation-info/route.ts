@@ -9,7 +9,7 @@ export async function POST(request: Request) {
         const { donorFullName, donorEmail, donorPhone, amount, projectTitle } = body;
 
         await resend.emails.send({
-            from: 'Insander Bağış <onboarding@resend.dev>',
+            from: 'Insander Bağış <info@insander.org>',
             to: ['ahmetbozbay.work@gmail.com', 'info@insander.org'], // Belirlediğin alıcı adresi
             subject: `Yeni Bağış Bildirimi: ${projectTitle}`,
             html: `
