@@ -213,9 +213,7 @@ export default function ProjectsPage({ lang = "tr" }: { lang?: string }) {
                   Ana Sayfa
                 </Link>
               </li>
-
               <li className="mx-3 text-gray-300">/</li>
-
               {/* Projeler */}
               <li>
                 <Link
@@ -225,6 +223,7 @@ export default function ProjectsPage({ lang = "tr" }: { lang?: string }) {
                   Projelerimiz
                 </Link>
               </li>
+              <li className="mx-3 text-gray-300">/</li>           
             </ol>
           </div>
         </nav>
