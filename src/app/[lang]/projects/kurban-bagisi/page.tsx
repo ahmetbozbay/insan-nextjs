@@ -446,7 +446,7 @@ const KurbanDonationPage = () => {
             <div className="flex flex-wrap justify-center gap-6">
 
               <div className="text-lg font-bold text-[#0b5331]">
-                📞 +90 (501) 087 91 98
+                📞 +90 (555) 190 10 43
               </div>
 
               <div className="text-lg font-bold text-[#0b5331]">
