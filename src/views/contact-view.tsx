@@ -26,8 +26,8 @@ export default async function ContactView({ lang = 'en' }: ContactViewProps) {
                             {
                                 iconClass: "ri-phone-fill",
                                 title: t.phone,
-                                value: "05010879198 / 05523202962",
-                                href: "tel:+905523202962",
+                                value: "0 (555) 190 10 43",
+                                href: "tel:+905551901043",
                             },
                             {
                                 iconClass: "ri-mail-fill",

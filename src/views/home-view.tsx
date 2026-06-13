@@ -487,7 +487,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                                     </div>
                                     <div>
                                         <span className="block text-xs text-gray-400 font-bold uppercase tracking-widest">Destek Hattı</span>
-                                        <span className="text-gray-900 font-black">+90 (501) 087 91 98</span>
+                                        <span className="text-gray-900 font-black">+90 (555) 190 10 43</span>
                                     </div>
                                 </a>
 
