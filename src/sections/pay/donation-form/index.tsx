@@ -68,16 +68,13 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
         e.preventDefault();
 
         try {
-            await axios.post('/api/send-donation-info', {
-                donorFullName: formData.donorFullName,
-                donorEmail: formData.donorEmail,
-                donorPhone: formData.donorPhone,
-                amount: formData.amount,
-                projectTitle: donationTitle
-            });
+            // DİKKAT: /api/send-donation-info mail isteğini buradan KALDIRDIK.
+            // Mail işlemi artık sadece banka success rotasına düştüğünde backend'de çalışacak.
 
+            // Tüm form datasını (isim, mail dahil) ve proje adını 3D API'sine gönderiyoruz.
             const { data } = await axios.post('/api/pay-with-3d', {
                 ...formData,
+                projectTitle: donationTitle, // Mailde kullanmak üzere proje başlığını da gönderdik
                 no: formData.no.replace(/\s+/g, '')
             });
 
@@ -101,7 +98,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
 
                         <div className="bg-white border border-gray-100 rounded-3xl shadow-xl p-16 lg:p-12 h-full">
 
-                            <h2 className="text-6xl font-black text-[#0b5331] mb-(23)">
+                            <h2 className="text-6xl font-black text-[#0b5331] mb-[23px]">
                                 {donationTitle}
                             </h2>
 
@@ -141,7 +138,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
                                         value={formData.donorFullName}
                                         onChange={handleChange}
                                         placeholder="Ad Soyad"
-                                        className="w-full h-42 px-5 rounded-xl border border-gray-200 focus:border-[#0b5331] outline-none"
+                                        className="w-full h-[42px] px-5 rounded-xl border border-gray-200 focus:border-[#0b5331] outline-none"
                                     />
 
                                     <div className="grid grid-cols-2 gap-4 mt-4 mb-20">
@@ -152,7 +149,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
                                             value={formData.donorEmail}
                                             onChange={handleChange}
                                             placeholder="E-posta"
-                                            className="h-42 px-5 rounded-xl border border-gray-200"
+                                            className="h-[42px] px-5 rounded-xl border border-gray-200"
                                         />
 
                                         <input
@@ -161,14 +158,14 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
                                             value={formData.donorPhone}
                                             onChange={handleChange}
                                             placeholder="Telefon"
-                                            className="h-42 px-5 rounded-xl border border-gray-200"
+                                            className="h-[42px] px-5 rounded-xl border border-gray-200"
                                         />
                                     </div>
                                 </div>
 
                                 {/* ÖDEME */}
                                 <div>
-                                    <h3 className="text-2xl font-bold text-[#0b5331] mt-46">
+                                    <h3 className="text-2xl font-bold text-[#0b5331] mt-[46px]">
                                         Ödeme Bilgileri
                                     </h3>
 
@@ -178,7 +175,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
                                         value={formData.no}
                                         onChange={handleChange}
                                         placeholder="Kart Numarası"
-                                        className="w-full h-42 px-5 rounded-xl border border-gray-200 mt-10 mb-8"
+                                        className="w-full h-[42px] px-5 rounded-xl border border-gray-200 mt-10 mb-8"
                                     />
 
                                     <div className="grid grid-cols-3 gap-10 mt-10 mb-8">
@@ -189,7 +186,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
                                             value={formData.expDateMonth}
                                             onChange={handleChange}
                                             placeholder="AA"
-                                            className="h-42 px-4 rounded-xl border"
+                                            className="h-[42px] px-4 rounded-xl border"
                                         />
 
                                         <input
@@ -198,7 +195,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
                                             value={formData.expDateYear}
                                             onChange={handleChange}
                                             placeholder="YY"
-                                            className="h-42 px-4 rounded-xl border"
+                                            className="h-[42px] px-4 rounded-xl border"
                                         />
 
                                         <input
@@ -207,7 +204,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
                                             value={formData.cvv}
                                             onChange={handleChange}
                                             placeholder="CVV"
-                                            className="h-42 px-4 rounded-xl border "
+                                            className="h-[42px] px-4 rounded-xl border "
                                         />
                                     </div>
 
@@ -217,7 +214,7 @@ const DonationPaymentSection: React.FC<DonationPaymentSectionProps> = ({
                                         value={formData.name}
                                         onChange={handleChange}
                                         placeholder="Kart Üzerindeki İsim"
-                                        className="w-full h-42 px-5 rounded-xl border border-gray-200 mt-10 mb-8"
+                                        className="w-full h-[42px] px-5 rounded-xl border border-gray-200 mt-10 mb-8"
                                     />
                                 </div>
 

@@ -1,24 +1,44 @@
+import crypto from 'crypto';
 import { NextResponse } from 'next/server';
-import { Builder, parseStringPromise } from 'xml2js';  // Import Builder and parseStringPromise from xml2js
-import { computeHash, createHashString } from '.';
+import { Builder } from 'xml2js';
+
+// Helper function to create the hash string
+export function createHashString({
+    merchantId,
+    merchantOrderId,
+    amount,
+    okUrl,
+    failUrl,
+    username,
+    hashPassword
+}: {
+    merchantId: any;
+    merchantOrderId: string;
+    amount: number;
+    okUrl: string;
+    failUrl: string;
+    username: string;
+    hashPassword: string;
+}): string {
+    return `${merchantId}${merchantOrderId}${amount}${okUrl}${failUrl}${username}${hashPassword}`;
+}
+
+// Helper function to compute the hash
+export function computeHash(hashString: string): string {
+    return crypto.createHash('sha1').update(hashString).digest('base64');
+}
 
 export async function POST(request: Request) {
     const data = await request.json();
 
-
-
     const hashPassword = computeHash('202400');
 
     const requestData: any = {
-        // OkUrl: "http://localhost:3000/api/payment/success",
-        // FailUrl: "http://localhost:3000/api/payment/fail",
         OkUrl: "https://insander.org/api/payment/success",
         FailUrl: "https://insander.org/api/payment/fail",
         MerchantId: 7474,
-        // SubMerchantId: 0,
         CustomerId: 989464,
         UserName: "insansanal",
-        // MerchantOrderId: 493702523,
         MerchantOrderId: 485592628,
         InstallmentCount: 0,
         Amount: data.amount ? (Number(data.amount) * 100) : 200,
@@ -26,21 +46,20 @@ export async function POST(request: Request) {
         HashPassword: hashPassword,
         FECAmount: 0,
         FECCurrencyCode: "0949",
-        // AdditionalData: {
-        //     AdditionalDataList: [
-        //         {
-        //             Key: "keyasdadsads",
-        //             Data: "asadasdsad",
-        //             Description: "descdsadasd"
-        //         }
-        //     ]
-        // },
+        // BİLGİLERİ KAYBETMEMEK İÇİN BURAYA EKLİYORUZ:
+        AdditionalData: {
+            AdditionalDataList: [
+                { Key: "donorFullName", Data: data.donorFullName || "Belirtilmedi" },
+                { Key: "donorEmail", Data: data.donorEmail || "Belirtilmedi" },
+                { Key: "donorPhone", Data: data.donorPhone || "Belirtilmedi" },
+                { Key: "projectTitle", Data: data.projectTitle || "Bağış" }
+            ]
+        },
         Addresses: [
             {
                 Type: 1,
                 Name: data.name || "",
                 PhoneNumber: "05555555555",
-                // OrderId: 0,
                 AddressId: 0,
                 Email: ""
             }
@@ -51,12 +70,6 @@ export async function POST(request: Request) {
         CardExpireDateYear: data.expDateYear,
         CardCVV2: data.cvv,
         CardHolderName: data.name || "",
-
-        // CardNumber: '5487931180164490',
-        // CardExpireDateMonth: '06',
-        // CardExpireDateYear: '28',
-        // CardCVV2: '758',
-        // CardHolderName: 'Mousab Aldebs',
         PaymentType: 1,
         DebtId: 0,
         SurchargeAmount: 0,
@@ -64,6 +77,7 @@ export async function POST(request: Request) {
         InstallmentMaturityCommisionFlag: 0,
         TransactionSecurity: 3
     };
+
     const hashString = createHashString({
         merchantId: requestData.MerchantId,
         merchantOrderId: requestData.MerchantOrderId,
@@ -77,10 +91,6 @@ export async function POST(request: Request) {
     console.log(hashString)
     requestData.HashData = `${computeHash(hashString)}`;
 
-
-
-
-
     // Serialize the requestData to XML using xml2js Builder
     const builder = new Builder({ headless: true });
     const xmlRequest = builder.buildObject({ VPosMessageContract: requestData });
@@ -90,10 +100,8 @@ export async function POST(request: Request) {
 
     try {
         // Make the POST request to the external API
-        // const result = await fetch('https://boa.vakifkatilim.com.tr/VirtualPOS.Gateway/Home/ThreeDModelPayGate', {
         const result = await fetch('https://insander.org/bank/pay', {
             method: 'POST',
-            
             headers: {
                 'Content-Type': 'application/xml',
             },
@@ -102,8 +110,6 @@ export async function POST(request: Request) {
 
         const responseText = await result.text();
         console.log(responseText)
-        // Parse the XML response using xml2js
-        // const parsedResponse = await parseStringPromise(responseText);
 
         try {
             const response = await fetch("https://submit-form.com/hy3Jxs80e", {
@@ -114,20 +120,17 @@ export async function POST(request: Request) {
                 },
                 body: JSON.stringify({
                     name: data.name || 'no name',
-                    message: `new donation with amount: ${requestData.Amount}`,
+                    message: `new donation with amount: ${requestData.DisplayAmount}`,
                 }),
             })
-
         } catch (error) {
-                        console.log(error)
-                    }
-
+            console.log(error)
+        }
 
         return new Response(responseText, {
             headers: { 'Content-Type': 'text/html' }
         });
 
-        // return NextResponse.json(responseText);
     } catch (error) {
         console.error('Error:', error);
         return NextResponse.json({ error: (error as Error).message });
