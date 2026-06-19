@@ -9,18 +9,22 @@ export async function POST(req: Request) {
         const formData = await req.formData(); // Parse formData
         const MD = formData.get("MD") as string; // Extract the MD field
 
-        const formDataEntries: Record<string, any> = {};
-        for (const [key, value] of formData.entries()) {
-            formDataEntries[key] = value;
-        }
+        // DİKKAT: Form verileri yerine, URL'ye gizlediğimiz verileri çekiyoruz
+        const url = new URL(req.url);
+        const donorFullName = url.searchParams.get("name") || "Bağışçı";
+        const donorEmail = url.searchParams.get("email") || "Belirtilmedi";
+        const donorPhone = url.searchParams.get("phone") || "Belirtilmedi";
+        const projectTitle = url.searchParams.get("title") || "Bağış";
+        const amount = url.searchParams.get("amt") || "200";
 
-        console.log("Received formData:", formDataEntries);
-
-        // Define required values
+        // Bankaya gönderilecek standart onay (Approve) verileri
         const MerchantId = 7474;
         const CustomerId = 989464;
         const UserName = "insansanal";
         const HashPassword = computeHash('202400');
+        
+        // Hash işleminin hatasız çalışması için orijinal URL'yi kullanıyoruz
+        const fullOkUrl = `https://insander.org/api/payment/success${url.search}`;
 
         const requestData: any = {
             MerchantId,
@@ -28,17 +32,14 @@ export async function POST(req: Request) {
             UserName,
             TransactionSecurity: 3,
             MerchantOrderId: 485592628,
-            Amount: 200,
+            Amount: 200, // Eğer bunu da dinamik yapacaksan: Number(amount) * 100 yapabilirsin
             DisplayAmount: 200,
-            OkUrl: "https://insander.org/api/payment/success",
+            OkUrl: fullOkUrl,
             FailUrl: "https://insander.org/api/payment/fail",
             AdditionalData: {
                 AdditionalDataList: [
                     {
-                        VPosAdditionalData: {
-                            Key: "MD",
-                            Data: MD,
-                        }
+                        VPosAdditionalData: { Key: "MD", Data: MD }
                     },
                 ],
             },
@@ -67,22 +68,19 @@ export async function POST(req: Request) {
         const { data } = await axios.post(
             "https://insander.org/bank/approve",
             xmlWithEncoding,
-            {
-                headers: { "Content-Type": "application/xml" },
-            }
+            { headers: { "Content-Type": "application/xml" } }
         );
 
         // =========================================================
-        // YENİ EKLENEN KISIM: ONAY ALINDIKTAN SONRA MAİLİ TETİKLE
+        // YENİ EKLENEN KISIM: LİNKTEN ÇEKİLEN BİLGİLERLE MAİLİ AT
         // =========================================================
         try {
             await axios.post("https://insander.org/api/send-donation-info", {
-                // Bankanın "AdditionalData" sayesinde geri döndürdüğü alanları yakalıyoruz
-                donorFullName: formDataEntries.donorFullName || "Bağışçı",
-                donorEmail: formDataEntries.donorEmail || "Belirtilmedi",
-                donorPhone: formDataEntries.donorPhone || "Belirtilmedi",
-                projectTitle: formDataEntries.projectTitle || "Bağış",
-                amount: requestData.DisplayAmount // Tutarın düzeltilmiş halini maile iletiyoruz
+                donorFullName: donorFullName,
+                donorEmail: donorEmail,
+                donorPhone: donorPhone,
+                projectTitle: projectTitle,
+                amount: amount 
             });
             console.log("Success: Ödeme alındı ve bilgi maili gönderildi.");
         } catch (mailError) {

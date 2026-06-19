@@ -33,8 +33,11 @@ export async function POST(request: Request) {
 
     const hashPassword = computeHash('202400');
 
+    // DİKKAT: BİLGİLERİ KAYBETMEMEK İÇİN URL'NİN SONUNA PARAMETRE OLARAK EKLİYORUZ
+    const dynamicOkUrl = `https://insander.org/api/payment/success?name=${encodeURIComponent(data.donorFullName || 'Bağışçı')}&email=${encodeURIComponent(data.donorEmail || 'Belirtilmedi')}&phone=${encodeURIComponent(data.donorPhone || 'Belirtilmedi')}&title=${encodeURIComponent(data.projectTitle || 'Bağış')}&amt=${data.amount || 200}`;
+
     const requestData: any = {
-        OkUrl: "https://insander.org/api/payment/success",
+        OkUrl: dynamicOkUrl, // Artık statik değil, dinamik link gönderiyoruz
         FailUrl: "https://insander.org/api/payment/fail",
         MerchantId: 7474,
         CustomerId: 989464,
@@ -46,15 +49,6 @@ export async function POST(request: Request) {
         HashPassword: hashPassword,
         FECAmount: 0,
         FECCurrencyCode: "0949",
-        // BİLGİLERİ KAYBETMEMEK İÇİN BURAYA EKLİYORUZ:
-        AdditionalData: {
-            AdditionalDataList: [
-                { Key: "donorFullName", Data: data.donorFullName || "Belirtilmedi" },
-                { Key: "donorEmail", Data: data.donorEmail || "Belirtilmedi" },
-                { Key: "donorPhone", Data: data.donorPhone || "Belirtilmedi" },
-                { Key: "projectTitle", Data: data.projectTitle || "Bağış" }
-            ]
-        },
         Addresses: [
             {
                 Type: 1,
