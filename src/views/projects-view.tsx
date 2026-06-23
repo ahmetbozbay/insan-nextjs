@@ -69,6 +69,14 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
       subtitle: "Ambargo ve lojistik zorluklara rağmen sürdürdüğümüz beslenme ve su projelerimiz.",
       projects: [
         {
+          title: "Sıcak Yemek",
+          price: "130 TL",
+          image: "/assets/images-used/projects/sicak-yemek.webp",
+          desc: "Bölgedeki aşevlerimizde her gün binlerce savaş mağduru aile için sıcak yemek pişirip dağıtıyoruz.",
+          link: `/${lang}/projects/gazze-yemek-yardimi`,
+          category: "Gıda & Su"
+        },
+        {
           title: "Gıda Kolisi",
           price: "1.500 TL",
           image: "/assets/images-used/projects/gida-kolisi.webp",
@@ -91,15 +99,8 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
           desc: "Saldırıların gölgesinde un ve unlu mamul tedariği sağlayarak fırınların çalışmasına destek oluyoruz.",
           link: `/${lang}/projects/ekmek-un`,
           category: "Gıda & Su"
-        },
-        {
-          title: "Sıcak Yemek",
-          price: "130 TL",
-          image: "/assets/images-used/projects/sicak-yemek.webp",
-          desc: "Bölgedeki aşevlerimizde her gün binlerce savaş mağduru aile için sıcak yemek pişirip dağıtıyoruz.",
-          link: `/${lang}/projects/sicak-yemek`,
-          category: "Gıda & Su"
         }
+        
       ]
     },
     {
@@ -256,13 +257,13 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
               <li>
                 <Link
                   href="/tr/projects"
-                  className="text-gray-500 hover:text-[#0b5331] transition-colors"
+                  className="text-[#0b5331]"
                 >
                   Projelerimiz
                 </Link>
               </li>
 
-              <li className="mx-3 text-gray-300">/</li>
+         
             </ol>
           </div>
         </nav>

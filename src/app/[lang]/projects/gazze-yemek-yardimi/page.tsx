@@ -7,14 +7,37 @@ export const metadata = {
   title: "Gazze Yemek Yardımı | Filistin Sıcak Yemek Bağışı",
   description: "Gazze ve Filistin yemek yardımı kampanyası. 130 TL ile bir kap sıcak yemek bağışlayın. Aşevlerimizle savaş mağduru ailelere günlük taze yemek ulaştırıyoruz.",
   alternates: {
-    canonical: "https://insander.org/tr/projects/acil-yardim/gazze-yemek-yardimi",
+    canonical: "https://insander.org/tr/projects/gazze-yemek-yardimi",
+  },
+  // SEO LISTESİ MADDE 19: OPEN GRAPH VE TWITTER CARDS EKLENDİ
+  openGraph: {
+    title: "Gazze Yemek Yardımı | Açlığa Karşı Umut Olun",
+    description: "Sadece 130 TL ile bir savaş mağdurunun günlük sıcak yemek ihtiyacını karşılayabilirsiniz. Bağış yapmak için tıklayın.",
+    url: "https://insander.org/tr/projects/gazze-yemek-yardimi",
+    siteName: "İnsan Derneği",
+    images: [
+      {
+        url: "/assets/images-used/projects/gazze-yemek-yardimi-filistin-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Gazze Yemek Yardımı",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gazze Yemek Yardımı | Açlığa Karşı Umut Olun",
+    description: "130 TL ile Gazze'de bir kap sıcak yemek bağışlayın.",
+    images: ["/assets/images-used/projects/gazze-yemek-yardimi-filistin-banner.webp"],
   },
 };
 
 const GazzeYemekYardimiPage = () => {
-
   return (
     <main className="bg-white">
+      {/* SEO LISTESİ MADDE 12: SCHEMA MARKUP */}
       <Script
         id="ngo-schema"
         type="application/ld+json"
@@ -32,18 +55,17 @@ const GazzeYemekYardimiPage = () => {
       
       {/* --- HERO SECTION --- */}
       <section className="relative w-full h-[500px] lg:h-[720px] overflow-hidden bg-white">
-          {/* BACKGROUND IMAGE */}
+          {/* BACKGROUND IMAGE AREA */}
           <div className="absolute inset-0">
             <Image
-              src="/assets/images-used/projects/filistin-kurban-bagisi-banner.webp"
+              src="/assets/images-used/projects/gazze-yemek-yardimi-filistin-banner.webp"
               alt="Gazze yemek yardımı ve aşevi çalışmaları"
               fill
               priority
               sizes="100vw"
-              className="object-cover object-center"
+              className="object-contain object-center" 
             />
-            {/* SEO SAFE READABILITY LAYER */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0b5331]/80 via-black/40 to-black/10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0b5331] via-[#0b5331] via-5% to-transparent"></div>
           </div>
 
           {/* CONTENT */}
@@ -57,15 +79,15 @@ const GazzeYemekYardimiPage = () => {
                 </span>
               </div>
 
-              {/* H1 (PRIMARY SEO KEYWORD) */}
+              {/* H1 (SEO LISTESİ MADDE 4: TEK H1) */}
               <h1 className="text-white text-3xl md:text-6xl font-extrabold leading-[1.2] md:leading-[1.1] mb-4 md:mb-6">
-                  Gazze Yemek Yardımı <br></br><br className="hidden md:block" />
+                  Gazze Yemek Yardımı <br /><br className="hidden md:block" />
                   <span className="text-[#e31e24] text-2xl md:text-5xl">Açlığa Karşı Umut Olun</span>
                 </h1>
           
-              {/* SEO DESCRIPTION */}
+              {/* SEO LISTESİ MADDE 6 & 8: İLK PARAGRAF ANAHTAR KELİME OPTİMİZASYONU */}
               <p className="text-gray-100 text-base md:text-xl leading-relaxed mb-8 md:mb-10 max-w-[680px]">
-                <strong>Filistin yemek yardımı</strong> kampanyamızla, bölgedeki aşevlerimiz her gün binlerce savaş mağduru aileye taze ve sıcak yemek ulaştırıyor. Sadece <strong>130 TL</strong> ile bir kardeşinizin günlük sıcak yemek ihtiyacını karşılayabilirsiniz.
+                <strong>Gazze yemek yardımı</strong> ve <strong>Filistin yemek yardımı</strong> kampanyamızla, bölgedeki aşevlerimiz her gün binlerce savaş mağduru aileye taze ve sıcak yemek ulaştırıyor. Sadece <strong>130 TL</strong> ile bir kardeşinizin günlük sıcak yemek ihtiyacını karşılayabilirsiniz.
               </p>
 
               {/* CTA */}
@@ -97,7 +119,7 @@ const GazzeYemekYardimiPage = () => {
           </div>
         </section>
 
-      {/* --- BREADCRUMB --- */}
+      {/* --- BREADCRUMB (SEO LISTESİ MADDE 13) --- */}
       <section className="bg-gray-50 border-b border-gray-200">
         <nav aria-label="Breadcrumb" className="py-5">
           <div className="container mx-auto px-6">
@@ -113,56 +135,14 @@ const GazzeYemekYardimiPage = () => {
                   Projelerimiz
                 </Link>
               </li>
+              
               <li className="mx-3 text-gray-300">/</li>
-              <li>
-                <Link href="/tr/projects/acil-yardim" className="text-gray-500 hover:text-[#0b5331] transition-colors">
-                  Acil Yardım
-                </Link>
-              </li>
-              <li className="mx-3 text-gray-300">/</li>
-              <li className="text-[#0b5331] font-bold md:text-lg">
+              <li className="text-[#0b5331] font-bold md:text-lg" aria-current="page">
                 Gazze Yemek Yardımı
               </li>
             </ol>
           </div>
         </nav>
-
-        {/* SEO: JSON-LD Breadcrumb Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Ana Sayfa",
-                  "item": "https://insander.org/tr"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Projelerimiz",
-                  "item": "https://insander.org/tr/projects"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Acil Yardım",
-                  "item": "https://insander.org/tr/projects/acil-yardim"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 4,
-                  "name": "Gazze Yemek Yardımı",
-                  "item": "https://insander.org/tr/projects/acil-yardim/gazze-yemek-yardimi"
-                }
-              ]
-            })
-          }}
-        />
       </section>
       
       {/* --- SÜREÇ KARTLARI (3'LÜ GRID) --- */}
@@ -180,14 +160,15 @@ const GazzeYemekYardimiPage = () => {
 
           <div className="grid gap-6 lg:gap-8 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
             
-            {/* 1. KART */}
+            {/* 1. KART: TEDARİK VE HAZIRLIK */}
             <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-              <Link href="#bagis-formu" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
+              <Link href="#bagis-formu" className="block relative aspect-[3/4] overflow-hidden bg-gray-50">
                 <Image
-                  src="/assets/images-used/projects/kurbanlıklar-filistin.webp" 
-                  alt="Gazze sıcak yemek hazırlık ve tedarik süreci"
+                  src="/assets/images-used/projects/gazze-yemek-yardimi-tedarik-hazirlik.webp" 
+                  alt="Gazze sıcak yemek yardımı için taze malzeme ve et tedarik süreci"
                   fill
-                  className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4 bg-[#0b5331] text-white px-3 py-1 text-xs font-bold rounded z-10">
                   Adım 1
@@ -206,14 +187,15 @@ const GazzeYemekYardimiPage = () => {
               </div>
             </div>
 
-            {/* 2. KART */}
+            {/* 2. KART: GÜNLÜK PİŞİRİM */}
             <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-              <Link href="#bagis-formu" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
+              <Link href="#bagis-formu" className="block relative aspect-[3/4] overflow-hidden bg-gray-50">
                 <Image
-                  src="/assets/images-used/projects/kurban-kesim-sonrası-filistin.webp"
-                  alt="Gazze aşevlerinde günlük sıcak yemek pişirimi"
+                  src="/assets/images-used/projects/gazze-yemek-yardimi-gunluk-pisirim.webp"
+                  alt="Gazze aşevlerinde dev kazanlarda günlük sıcak yemek pişirimi"
                   fill
-                  className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4 bg-[#e31e24] text-white px-3 py-1 text-xs font-bold rounded z-10">
                   Adım 2
@@ -232,14 +214,15 @@ const GazzeYemekYardimiPage = () => {
               </div>
             </div>
 
-            {/* 3. KART */}
+            {/* 3. KART: DAĞITIM VE TESLİM */}
             <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-              <Link href="#bagis-formu" className="block relative aspect-[5/4] overflow-hidden bg-gray-50 p-4">
+              <Link href="#bagis-formu" className="block relative aspect-[3/4] overflow-hidden bg-gray-50">
                 <Image
-                  src="/assets/images-used/projects/kurban-yardim-tiri-filistin.webp"
-                  alt="Gazze sığınak ve çadır kentlerde sıcak yemek dağıtımı"
+                  src="/assets/images-used/projects/filistin-yemek-yardimi-dagitim-teslim.webp"
+                  alt="Filistin yemek yardımı kapsamında çadır kentlerde sıcak yemek dağıtımı"
                   fill
-                  className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4 bg-[#0b5331] text-white px-3 py-1 text-xs font-bold rounded z-10">
                   Adım 3
@@ -270,10 +253,10 @@ const GazzeYemekYardimiPage = () => {
               <DonationPaymentSection
                 categories={["Filistin", "Gazze", "Acil Yardım"]}
                 paymentMethods={[]}
-                quickSelectAmounts={[130, 260, 650, 1300]}
+                quickSelectAmounts={[130, 260, 650, 1300, 2600, 15000]}
                 donationTitle="Gazze Sıcak Yemek Bağışı"
                 href="/tr/pay/sicak-yemek"
-                donationDetailsImage="/assets/images-used/projects/filistin.webp"
+                donationDetailsImage="/assets/images-used/projects/gazze-yemek-yardimi-tedarik-hazirlik.webp"
                 donationDescription="Gazze'deki kardeşlerimize bir kap sıcak yemek ulaştırın."
                 initialAmount={130}
               />
@@ -296,36 +279,149 @@ const GazzeYemekYardimiPage = () => {
               
               <div className="prose prose-lg text-gray-600 space-y-8 max-w-none">
                 <p>
-                  Savaşın ve ablukanın gölgesinde hayatta kalma mücadelesi veren Gazze halkı, temiz gıdaya ve suya ulaşmakta büyük zorluklar çekiyor. <strong>Gazze yemek yardımı</strong> kampanyamız kapsamında, bölgede kurduğumuz aşevleri aracılığıyla her gün düzenli olarak on binlerce kişiye sıcak yemek ulaştırıyoruz[cite: 129, 130, 131].
+                  Savaşın ve ablukanın gölgesinde hayatta kalma mücadelesi veren Gazze halkı, temiz gıdaya ve suya ulaşmakta büyük zorluklar çekiyor. <strong>Gazze yemek yardımı</strong> kampanyamız kapsamında, bölgede kurduğumuz aşevleri aracılığıyla her gün düzenli olarak on binlerce kişiye sıcak yemek ulaştırıyoruz. İhtiyaçların günden güne arttığı bu süreçte, diğer <Link href="/tr/projects" className="text-[#0b5331] font-semibold hover:underline">acil yardım projelerimiz</Link> ile de bölge halkının yanındayız.
                 </p>
 
-                {/* YOUTUBE İFRAME */}
+                {/* SEO LISTESİ MADDE 7: TABLO VE LİSTE KULLANIMI EKLENDİ */}
+                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 mt-0">Yardımlarınız Kimlere Ulaşıyor?</h3>
+                  <ul className="space-y-3 mb-0">
+                    <li className="flex items-center gap-2">
+                      <span className="text-[#e31e24]">✔</span> Sığınaklarda ve derme çatma çadırlarda kalan aileler
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-[#e31e24]">✔</span> Yetersiz beslenme tehlikesi altındaki çocuklar ve bebekler
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-[#e31e24]">✔</span> Kendi gıdasını temin edemeyecek durumdaki yaşlılar ve yaralılar
+                    </li>
+                  </ul>
+                </div>
+
+                {/* YOUTUBE İFRAME (3'LÜ KART YAPISI) */}
                 <div className="my-10">
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">Sahadan Yansıyanlar</h3>
-                  <p className="text-base mb-4">Bağışlarınızın Gazze'de nasıl umuda dönüştüğünü kendi gözlerinizle görün. Ekiplerimiz zor şartlara rağmen yardımlarınızı ihtiyaç sahiplerine ulaştırıyor[cite: 98, 99, 100].</p>
-                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-gray-100 shadow-lg">
-                    <iframe 
-                      width="100%" 
-                      height="100%" 
-                      src="https://www.youtube.com/embed/nXLW-MyRumQ?si=XNK8EnfkHQSJ8blj" 
-                      title="İnsan Derneği Gazze Yardım Çalışmaları" 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      referrerPolicy="strict-origin-when-cross-origin" 
-                      allowFullScreen
-                      className="absolute top-0 left-0 w-full h-full"
-                    ></iframe>
+                  <p className="text-base mb-6">Bağışlarınızın Gazze'de nasıl umuda dönüştüğünü kendi gözlerinizle görün. Ekiplerimiz zor şartlara rağmen yardımlarınızı ihtiyaç sahiplerine ulaştırıyor.</p>
+                  
+                  <div className="grid gap-6 lg:gap-8 [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))]">
+                    
+                    <div className="group w-full bg-black rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                      <div className="relative w-full h-[350px] md:h-[300px]">
+                        <iframe 
+                          width="100%" 
+                          height="100%" 
+                          src="https://www.youtube.com/embed/nXLW-MyRumQ?si=XNK8EnfkHQSJ8blj" 
+                          title="İnsan Derneği Gazze Yardım Çalışmaları 1" 
+                          frameBorder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          referrerPolicy="strict-origin-when-cross-origin" 
+                          allowFullScreen
+                          loading="lazy"
+                          className="absolute top-0 left-0 w-full h-full"
+                        ></iframe>
+                      </div>
+                    </div>
+
+                    <div className="group w-full bg-black rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                      <div className="relative w-full h-[350px] md:h-[300px]">
+                        <iframe 
+                          width="100%" 
+                          height="100%" 
+                          src="https://www.youtube.com/embed/Q2AA-leztvw?si=26wm0nWUUN-pK_w_" 
+                          title="İnsan Derneği Gazze Yardım Çalışmaları 2" 
+                          frameBorder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          referrerPolicy="strict-origin-when-cross-origin" 
+                          allowFullScreen
+                          loading="lazy"
+                          className="absolute top-0 left-0 w-full h-full"
+                        ></iframe>
+                      </div>
+                    </div>
+
+                    <div className="group w-full bg-black rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                      <div className="relative w-full h-[350px] md:h-[300px]">
+                        <iframe 
+                          width="100%" 
+                          height="100%" 
+                          src="https://www.youtube.com/embed/51Jc6H0TCjs?si=fMuLzpUZ4tQoYEmX" 
+                          title="İnsan Derneği Gazze Yardım Çalışmaları 3" 
+                          frameBorder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          referrerPolicy="strict-origin-when-cross-origin" 
+                          allowFullScreen
+                          loading="lazy"
+                          className="absolute top-0 left-0 w-full h-full"
+                        ></iframe>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* --- INSTAGRAM REELS (3'LÜ KART YAPISI) --- */}
+                <div className="my-16 border-t border-gray-100 pt-12">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Instagram'da Biz</h3>
+                  <p className="text-base mb-8">Gazze aşevlerimizden ve sahadaki sıcak yemek dağıtımlarımızdan en güncel video paylaşımlarımızı sosyal medya hesaplarımızdan da takip edebilirsiniz.</p>
+                  
+                  <Script src="https://www.instagram.com/embed.js" strategy="afterInteractive" />
+
+                  <div className="grid gap-6 lg:gap-8 [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))]">
+                    
+                    <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                      <blockquote 
+                        className="instagram-media" 
+                        data-instgrm-captioned 
+                        data-instgrm-permalink="https://www.instagram.com/reel/DYM3N34SHll/?utm_source=ig_embed&amp;utm_campaign=loading" 
+                        data-instgrm-version="14" 
+                        style={{ background: '#FFF', border: 0, margin: 0, padding: 0, width: '100%', minWidth: '100%', maxWidth: '100%' }}
+                      >
+                        <a href="https://www.instagram.com/reel/DYM3N34SHll/" target="_blank" rel="noopener noreferrer">
+                          İnsan Derneği Gazze Paylaşımı 1
+                        </a>
+                      </blockquote>
+                    </div>
+
+                    <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                      <blockquote 
+                        className="instagram-media" 
+                        data-instgrm-captioned 
+                        data-instgrm-permalink="https://www.instagram.com/reel/DZU9ma3Mo0w/?utm_source=ig_embed&amp;utm_campaign=loading" 
+                        data-instgrm-version="14" 
+                        style={{ background: '#FFF', border: 0, margin: 0, padding: 0, width: '100%', minWidth: '100%', maxWidth: '100%' }}
+                      >
+                        <a href="https://www.instagram.com/reel/DZU9ma3Mo0w/" target="_blank" rel="noopener noreferrer">
+                          İnsan Derneği Gazze Paylaşımı 2
+                        </a>
+                      </blockquote>
+                    </div>
+
+                    <div className="group w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                      <blockquote 
+                        className="instagram-media" 
+                        data-instgrm-captioned 
+                        data-instgrm-permalink="https://www.instagram.com/reel/DYwmx3usd9T/?utm_source=ig_embed&amp;utm_campaign=loading" 
+                        data-instgrm-version="14" 
+                        style={{ background: '#FFF', border: 0, margin: 0, padding: 0, width: '100%', minWidth: '100%', maxWidth: '100%' }}
+                      >
+                        <a href="https://www.instagram.com/reel/DYwmx3usd9T/" target="_blank" rel="noopener noreferrer">
+                          İnsan Derneği Gazze Paylaşımı 3
+                        </a>
+                      </blockquote>
+                    </div>
+
                   </div>
                 </div>
 
                 <h3 className="text-2xl font-bold text-gray-800">Bir Kap Yemek 130 TL</h3>
                 <p>
-                  Bağışlayacağınız sadece <strong>130 TL</strong> ile bir kişinin günlük sıcak yemek ihtiyacını karşılayabilirsiniz[cite: 132]. <strong>Filistin yemek yardımı</strong>, bölgedeki en acil ihtiyaçların başında gelmektedir[cite: 133]. Bebekler, çocuklar ve yaşlılar başta olmak üzere savunmasız durumdaki binlerce insan bu yardımlarla hayata tutunuyor[cite: 134].
+                  Bağışlayacağınız sadece <strong>130 TL</strong> ile bir kişinin günlük sıcak yemek ihtiyacını karşılayabilirsiniz. <strong>Filistin yemek yardımı</strong>, bölgedeki en acil ihtiyaçların başında gelmektedir. Bebekler, çocuklar ve yaşlılar başta olmak üzere savunmasız durumdaki binlerce insan bu yardımlarla hayata tutunuyor.
                 </p>
 
+                {/* SEO LISTESİ MADDE 18: E-E-A-T SİNYALLERİ (UZMANLIK VE GÜVEN) */}
                 <div className="bg-[#f8f9fa] p-8 rounded-2xl border-l-4 border-[#0b5331] mt-8">
-                  <h4 className="font-bold text-gray-900 mb-2 text-lg">Şeffaf ve İzlenebilir Altyapı</h4>
-                  <p className="text-base leading-relaxed m-0">İnsan Derneği olarak, yardımlarınızın doğru adrese ulaştığından emin olmanız için tüm süreçleri şeffaf bir şekilde yönetiyoruz. Aşevlerimizin faaliyetleri ve yemek dağıtım süreçleri düzenli olarak raporlanmaktadır[cite: 135, 136].</p>
+                  <h4 className="font-bold text-gray-900 mb-2 text-lg">Şeffaf ve İzlenebilir Altyapı (E-E-A-T)</h4>
+                  <p className="text-base leading-relaxed m-0">İnsan Derneği olarak, yardımlarınızın doğru adrese ulaştığından emin olmanız için tüm süreçleri şeffaf bir şekilde yönetiyoruz. Uluslararası insani yardım standartlarına uygun olarak çalışan ekiplerimiz, aşevlerimizin faaliyetlerini ve günlük yemek dağıtım süreçlerini düzenli saha raporları ile denetlemektedir.</p>
                 </div>
               </div>
             </div>
@@ -338,19 +434,19 @@ const GazzeYemekYardimiPage = () => {
                 <div className="space-y-4 mb-8">
                   <div className="flex justify-between items-center pb-3 border-b border-gray-100">
                     <span className="text-gray-500 text-sm">Bölge</span>
-                    <span className="font-bold text-gray-900">Filistin / Gazze [cite: 138]</span>
+                    <span className="font-bold text-gray-900">Filistin / Gazze</span>
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b border-gray-100">
                     <span className="text-gray-500 text-sm">Bir Kap Yemek</span>
-                    <span className="font-bold text-[#e31e24]">130 TL [cite: 138]</span>
+                    <span className="font-bold text-[#e31e24]">130 TL</span>
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b border-gray-100">
                     <span className="text-gray-500 text-sm">Kategori</span>
-                    <span className="font-bold text-gray-900">Acil Yardım [cite: 138]</span>
+                    <span className="font-bold text-gray-900">Acil Yardım</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-500 text-sm">Günlük Üretim</span>
-                    <span className="font-bold text-gray-900">10.000+ Kap [cite: 97]</span>
+                    <span className="font-bold text-gray-900">10.000+ Kap</span>
                   </div>
                 </div>
 
@@ -414,48 +510,11 @@ const GazzeYemekYardimiPage = () => {
         </div>
       </section>
 
-      {/* SEO SCHEMA FOR FAQ */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Gazze'de sıcak yemek dağıtımı nasıl yapılıyor? [cite: 142]",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Bölgedeki yerel partnerlerimiz ve kendi lojistik ağımız sayesinde kurulan aşevlerinde pişirilen yemekler, sığınaklara ve çadır kentlere araçlarla günlük olarak dağıtılmaktadır."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "130 TL ile tam olarak ne sağlanıyor? [cite: 142]",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "130 TL, bir kişinin bir öğünlük besin değeri yüksek, doyurucu ve sıcak yemek maliyetini (malzeme, pişirme ve dağıtım masrafları dahil) karşılamaktadır."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Zekat veya sadaka niyetine yemek bağışı yapabilir miyim? [cite: 142]",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Evet, online bağış yaparken niyetinizi (zekat, sadaka, fidye vb.) belirtebilirsiniz. Bağışlarınız bu hassasiyete uygun olarak ihtiyaç sahiplerine ulaştırılır."
-                }
-              }
-            ]
-          })
-        }}
-      />
-
       <a
-        href="https://wa.me/905010879198?text=Merhaba,%20Gazze%20Sıcak%20Yemek%20Yardımı%20hakkında%20bilgi%20almak%20istiyorum." 
+        href="https://wa.me/905551901043?text=Merhaba,%20Gazze%20Sıcak%20Yemek%20Yardımı%20hakkında%20bilgi%20almak%20istiyorum." 
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-10 right-10 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:scale-110 transition-all duration-300 animate"
+        className="fixed bottom-10 right-10 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
         aria-label="WhatsApp üzerinden bize ulaşın"
       >
         <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
