@@ -38,6 +38,7 @@ const GazzeYemekYardimiPage = () => {
   return (
     <main className="bg-white">
       {/* SEO LISTESİ MADDE 12: SCHEMA MARKUP */}
+      {/* GELİŞMİŞ NGO + ORGANIZATION SCHEMA */}
       <Script
         id="ngo-schema"
         type="application/ld+json"
@@ -45,10 +46,63 @@ const GazzeYemekYardimiPage = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "NGO",
+            "@id": "https://insander.org/#organization",
+
             "name": "İnsan Derneği",
+
             "url": "https://insander.org",
-            "areaServed": "Global",
-            "sameAs": ["https://insander.org/tr"]
+
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://insander.org/_next/image?url=%2Fassets%2Fimages-used%2Flogo%2Flogo-ww.png&w=384&q=75"
+            },
+
+            "foundingDate": "2023",
+
+            "description":
+              "İnsan Derneği, savaş, afet ve yoksulluk gibi zor şartlarda yaşayan ihtiyaç sahiplerine gıda, sağlık, eğitim ve acil yardım alanlarında destek sağlayan uluslararası insani yardım kuruluşudur.",
+
+            "telephone": "+90 555 190 10 43",
+
+            "email": "info@insander.org",
+
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Kütahya",
+              "addressCountry": "TR"
+            },
+
+            "areaServed": {
+              "@type": "Place",
+              "name": "Dünya Geneli"
+            },
+
+            "knowsAbout": [
+              "Gazze yardım çalışmaları",
+              "Filistin yemek yardımı",
+              "Sıcak yemek bağışı",
+              "Gıda yardımı",
+              "Acil insani yardım",
+              "Eğitim desteği",
+              "Sağlık yardımları"
+            ],
+
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Bağış Destek Hattı",
+              "telephone": "+90 555 190 10 43",
+              "email": "info@insander.org",
+              "availableLanguage": [
+                "Turkish",
+                "English",
+                "Arabic"
+              ]
+            },
+
+            "sameAs": [
+              "https://www.instagram.com/insandernegi_/",
+              "https://www.youtube.com/@insanderneği"
+            ]
           })
         }}
       />
