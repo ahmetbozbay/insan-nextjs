@@ -24,6 +24,11 @@ const nextConfig: NextConfig = {
         destination: '/tr/projects/kurban-bagisi',
         permanent: true,
       },
+      {
+        source: '/tr/projects/zekat-dagitimi',
+        destination: '/tr/projects/gazze-zekat-bagisi',
+        permanent: true,
+      },
     ];
   },
 };
