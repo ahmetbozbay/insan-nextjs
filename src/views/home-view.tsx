@@ -545,7 +545,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                 <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
 
                 <div
-                    className="relative w-full max-w-2xl"
+                    className="relative w-full max-w-xl"
                     style={{ animation: "popupScale .35s ease" }}
                 >
 
@@ -555,7 +555,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                     aria-label="Popup kapat"
                     className="absolute -top-8 -right-8 z-20 bg-emerald-600 text-white w-36 h-36 rounded-full flex items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:bg-red-600 hover:scale-110 transition-all duration-300"
                     >
-                    <X size={110} strokeWidth={3.5} />
+                    <X size={90} strokeWidth={3.5} />
                     </button>
 
                     {/* SMS Bağış Görseli */}
@@ -566,8 +566,8 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                     <Image
                         src="/assets/images-used/projects/sms-bagis-popup.webp"
                         alt="Gazze SMS Bağış Kampanyası"
-                        width={1200}
-                        height={1200}
+                        width={900}
+                        height={900}
                         priority
                         className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
                     />

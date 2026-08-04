@@ -1,0 +1,10 @@
+# Bütün arama motoru botlarına izin ver
+User-agent: *
+Allow: /
+
+# Taranmasını istemediğimiz arka plan ve sistem klasörleri
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap (Site Haritası) konumu - Google'ın sayfalarınızı hızlı bulması için kritik!
+Sitemap: https://insander.org/sitemap.xml

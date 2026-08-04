@@ -1,4 +1,4 @@
-@import "../../assets/css/custom/header.css";
+/* @import "../../assets/css/custom/header.css"; */
 @import "../../assets/css/custom/card.css";
 @import "../../assets/css/custom/user.css";
 @import "../../assets/css/custom/tab.css";
@@ -22,10 +22,11 @@
     @apply font-inter;
   }
 
+  /* DÜZELTİLMİŞ HALİ: */
   img,
   video {
-    max-width: unset;
-    height: unset;
+    max-width: 100%;
+    height: auto;
   }
 
   input:focus-visible,
