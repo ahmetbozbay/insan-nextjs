@@ -19,7 +19,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // --- 1. Önceki Özel Yönlendirmeleriniz (Çift Yönlendirmeyi Önlemek İçin Güncellendi) ---
+      // --- Yeni Kural: kardes-aile -> gazze-kardes-aile ---
+      {
+        source: '/tr/gazze-bagis/kardes-aile',
+        destination: '/tr/gazze-bagis/gazze-kardes-aile',
+        permanent: true,
+      },
+
+      // --- 1. Önceki Özel Yönlendirmeleriniz ---
       {
         source: '/tr/projects/qurbani',
         destination: '/tr/gazze-bagis/kurban-bagisi',

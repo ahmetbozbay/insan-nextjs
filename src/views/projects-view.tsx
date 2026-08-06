@@ -116,13 +116,13 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
       subtitle: "Yıkılan yaşam alanlarında Gazzeli mülteci aileleri korunaklı kılmak için yürütülen Gazze barınma bağışları.",
       projects: [
         {
-          title: "Gazze Çadır & Barınma Bağışı",
-          price: "9.000 TL",
-          image: "/assets/images-used/projects/cadir.webp",
-          desc: "Evsiz kalan sivil halkı zorlu hava şartlarından korumak için Gazze çadır bağışı ile güvenli yaşam alanları kuruyoruz.",
-          link: `/${lang}/gazze-bagis/cadir`,
-          category: "Barınma & Giyim",
-          buttonText: "Gazze Çadır Bağışı Yap"
+          title: "Gazze Kardeş Aile Bağışı",
+          price: "5.000 TL",
+          image: "/assets/images-used/projects/kardes-aile.webp",
+          desc: "Aile reisi şehit düşmüş veya engelli kalmış ailelerin aylık bakımını Gazze kardeş aile bağışı ile üstlenin.",
+          link: `/${lang}/gazze-bagis/kardes-aile`,
+          category: "Yetim & Aile",
+          buttonText: "Kardeş Aile Bağışı Yap"
         },
         {
           title: "Gazze Altyapı Desteği Bağışı",
@@ -143,13 +143,13 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
           buttonText: "Gazze Kıyafet Bağışı Yap"
         },
         {
-          title: "Gazze Kardeş Aile Bağışı",
-          price: "5.000 TL",
-          image: "/assets/images-used/projects/kardes-aile.webp",
-          desc: "Aile reisi şehit düşmüş veya engelli kalmış ailelerin aylık bakımını Gazze kardeş aile bağışı ile üstlenin.",
-          link: `/${lang}/gazze-bagis/kardes-aile`,
-          category: "Yetim & Aile",
-          buttonText: "Kardeş Aile Bağışı Yap"
+          title: "Gazze Çadır & Barınma Bağışı",
+          price: "9.000 TL",
+          image: "/assets/images-used/projects/cadir.webp",
+          desc: "Evsiz kalan sivil halkı zorlu hava şartlarından korumak için Gazze çadır bağışı ile güvenli yaşam alanları kuruyoruz.",
+          link: `/${lang}/gazze-bagis/cadir`,
+          category: "Barınma & Giyim",
+          buttonText: "Gazze Çadır Bağışı Yap"
         }
       ]
     },
