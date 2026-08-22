@@ -278,8 +278,8 @@ export default function KardesAileView({ lang = "tr" }: KardesAileViewProps) {
             
             {/* 1. ERZAK KOLİSİ */}
             <div className="bg-white p-7 rounded-3xl border-2 border-emerald-200 shadow-md hover:shadow-xl hover:border-emerald-500 transition-all text-center group">
-              <div className="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-emerald-600/30 group-hover:scale-110 transition-transform">
-                <Package className="w-8 h-8 text-white" />
+              <div className="w-48 h-48 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-emerald-600/30 group-hover:scale-110 transition-transform">
+                <Package className="w-24 h-24 text-white" />
               </div>
               <h3 className="font-black text-gray-900 text-xl mb-2">Aylık Erzak Kolisi</h3>
               <p className="text-gray-600 text-xs leading-relaxed font-medium">
@@ -289,8 +289,8 @@ export default function KardesAileView({ lang = "tr" }: KardesAileViewProps) {
 
             {/* 2. İÇME SUYU */}
             <div className="bg-white p-7 rounded-3xl border-2 border-blue-200 shadow-md hover:shadow-xl hover:border-blue-500 transition-all text-center group">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-blue-600/30 group-hover:scale-110 transition-transform">
-                <Droplets className="w-8 h-8 text-white" />
+              <div className="w-48 h-48 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-blue-600/30 group-hover:scale-110 transition-transform">
+                <Droplets className="w-24 h-24 text-white" />
               </div>
               <h3 className="font-black text-gray-900 text-xl mb-2">Temiz İçme Suyu</h3>
               <p className="text-gray-600 text-xs leading-relaxed font-medium">
@@ -300,8 +300,8 @@ export default function KardesAileView({ lang = "tr" }: KardesAileViewProps) {
 
             {/* 3. ÇADIR & BARINMA */}
             <div className="bg-white p-7 rounded-3xl border-2 border-amber-200 shadow-md hover:shadow-xl hover:border-amber-500 transition-all text-center group">
-              <div className="w-16 h-16 bg-amber-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-amber-600/30 group-hover:scale-110 transition-transform">
-                <Tent className="w-8 h-8 text-white" />
+              <div className="w-48 h-48 bg-amber-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-amber-600/30 group-hover:scale-110 transition-transform">
+                <Tent className="w-24 h-24 text-white" />
               </div>
               <h3 className="font-black text-gray-900 text-xl mb-2">Çadır & Barınma</h3>
               <p className="text-gray-600 text-xs leading-relaxed font-medium">
@@ -311,8 +311,8 @@ export default function KardesAileView({ lang = "tr" }: KardesAileViewProps) {
 
             {/* 4. NAKİT DESTEĞİ */}
             <div className="bg-white p-7 rounded-3xl border-2 border-red-200 shadow-md hover:shadow-xl hover:border-red-500 transition-all text-center group">
-              <div className="w-16 h-16 bg-red-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-red-600/30 group-hover:scale-110 transition-transform">
-                <HandHeart className="w-8 h-8 text-white" />
+              <div className="w-48 h-48 bg-red-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-red-600/30 group-hover:scale-110 transition-transform">
+                <HandHeart className="w-24 h-24 text-white" />
               </div>
               <h3 className="font-black text-gray-900 text-xl mb-2">Acil Nakit Desteği</h3>
               <p className="text-gray-600 text-xs leading-relaxed font-medium">
