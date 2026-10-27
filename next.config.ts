@@ -19,6 +19,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // --- Yeni Kural: icme-suyu -> gazze-su-yardimi ---
+      {
+        source: '/tr/gazze-bagis/icme-suyu',
+        destination: '/tr/gazze-bagis/gazze-su-yardimi',
+        permanent: true,
+      },
+
       // --- Yeni Kural: kardes-aile -> gazze-kardes-aile ---
       {
         source: '/tr/gazze-bagis/kardes-aile',
@@ -46,7 +53,7 @@ const nextConfig: NextConfig = {
       },
 
       // --- 3. Tüm Alt Sayfaları Otomatik Yönlendiren Wildcard Kuralı ---
-      // (Örn: /tr/projects/icme-suyu -> /tr/gazze-bagis/icme-suyu)
+      // (Örn: /tr/projects/icme-suyu -> /tr/gazze-bagis/icme-suyu -> /tr/gazze-bagis/gazze-su-yardimi)
       {
         source: '/tr/projects/:path*',
         destination: '/tr/gazze-bagis/:path*',

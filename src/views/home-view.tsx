@@ -28,19 +28,19 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
         title: "Filistin Kurban Bağışı",
         price: "135.000 TL",
         image: "/assets/images-used/projects/filistin.webp",
-        link: `/${lang}/projects/kurban-bagisi/filistin-kurban-bagisi`,
+        link: `/${lang}/gazze-bagis/kurban-bagisi`,
       },
       {
         title: "Lübnan Kurban Bağışı",
         price: "15.000 TL",
         image: "/assets/images-used/projects/lübnan.webp",
-        link: `/${lang}/projects/kurban-bagisi/lubnan-kurban-bagisi`,
+        link: `/${lang}/gazze-bagis/kurban-bagisi`,
       },
       {
         title: "Mısır Kurban Bağışı",
         price: "15.000 TL",
         image: "/assets/images-used/projects/mısır.webp",
-        link: `/${lang}/projects/kurban-bagisi/misir-kurban-bagisi`,
+        link: `/${lang}/gazze-bagis/kurban-bagisi`,
       }
     ];
 
@@ -50,15 +50,15 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
             url: "https://cdn.sanity.io/images/bbpgvnl9/production/b6ef7bd55e922f7a71c69a91b1ecee2ced8f4954-1280x960.jpg", 
             title: "Kurbanınız Umut Olsun", 
             description: "Vekaletlerinizi titizlikle yerine getiriyor, videolarla size bildiriyoruz. Bu bayram binlerce sofraya bereket olalım.",
-            link: `/${lang}/projects/kurban-bagisi`,
-            donateLink: `/${lang}/projects/kurban-bagisi`,
+            link: `/${lang}/gazze-bagis/kurban-bagisi`,
+            donateLink: `/${lang}/gazze-bagis/kurban-bagisi`,
             tag: "KURBAN 2026"
         },
         { 
             url: "https://cdn.sanity.io/images/bbpgvnl9/production/ebc53ead1b612b6eba7ea715bac4b9c4ce228fb7-2048x1536.jpg", 
             title: "Gazze'ye Gıda Desteği", 
             description: "Saldırıların başından bu yana on binlerce gıda kolisi dağıtımı gerçekleştirerek Gazze halkının yanında oluyoruz.",
-            link: `/${lang}/projects/gida-kolisi`,
+            link: `/${lang}/gazze-bagis/gida-kolisi`,
             donateLink: `/${lang}/pay/gida-kolisi`,
             tag: "ACİL YARDIM"
         },
@@ -66,7 +66,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
             url: "https://cdn.sanity.io/images/bbpgvnl9/production/db67bea66878e3a0421f6236c0e4d476f896214d-848x480.jpg", 
             title: "Altyapı ve Yaşam Alanları", 
             description: "Çadır kampları kuruyor, iş makineleriyle tesviye çalışmaları yaparak barınma alanlarını yaşanabilir kılıyoruz.",
-            link: `/${lang}/projects/altyapi-calismalari`,
+            link: `/${lang}/gazze-bagis/altyapi-calismalari`,
             donateLink: `/${lang}/pay/altyapi-calismalari`,
             tag: "ALTYAPI - BİNA"
         },
@@ -74,7 +74,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
             url: "https://cdn.sanity.io/images/bbpgvnl9/production/c9b5cba806ec74e1dfca2ede217910c31db7f492-2048x1152.jpg", 
             title: "Filistin'in Geleceği: Eğitim", 
             description: "Zorlu şartlar altında dahi eğitimden kopmayan Gazze halkına hafızlık ve okul desteği sağlıyoruz.",
-            link: `/${lang}/projects/egitim-destek`,
+            link: `/${lang}/gazze-bagis/egitim-destek`,
             donateLink: `/${lang}/pay/egitim-destek`,
             tag: "EĞİTİM"
         },
@@ -82,54 +82,61 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
             url: "https://cdn.sanity.io/images/bbpgvnl9/production/b3af03c02203d8c4824163dffcc75b72797ff3a2-1280x720.jpg", 
             title: "Yaraları Birlikte Sarıyoruz", 
             description: "Saldırılarda uzuvlarını kaybeden kardeşlerimize protez desteği sağlayarak hayata tutunmalarına yardımcı oluyoruz.",
-            link: `/${lang}/projects/protez`,
+            link: `/${lang}/gazze-bagis/protez`,
             donateLink: `/${lang}/pay/protez`,
             tag: "SAĞLIK"
         }
     ];
 
-    // --- HIZLI BAĞIŞ VERİLERİ ---
+    // --- HIZLI BAĞIŞ VERİLERİ (GÜNCELLENDİ) ---
     const quickDonations = [
         {
             title: "Nakdi Yardım",
             price: "500 TL",
             image: "https://cdn.sanity.io/images/bbpgvnl9/production/a2e4b5dff9b2150ef74cfc3abf826abc61edaeb8-1600x900.jpg",
-            link: `/${lang}/projects/nakdi-yardim`,
+            link: `/${lang}/gazze-bagis/nakdi-yardim`,
             payLink: `/${lang}/pay/nakdi-yardim`
         },
         {
             title: "Sıcak Yemek",
-            price: "130 TL",
+            price: "170 TL",
             image: "https://cdn.sanity.io/images/bbpgvnl9/production/dd1a3328fbee48609bce4d4a581f6eab32e50a1c-1600x900.jpg",
-            link: `/${lang}/projects/sicak-yemek`,
+            link: `/${lang}/gazze-bagis/gazze-yemek-yardimi`,
             payLink: `/${lang}/pay/sicak-yemek`
+        },
+        {
+            title: "İçme Suyu",
+            price: "8.000 TL",
+            image: "/assets/images-used/projects/icme-suyu.webp",
+            link: `/${lang}/gazze-bagis/gazze-su-yardimi`,
+            payLink: `/${lang}/pay/icme-suyu`
         },
         {
             title: "Hijyen Paketi",
             price: "900 TL",
             image: "https://cdn.sanity.io/images/bbpgvnl9/production/5cc6f34cbedfe5bbe086c6fc653b129294d1133a-2048x1536.jpg",
-            link: `/${lang}/projects/hijyen-paketi`,
+            link: `/${lang}/gazze-bagis/hijyen-paketi`,
             payLink: `/${lang}/pay/hijyen-paketi`
         },
         {
             title: "Ekmek - Un",
             price: "800 TL",
             image: "https://cdn.sanity.io/images/bbpgvnl9/production/02310009fdf848b5a33d64b073ab0f48cc7877b3-1280x720.jpg",
-            link: `/${lang}/projects/ekmek-un`,
+            link: `/${lang}/gazze-bagis/ekmek-un`,
             payLink: `/${lang}/pay/ekmek-un`
         }
     ];
 
-    // --- "NELER YAPIYORUZ" FAALİYET ALANLARI (İsim ve İkon Hataları Tamamen Düzeltildi) ---
+    // --- "NELER YAPIYORUZ" FAALİYET ALANLARI ---
     const categories = [
-        { name: "Eğitim Destek", icon: <GraduationCap />, link: `/${lang}/projects/egitim-destek` },
-        { name: "Gıda Kolisi", icon: <Package />, link: `/${lang}/projects/gida-kolisi` },
-        { name: "Sıcak Yemek", icon: <Utensils />, link: `/${lang}/projects/sicak-yemek` },
-        { name: "Çadır Yardımı", icon: <Tent />, link: `/${lang}/projects/cadir` },
-        { name: "Ambulans", icon: <Ambulance />, link: `/${lang}/projects/ambulans` },
-        { name: "Yenidoğan Paketi", icon: <Baby />, link: `/${lang}/projects/yenidogan-paketi` },
-        { name: "Kardeş Aile", icon: <Heart />, link: `/${lang}/projects/kardes-aile` },
-        { name: "Nakdi Yardım", icon: <HandHelping />, link: `/${lang}/projects/nakdi-yardim` },
+        { name: "Eğitim Destek", icon: <GraduationCap />, link: `/${lang}/gazze-bagis/egitim-destek` },
+        { name: "Gıda Kolisi", icon: <Package />, link: `/${lang}/gazze-bagis/gida-kolisi` },
+        { name: "Sıcak Yemek", icon: <Utensils />, link: `/${lang}/gazze-bagis/gazze-yemek-yardimi` },
+        { name: "Çadır Yardımı", icon: <Tent />, link: `/${lang}/gazze-bagis/cadir` },
+        { name: "Ambulans", icon: <Ambulance />, link: `/${lang}/gazze-bagis/ambulans` },
+        { name: "Yenidoğan Paketi", icon: <Baby />, link: `/${lang}/gazze-bagis/yenidogan-paketi` },
+        { name: "Kardeş Aile", icon: <Heart />, link: `/${lang}/gazze-bagis/gazze-kardes-aile` },
+        { name: "Nakdi Yardım", icon: <HandHelping />, link: `/${lang}/gazze-bagis/nakdi-yardim` },
     ];
 
     useEffect(() => {
@@ -153,7 +160,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
     return (
         <main className="flex flex-col bg-white">
             
-            {/* --- HERO SLIDER SECTION (Kırmızı & Yeşil Dengeli) --- */}
+            {/* --- HERO SLIDER SECTION --- */}
             <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden group">
                 {slides.map((slide, index) => (
                     <div 
@@ -162,14 +169,12 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                             index === currentSlide ? "opacity-100 scale-100 z-10" : "opacity-0 scale-105 z-0"
                         }`}
                     >
-                        {/* Koyu Kontrast Katmanı (Yeşil Alt Tonlu) */}
                         <div className="absolute inset-0 bg-gradient-to-r from-[#052c1a]/95 via-black/50 to-transparent z-10"></div>
                         <img src={slide.url} alt={slide.title} className="absolute inset-0 w-full h-full object-cover" />
                         
                         <div className="absolute inset-0 z-20 flex items-center">
                             <div className="container mx-auto px-8 md:px-24">
                                 <div className="max-w-4xl">
-                                    {/* Kırmızı Badge */}
                                     <span className="inline-block bg-[#e31e24] text-white px-6 py-2 rounded-lg text-sm font-black mb-8 tracking-[0.2em] uppercase shadow-lg shadow-[#e31e24]/30">
                                         {slide.tag}
                                     </span>
@@ -181,14 +186,12 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                                     </p>
                                     
                                     <div className="flex flex-wrap gap-8">
-                                        {/* Kırmızı Birincil Buton */}
                                         <Link 
                                             href={slide.donateLink} 
                                             className="bg-[#e31e24] hover:bg-[#b71c1c] text-white px-10 py-5 rounded-2xl font-black text-lg transition-all shadow-2xl hover:scale-105 duration-300"
                                         >
                                             Bağış Yap
                                         </Link>
-                                        {/* Şeffaf/Yeşil İkincil Buton */}
                                         <Link 
                                             href={slide.link} 
                                             className="bg-white/10 hover:bg-white hover:text-[#0b5331] text-white backdrop-blur-xl px-10 py-5 rounded-2xl font-black text-lg transition-all border-2 border-white/20 shadow-2xl hover:scale-105 duration-300"
@@ -202,7 +205,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                     </div>
                 ))}
 
-                {/* Navigasyon Okları (Kırmızı Hover Efektli) */}
+                {/* Navigasyon Okları */}
                 <div className="absolute inset-0 z-40 flex items-center justify-between px-4 md:px-8 pointer-events-none">
                     <button onClick={prevSlide} className="pointer-events-auto bg-black/30 hover:bg-[#e31e24] text-white p-5 md:p-6 rounded-full backdrop-blur-md transition-all border-2 border-white/10 group">
                         <ChevronLeft size={32} className="group-hover:scale-110 transition-transform" />
@@ -212,7 +215,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                     </button>
                 </div>
 
-                {/* Alt İlerleme Çubukları (Kırmızı Aksan) */}
+                {/* Alt İlerleme Çubukları */}
                 <div className="absolute bottom-12 left-0 w-full z-40 px-8 md:px-24">
                     <div className="container mx-auto flex gap-6">
                         {slides.map((_, i) => (
@@ -230,7 +233,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                 </div>
             </section>
 
-            {/* --- KURBAN BAĞIŞI BÖLGELERİ SECTION (İç Sayfalarla Birebir Eşit) --- */}
+            {/* --- KURBAN BAĞIŞI BÖLGELERİ SECTION --- */}
             <section id="bagis-secenekleri" className="py-20 md:py-32 bg-[#fcfcfc] border-y border-gray-100">
                 <div className="container mx-auto px-6">
                     <div className="max-w-3xl mb-14">
@@ -332,7 +335,6 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                                         {item.price}
                                     </p>
                                     <div className="mt-auto flex flex-col gap-3">
-                                        {/* Kırmızı Buton */}
                                         <Link 
                                             href={item.payLink} 
                                             className="bg-[#e31e24] text-white text-center py-4 rounded-xl font-black hover:bg-[#b71c1c] transition-all shadow-lg shadow-[#e31e24]/20 active:scale-95 text-lg duration-300"
@@ -362,7 +364,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                                 </p>
                             </div>
                             <Link 
-                                href={`/${lang}/projects`} 
+                                href={`/${lang}/gazze-bagis`} 
                                 className="group flex items-center gap-6 bg-[#0b5331] hover:bg-[#e31e24] text-white pl-10 pr-4 py-4 rounded-[1.5rem] transition-all duration-500 shadow-2xl transform hover:-translate-y-1 active:scale-95"
                             >
                                 <span className="font-black text-xl md:text-2xl tracking-tight">
@@ -377,7 +379,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                 </div>
             </section>
 
-            {/* --- FAALİYET ALANLARI (Doğrulanan Eşleşmelerle Premium Tasarım) --- */}
+            {/* --- FAALİYET ALANLARI --- */}
             <section className="py-20 md:py-28 bg-gray-50/50">
                 <div className="container mx-auto px-6">
                     <div className="mb-16 border-l-4 border-[#e31e24] pl-6">
@@ -396,14 +398,12 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                                 href={category.link} 
                                 className="group bg-white p-8 md:p-10 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-[#e31e24]/30"
                             >
-                                {/* İkon Alanı: Yeşil başlar, hover olunca İnsander Kırmızısına döner */}
                                 <div className="w-20 h-20 md:w-24 md:h-24 bg-[#0b5331]/5 text-[#0b5331] rounded-full flex items-center justify-center mb-6 group-hover:bg-[#e31e24] group-hover:text-white transition-all duration-500 shadow-sm">
                                     <div className="scale-[1.5] md:scale-[1.8]">{category.icon}</div>
                                 </div>
                                 <h3 className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-[#e31e24] transition-colors duration-300">
                                     {category.name}
                                 </h3>
-                                {/* Hoverda genişleyen kırmızı çizgi */}
                                 <div className="mt-4 w-0 h-1 bg-[#e31e24] rounded-full group-hover:w-12 transition-all duration-500"></div>
                             </Link>
                         ))}
@@ -428,7 +428,6 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                         ].map((stat, idx) => (
                             <div key={idx} className="relative group">
                                 <div className="flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-[#e31e24]/30 hover:-translate-y-2">
-                                    {/* Parlayan Kırmızı/Turuncu alt ton yerine net beyaz ve yeşil uyumu */}
                                     <span className="text-white text-4xl md:text-6xl font-black mb-2 tracking-tighter drop-shadow-lg">
                                         {stat.value}
                                     </span>
@@ -446,7 +445,7 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                 </div>
             </section>
 
-            {/* --- SON DOKUNUŞ: BÜLTEN & FİNAL CTA --- */}
+            {/* --- BÜLTEN & İLETİŞİM --- */}
             <section className="relative py-24 bg-white overflow-hidden">
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -480,7 +479,6 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {/* Telefon Kartı */}
                                 <a href="tel:+905010879198" className="flex items-center gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-[#e31e24]/30 hover:bg-white transition-all group duration-300">
                                     <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm text-[#e31e24] group-hover:bg-[#e31e24] group-hover:text-white transition-all duration-300">
                                         <ChevronRight size={20} />
@@ -491,7 +489,6 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                                     </div>
                                 </a>
 
-                                {/* E-Posta Kartı */}
                                 <a href="mailto:info@insander.org" className="flex items-center gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-[#e31e24]/30 hover:bg-white transition-all group duration-300">
                                     <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm text-[#e31e24] group-hover:bg-[#e31e24] group-hover:text-white transition-all duration-300">
                                         <ChevronRight size={20} />
@@ -515,18 +512,21 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
                     </div>
                 </div>
             </section>
+
+            {/* WHATSAPP BUTONU */}
             <a
                 href="https://wa.me/905010879198?text=Merhaba,%20İnsan%20Derneği%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-50 right-20 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
                 aria-label="WhatsApp üzerinden bize ulaşın"
-                >
+            >
                 <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                 </svg>
             </a>
-            {/* --- SMS BAĞIŞ POPUP (MOBİL UYUMLU, ÇİFT KAPATMA & ALT AKSİYON BUTONLU) --- */}
+
+            {/* --- SMS BAĞIŞ POPUP (BOYUT VE AYARLAR KORUNDU) --- */}
             {showPopup && (
             <>
                 <style jsx>{`
@@ -597,10 +597,6 @@ export default function HomeView({ lang = "tr" }: { lang?: string }) {
             </>
             )}
 
-    
         </main>
     );
 }
-
-
-

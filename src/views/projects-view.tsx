@@ -73,7 +73,7 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
       projects: [
         {
           title: "Gazze Sıcak Yemek Bağışı",
-          price: "130 TL",
+          price: "170 TL",
           image: "/assets/images-used/projects/sicak-yemek.webp",
           desc: "Gazze'deki aşevlerimizde her gün binlerce aileye sıcak yemek dağıtıyoruz. Gazze sıcak yemek bağışı ile bir öğün destek olun.",
           link: `/${lang}/gazze-bagis/gazze-yemek-yardimi`,
@@ -91,7 +91,7 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
         },
         {
           title: "Gazze İçme Suyu Bağışı",
-          price: "12.000 TL",
+          price: "8.000 TL",
           image: "/assets/images-used/projects/icme-suyu.webp",
           desc: "Tahrip olan altyapı nedeniyle Gazze Şeridi'ne tankerlerle su taşıyoruz. Gazze temiz su bağışı ile hayat verin.",
           link: `/${lang}/gazze-bagis/icme-suyu`,
@@ -237,8 +237,7 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
 
   return (
     <main className="bg-white min-h-screen">
-      
-      {/* --- HERO BANNER (H1 & KELİME YOĞUNLUĞU OPTİMİZE EDİLDİ) --- */}
+      {/* --- HERO BANNER --- */}
       <header className="relative w-full py-20 bg-gradient-to-r from-[#052c1a] to-[#0b5331] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-[-50%] left-[-20%] w-[600px] h-[600px] bg-white rounded-full blur-[120px]"></div>
@@ -249,8 +248,7 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
             <span className="text-[#b71c1c] font-bold tracking-[0.25em] text-xs uppercase">ONLINE GAZZE BAĞIŞ & ACİL YARDIM PORTALI</span>
             <span className="w-10 h-[2px] bg-[#b71c1c]"></span>
           </div>
-          
-          {/* SEO İÇİN ANA H1 ETİKETİ */}
+
           <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-5">
             Gazze Bağış & Acil Yardım Projeleri
           </h1>
@@ -280,7 +278,7 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
             </ol>
           </div>
         </nav>
-        
+
         {/* SEO: JSON-LD Schemas */}
         <script
           type="application/ld+json"
@@ -326,15 +324,12 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
         return (
           <section key={section.id} id={section.id} className="py-16 md:py-24 bg-[#fcfcfc] border-b border-gray-100 last:border-none">
             <div className="container mx-auto px-6">
-              
               <header className="max-w-3xl mb-14">
-                {/* ÜST MİNİ BAŞLIK / ROZET */}
                 <div className="flex items-center gap-3 mb-4">
                   <span className="w-10 h-[2px] bg-[#b71c1c]"></span>
                   <span className="text-[#b71c1c] font-bold tracking-[0.25em] text-xs uppercase">{section.badge}</span>
                 </div>
-                
-                {/* SEO CRITICAL: H2 BAŞLIĞINDA 'GAZZE BAĞIŞ' DOĞRUDAN YER ALIYOR */}
+
                 <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
                   {section.title}
                 </h2>
@@ -343,7 +338,6 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
                 </p>
               </header>
 
-              {/* 3'LÜ GRID YAPINIZ BOZULMADAN KORUNDU */}
               <div className="grid gap-6 lg:gap-8 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
                 {displayProjects.map((item, idx) => (
                   <article
@@ -360,7 +354,6 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
-                      {/* GÖRSEL ROZETİ SEO ODAKLI GÜNCELLENDİ */}
                       <div className="absolute top-4 left-4 bg-[#b71c1c] text-white px-3 py-1 text-xs font-bold rounded shadow-sm">
                         Gazze Bağış 2026
                       </div>
@@ -368,22 +361,20 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
 
                     {/* İÇERİK ALANI */}
                     <div className="p-6 flex flex-col flex-grow">
-                      {/* H3 KART BAŞLIĞI: HEDEF KELİME DAHİL */}
                       <Link href={item.link} className="focus:outline-none">
                         <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#0b5331] transition-colors duration-300">
                           {item.title}
                         </h3>
                       </Link>
-                      
+
                       <p className="text-[#0b5331] text-2xl font-black mb-3">
                         {item.price}
                       </p>
-                      
+
                       <p className="text-gray-500 text-sm mb-6 flex-grow line-clamp-3 leading-relaxed">
                         {item.desc}
                       </p>
 
-                      {/* BUTON METNİ: HEDEF KELİME DAHİL */}
                       <Link
                         href={item.link}
                         title={`${item.title} için online bağış yapın`}
@@ -396,7 +387,6 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
                   </article>
                 ))}
               </div>
-
             </div>
           </section>
         );
@@ -424,17 +414,18 @@ export default function ProjectsView({ lang = "tr", category = "Tümü" }: Proje
         </div>
       </section>
 
-     <a
-                href="https://wa.me/905010879198?text=Merhaba,%20İnsan%20Derneği%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fixed bottom-50 right-20 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
-                aria-label="WhatsApp üzerinden bize ulaşın"
-                >
-                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-            </a>
+      {/* WHATSAPP BUTONU */}
+      <a
+        href="https://wa.me/905010879198?text=Merhaba,%20İnsan%20Derneği%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-50 right-20 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
+        aria-label="WhatsApp üzerinden bize ulaşın"
+      >
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+      </a>
     </main>
   );
 }
